@@ -1,0 +1,160 @@
+body {
+    -webkit-text-size-adjust: 100%;
+    color: @black;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+}
+
+main {
+    background-color: @beige;
+}
+
+a {
+    .transition();
+    color: @dark-beige;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+img {
+    outline: none;
+    border:none;
+}
+
+a, a:hover, a:focus,
+input, input:hover, input:focus, input:active,
+select, select:hover, select:focus, select:active,
+textarea, textarea:hover, textarea:focus, textarea:active,
+button, button:hover, button:focus, button:active,
+label, label:hover, label:focus, label:active {
+    outline: none;
+}
+button::-moz-focus-inner, input::-moz-focus-inner, select::-moz-focus-inner {
+    border: none;
+}
+
+textarea,
+input,
+select,
+button {
+    border-radius: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+p {
+    line-height: 1.35;
+    margin: 0;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+h1, .h1 {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+h2, .h2 {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-top: 0;
+    margin-bottom: 50px;
+    text-align: center;
+
+    & + .text {
+        margin-top: -30px;
+        margin-bottom: 50px;
+    }
+}
+
+h3, .h3 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-top: 0;
+    margin-bottom: 16px;
+
+
+    &.big {
+        font-size: 32px;
+        margin-bottom: var(--gap);
+        text-align: center;
+    }
+}
+
+h4, .h4 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.text {
+    color: @gray;
+    font-size: 20px;
+    line-height: 1.35;
+    margin-bottom: var(--gap);
+
+    &.center {
+        text-align: center;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.text + .documents-block,
+.text + .guarantee-details,
+.text + .delivery-methods,
+.text + .material-works__wrap,
+.text + .order-ways,
+.text + .meeting-path {
+    padding-top: ~'calc(var(--padding-vertical) - var(--gap))';
+}
+
+@media all and (max-width: @bp-1590) {
+    body {font-size: 14px;}
+    h1, .h1 {font-size: 40px;}
+    h2, .h2 {font-size: 32px; margin-bottom: 40px;
+        & + .text {margin-top: -20px; margin-bottom: 40px;}}
+    h3.big, .h3.big {font-size: 24px;}
+    .text {font-size: 16px;}
+}
+
+@media all and (max-width: @bp-1350) {
+    h1, .h1 {font-size: 24px; margin-bottom: 10px;}
+    h1 br, .h1 br {display: none;}
+    h2, .h2 {font-size: 24px; margin-bottom: 30px;
+        & + .text {margin-bottom: 30px;}}
+    h3, .h3 {font-size: 18px; margin-bottom: 12px;}
+    h3.big, .h3.big {font-size: 18px;}
+    h4, .h4 {font-size: 18px;}
+    .text {font-size: 14px;}
+}
+
+@media all and (max-width: @bp-836) {
+    h3, .h3 {margin-bottom: 8px;}
+}
+
+@media all and (max-width: @bp-599) {
+    h1, .h1 {font-size: 20px;}
+    h1 br, .h1 br {display: initial;}
+    h2, .h2 {font-size: 20px; margin-bottom: 20px;
+        & + .text {margin-top: -10px; margin-bottom: 20px;}}
+}

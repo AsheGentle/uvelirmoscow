@@ -1,0 +1,77 @@
+.why-section {
+    background-color: @black;
+    background-image: url('../images/design/bg/why-bg.webp');
+    background-position: center center;
+    background-size: cover;
+    color: @beige;
+    padding-left: var(--padding-horizontal);
+    padding-right: var(--padding-horizontal);
+    padding-top: var(--padding-vertical);
+    padding-bottom: var(--padding-vertical);
+}
+
+.why {
+    .swiper-wrapper {
+        .row-wrap();
+        gap: 30px;
+    }
+}
+
+.why__title {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.why__text {
+    color: @dark-beige;
+    font-size: 20px;
+    line-height: 1.35;
+    margin-bottom: 30px;
+}
+
+.why__item {
+    background-image: linear-gradient(180deg, rgba(11, 6, 1, 30%) 0%, rgba(11, 6, 1, 80%) 100%);
+    border: 1px solid fade(#6D624E, 50%);
+    border-radius: 12px;
+    padding: 32px;
+    width: ~'calc(25% - 22.5px)';
+
+    h3, .h3 {
+        color: #fff;
+    }
+}
+
+.why__icon {
+    display: block;
+    width: 48px;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+@media all and (max-width: @bp-1590) {
+    .why__title {font-size: 24px;}
+    .why__text {font-size: 16px;}
+    .why__icon {width: 40px;}
+}
+
+@media all and (max-width: @bp-1350) {
+    .why-section {background-image: url('../images/design/bg/why-bg-tab.webp');}
+    .why__title {font-size: 20px;}
+    .why__text {font-size: 14px;}
+    .why .swiper-wrapper {gap: 20px;}
+    .why__item {padding: 24px; width: ~'calc(50% - 10px)';}
+    .why__icon {width: 32px; margin-bottom: 16px;}
+}
+
+@media all and (max-width: @bp-836) {
+    .why-section {background-image: url('../images/design/bg/why-bg-tab.webp'); overflow: hidden;}
+    .why__title {font-size: 20px;}
+    .why.swiper {overflow: visible;}
+    .why .swiper-wrapper {.row-nowrap(); gap: 0;}
+    .why__item {width: 415px;}
+}
+
+@media all and (max-width: @bp-599) {
+    .why__item {padding: 16px; width: 235px;}
+    .why__title {font-size: 18px;}
+}

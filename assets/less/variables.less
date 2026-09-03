@@ -1,0 +1,103 @@
+@dark-beige: #E4CDA4;
+@beige: #EEE8E0;
+@black: #321E11;
+@black-dark: #1C0B01;
+@gray: #694F3F;
+
+@bp-1590: 1590px;
+@bp-1350: 1350px;
+@bp-836: 836px;
+@bp-599: 599px;
+@bp-400: 400px;
+@bp-359: 359px;
+@bp-837: (@bp-836 + 1);
+@bp-1351: (@bp-1350 + 1);
+@bp-1591: (@bp-1590 + 1);
+
+:root {
+    --padding-horizontal: ~'calc(50% - 765px)';
+    --padding-vertical: 100px;
+    --header-height: 191px;
+    --gap: 30px;
+
+    @media all and (max-width: @bp-1590) {
+        --padding-horizontal: ~'calc(50% - 645px)';
+        --padding-vertical: 80px;
+    }
+
+    @media all and (max-width: @bp-1350) {
+        --padding-horizontal: ~'calc(50% - 398px)';
+        --padding-vertical: 60px;
+        --header-height: 150px;
+        --gap: 20px;
+    }
+
+    @media all and (max-width: @bp-836) {
+        --padding-horizontal: 20px;
+        --padding-vertical: 50px;
+        --header-height: 74px;
+    }
+
+    @media all and (max-width: @bp-359) {
+        --padding-horizontal: 12px;
+    }
+}
+
+.transition(@var: all) {
+    -webkit-transition: @var 0.3s ease;
+    transition: @var 0.3s ease;
+}
+
+.transition(@var1, @var2) {
+    -webkit-transition: @var1 0.3s ease, @var2 0.3s ease;
+    transition: @var1 0.3s ease, @var2 0.3s ease;
+}
+
+.transition(@var1, @var2, @var3) {
+    -webkit-transition: @var1 0.3s ease, @var2 0.3s ease, @var3 0.3s ease;
+    transition: @var1 0.3s ease, @var2 0.3s ease, @var3 0.3s ease;
+}
+
+.clear() {
+    &:after {
+        clear: both;
+        content: '';
+        display: block;
+    }
+}
+
+.visually-hidden() {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.transform(@var) {
+    -webkit-transform: @var;
+    -ms-transform: @var;
+    transform: @var;
+}
+
+.scroll-thin() {
+    scrollbar-width: thin;
+    scrollbar-color: @dark-beige #fff;
+}
+
+.scroll-hide() {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.blur(@var) {
+    -webkit-backdrop-filter: blur(@var);
+    backdrop-filter: blur(@var);
+}

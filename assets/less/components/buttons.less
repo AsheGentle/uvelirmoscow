@@ -1,0 +1,209 @@
+.btn {
+    .transition();
+    .display-inline-flex();
+    .justify-content-center();
+    background-color: @dark-beige;
+    border: none;
+    border-radius: 12px;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: @black;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 11px 14px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    isolation: isolate;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        bottom: -1px;
+        left: -1px;
+        right: -1px;
+        inset: 0;
+        z-index: -1;
+        background-image: linear-gradient(135deg, #E4CDA4 0%, #FFF1D8 100%);
+        background-size: 200% 100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s ease;
+    }
+
+    &:hover {
+        border-color: transparent;
+
+        &::before {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.btn--small {
+    border-radius: 4px;
+    line-height: 18px;
+    padding: 8px 24px;
+    white-space: nowrap;
+}
+
+.btn--medium {
+    border-radius: 12px;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 14px 24px;
+}
+
+.btn--big {
+    border-radius: 12px;
+    font-size: 20px;
+    line-height: 28px;
+    padding: 18px 32px;
+}
+
+.btn--dark {
+    background-color: @black;
+    color: @beige;
+
+    &::before {
+        background-image: linear-gradient(135deg, #251003 0%, #765B4A 100%);
+    }
+}
+
+.btn--border {
+    background-color: transparent;
+    border: 1px solid currentColor;
+    color: @dark-beige;
+    padding: 10px 13px;
+
+    &:hover {
+        color: @black;
+    }
+
+    &.btn--medium {
+        padding: 13px 23px;
+    }
+
+    &.btn--big {
+        padding: 17px 31px;
+    }
+
+    &.btn--dark {
+        color: @black;
+
+        &::before {
+            background-image: linear-gradient(135deg, @black 0%, @black 100%);
+        }
+
+        &:hover {
+            color: @dark-beige;
+        }
+    }
+}
+
+.btn--more {
+    background-color: transparent;
+    border: 1px solid @dark-beige;
+    border-radius: 12px;
+    color: @dark-beige;
+    margin-top: auto;
+    padding: 7px 22px;
+
+    svg {
+        display: block;
+        fill: currentColor;
+        width: 64px;
+        height: 32px;
+    }
+
+    &.btn--dark {
+        border-color: @black;
+        color: @black;
+    }
+
+    &.btn--fill {
+        background-color: @dark-beige;
+        color: @black;
+    }
+
+    &:hover {
+        border-color: transparent;
+        color: @gray;
+    }
+}
+
+.btn--arrow {
+    .display-inline-flex();
+    .align-items-center();
+    .justify-content-between();
+
+    svg {
+        fill: currentColor;
+        width: 32px;
+        height: 32px;
+        margin-left: 10px;
+    }
+
+    &.btn--small {
+        padding: 6px 16px;
+
+        svg {
+            width: 19px;
+            height: 19px;
+        }
+    }
+
+    &.btn--big {
+        padding: 16px 32px;
+    }
+}
+
+.buttons {
+    .display-flex;
+    .align-items-center();
+    .justify-content-center();
+    gap: var(--gap);
+    margin-top: var(--gap);
+
+    .btn {
+        width: 100%;
+        max-width: 490px;
+    }
+}
+
+@media all and (max-width: @bp-1590) {
+    .btn--small {font-size: 12px;}
+    .btn--medium {font-size: 16px;}
+    .btn--big {font-size: 20px; padding: 14px 24px;}
+    .btn--border.btn--big {padding: 13px 23px;}
+    .btn--arrow svg {width: 26px; height: 26px;}
+    .btn--arrow.btn--big {padding: 14px 24px;}
+    .buttons .btn {max-width: 410px;}
+}
+
+@media all and (max-width: @bp-1350) {
+    .btn--small {font-size: 10px; padding: 4px 16px;}
+    .btn--medium {font-size: 14px; padding: 6px 24px;}
+    .btn--big {font-size: 14px; line-height: 20px; padding: 11px 16px;}
+    .btn--border.btn--medium {padding: 5px 23px;}
+    .btn--border.btn--big {padding: 10px 15px;}
+    .btn--more {padding: 8px 23px;}
+    .btn--more svg {width: 48px; height: 24px;}
+    .btn--arrow.btn--big {padding: 10px 16px;}
+    .btn--arrow svg {width: 22px; height: 22px;}
+    .buttons .btn {max-width: 252px;}
+}
+
+@media all and (max-width: @bp-836) {
+    .btn--medium {font-size: 14px; padding: 11px 24px;}
+    .btn--border.btn--medium {padding: 10px 23px;}
+}
+
+@media all and (max-width: @bp-599) {
+    .buttons {.column(); gap: 8px;}
+    .buttons .btn {max-width: none;}
+}

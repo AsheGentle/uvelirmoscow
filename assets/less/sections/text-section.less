@@ -1,0 +1,122 @@
+.text-section {
+    background-color: #fff;
+    color: @gray;
+    padding-left: ~'calc(var(--padding-horizontal) + 130px)';
+    padding-right: ~'calc(var(--padding-horizontal) + 130px)';
+    padding-top: var(--padding-vertical);
+    padding-bottom: var(--padding-vertical);
+
+    blockquote {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='58' fill='none' viewBox='0 0 100 58'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath fill='%23e4cda4' fill-rule='evenodd' d='M62.877 32.083c.385 3.548 1.411 6.38 3.199 8.892 2.397 3.35 6.416 6.48 13.062 9.808a3.439 3.439 0 0 1-.377 6.434 3.44 3.44 0 0 1-2.694-.292c-7.104-3.547-12.25-7.292-15.583-11.962-3.396-4.749-4.652-10.098-4.652-16.317V8.02A8.02 8.02 0 0 1 63.852 0h18.334a8.02 8.02 0 0 1 8.021 8.02v16.043a8.024 8.024 0 0 1-8.02 8.02zm-45.834 0c.385 3.548 1.412 6.38 3.2 8.892 2.397 3.35 6.416 6.48 13.062 9.808a3.439 3.439 0 0 1-.377 6.434 3.44 3.44 0 0 1-2.694-.292c-7.104-3.547-12.251-7.292-15.583-11.962-3.396-4.749-4.652-10.098-4.652-16.317V8.02A8.02 8.02 0 0 1 18.019 0h18.334a8.02 8.02 0 0 1 8.02 8.02v16.043a8.024 8.024 0 0 1-8.02 8.02z' clip-rule='evenodd'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h100v57.5H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+        background-position: left top;
+        background-repeat: no-repeat;
+        margin: 0 0 0 auto;
+        min-height: 58px;
+        max-width: 1010px;
+        padding-left: 130px;
+
+        cite {
+            .display-inline-flex();
+            .align-items-center();
+            gap: 30px;
+            color: @black;
+            font-size: 18px;
+            font-weight: 400;
+            font-style: normal;
+            margin-top: 10px;
+        }
+
+        &:not(:first-child) {
+            margin-top: 30px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        &.question {
+            background-size: 60px;
+            font-size: 20px;
+            margin-left: 0;
+            min-height: 35px;
+            padding-left: 76px;
+
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    h1, .h1 {
+        color: @black;
+        font-size: 40px;
+        margin-bottom: 24px;
+        text-align: left;
+
+        &:not(:first-child) {
+            margin-top: 64px;
+        }
+    }
+
+    h2, .h2 {
+        color: @black;
+        margin-bottom: 16px;
+        text-align: left;
+
+        &:not(:first-child) {
+            margin-top: 48px;
+        }
+    }
+
+    h3, .h3 {
+        color: @black;
+        margin-bottom: 12px;
+
+        &:not(:first-child) {
+            margin-top: 40px;
+        }
+    }
+
+    h4, .h4 {
+        color: @black;
+        margin-bottom: 12px;
+
+        &:not(:first-child) {
+            margin-top: 32px;
+        }
+    }
+}
+
+@media all and (max-width: @bp-1590) {
+    .text-section {padding-left: ~'calc(var(--padding-horizontal) + 110px)'; padding-right: ~'calc(var(--padding-horizontal) + 110px)';}
+    .text-section blockquote {background-size: 80px auto; min-height: 46px; max-width: 850px; padding-left: 110px;}
+    .text-section blockquote cite {margin-top: 4px;}
+    .text-section blockquote cite img {width: 80px;}
+    .text-section blockquote.question {font-size: 16px;}
+}
+
+@media all and (max-width: @bp-1350) {
+    .text-section {padding-left: var(--padding-horizontal); padding-right: var(--padding-horizontal);}
+    .text-section blockquote {background-size: 48px auto; min-height: 28px; max-width: none; padding-left: 64px;}
+    .text-section blockquote cite img {width: 60px;}
+    .text-section blockquote:not(:first-child) {margin-top: 20px;}
+    .text-section blockquote:not(:last-child) {margin-bottom: 20px;}
+    .text-section blockquote.question {background-size: 48px auto; min-height: 28px; padding-left: 52px;}
+    .text-section blockquote.question:not(:last-child) {margin-bottom: 12px;}
+    .text-section {
+        h1, .h1 {margin-bottom: 16px;}
+        h1, .h1 {&:not(:first-child) {margin-top: 48px;}}
+        h2, .h2 {&:not(:first-child) {margin-top: 40px;}}
+        h3, .h3 {&:not(:first-child) {margin-top: 32px;}}
+        h4, .h4 {&:not(:first-child) {margin-top: 24px;}}
+    }
+}
+
+@media all and (max-width: @bp-836) {
+    .text-section blockquote {background-size: 80px auto; min-height: 46px; padding-left: 110px;}
+}
+
+@media all and (max-width: @bp-599) {
+    .text-section blockquote {background-size: 65px auto; min-height: 38px; padding-left: 76px;}
+    .text-section blockquote cite {gap: 20px; margin-top: 0;}
+}

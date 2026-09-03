@@ -1,0 +1,95 @@
+.surfaces-section {
+    padding-left: var(--padding-horizontal);
+    padding-right: var(--padding-horizontal);
+    padding-top: var(--padding-vertical);
+    padding-bottom: var(--padding-vertical);
+}
+
+.surfaces {
+    margin-bottom: 30px;
+
+    .swiper-wrapper {
+        .row-wrap();
+        gap: 30px;
+    }
+}
+
+.surface {
+    width: ~'calc(33.333333% - 20px)';
+}
+
+.surface__inner {
+    .display-flex();
+    .justify-content-between();
+    gap: 30px;
+    background-color: @black-dark;
+    background-image: url('../images/design/light-bg.svg');
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    border-radius: 12px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.surface__description {
+    padding: 32px 0 32px 32px;
+}
+
+.surface__title {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.surface__text {
+    color: @beige;
+
+    p:not(:last-child) {
+        margin-bottom: 8px;
+    }
+    
+    strong {
+        color: #fff;
+        font-weight: 600;
+    }
+}
+
+.surface__image {
+    .flex(0,0,auto);
+    .align-self-end();
+    max-width: 185px;
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media all and (max-width: @bp-1590) {
+    .surface__image {max-width: 150px;}
+}
+
+@media all and (max-width: @bp-1350) {
+    .surfaces {margin-bottom: 20px;}
+    .surfaces .swiper-wrapper {gap: 20px;}
+    .surface {width: ~'calc(50% - 10px)';}
+    .surface__description {padding: 24px 0 24px 24px;}
+    .surface__title {font-size: 18px; margin-bottom: 8px;}
+    .surface__image {max-width: 130px;}
+}
+
+@media all and (max-width: @bp-836) {
+    .surface__inner {.column(); gap: 10px; min-height: 200px;}
+    .surface__description {padding: 24px 24px 0;}
+    .surface__image {max-width: 100px;}
+}
+
+@media all and (max-width: @bp-599) {
+    .surfaces-section {overflow: hidden;}
+    .surfaces.swiper {overflow: visible;}
+    .surfaces .swiper-wrapper {.row-nowrap(); gap: 0;}
+    .surface {width: 235px;}
+    .surface__description {padding: 16px 16px 0;}
+}

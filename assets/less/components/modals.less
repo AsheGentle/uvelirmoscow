@@ -1,0 +1,87 @@
+.overflow {
+    overflow: hidden;
+}
+
+.modal {
+    background-color: fade(@black, 80%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+
+    &.open {
+        .display-flex();
+        .justify-content-center();
+        .align-items-center();
+    }
+}
+
+.modal--small {
+    .modal__content {
+        //width: 600px;
+    }
+}
+
+.modal__content {
+    background-color: #fff;
+    border-radius: 12px;
+    position: relative;
+    //margin-top: 100px;
+    max-height: ~'calc(100dvh - 40px)';
+    max-width: ~'calc(100dvw - 40px)';
+    overflow: auto;
+    width: 840px;
+}
+
+.modal__close {
+    .display-flex();
+    .align-items-center();
+    .justify-content-center();
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    z-index: 100;
+
+    svg {
+	pointer-events: none;
+        fill: currentColor;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.modal__body {
+    padding: 30px;
+}
+
+@media all and (max-width: @bp-1350) {
+    .modal__close {top: 30px; right: 30px; width: 32px; height: 32px;}
+    .modal__close svg {width: 20px; height: 20px;}
+    .modal__content {margin-top: 62px; max-height: ~'calc(100dvh - 102px)';}
+    .modal__content .table--scroll {max-height: ~'calc(100dvh - 102px - 60px)';}
+}
+
+@media all and (max-width: @bp-836) {
+    .modal__close {top: 20px; right: 20px;}
+    .modal__content {margin-top: 52px; max-height: ~'calc(100dvh - 92px)';}
+    .modal__content .table--scroll {max-height: ~'calc(100dvh - 92px - 40px)';}
+    .modal__body {padding: 20px;}
+}
+
+@media all and (max-width: @bp-599) {
+    .modal__content .table--scroll {max-height: ~'calc(100dvh - 92px - 32px)';}
+    .modal__body {padding: 16px;}
+}

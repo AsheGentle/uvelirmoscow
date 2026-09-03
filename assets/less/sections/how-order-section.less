@@ -1,0 +1,234 @@
+.order-ways {
+    padding-top: var(--padding-vertical);
+}
+
+.order-ways__list {
+    .display-flex();
+    gap: var(--gap);
+}
+
+.order-way {
+    .display-flex();
+    .column();
+    width: ~'calc(33.333333% - var(--gap) * 2 / 3)';
+}
+
+.order-way__image {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-right: 30px;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.order-way__description {
+    .flex(1,1,auto);
+    .display-flex();
+    .column();
+    .align-items-start();
+    background-color: #fff;
+    border-radius: 12px;
+    margin-left: 60px;
+    margin-top: -60px;
+    padding: 32px;
+    position: relative;
+    z-index: 10;
+
+    .btn {
+        margin-top: auto;
+        min-width: 140px;
+    }
+}
+
+.order-way__title {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.order-way__text {
+    color: @gray;
+    line-height: 1.35;
+    margin-bottom: 24px;
+}
+
+.order-video {
+    padding-top: var(--padding-vertical);
+}
+
+.order-video__wrap {
+    .display-flex();
+    .justify-content-center();
+}
+
+.order-video__frame {
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 1010px;
+    height: auto;
+}
+
+.meeting-path {
+    padding-top: var(--padding-vertical);
+}
+
+.meeting-path__item {
+    counter-increment: meeting-path;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding-right: 260px;
+    position: relative;
+
+    &:not(:last-child) {
+        margin-bottom: 50px;
+    }
+
+    &:nth-child(2n) {
+        padding-left: 260px;
+        padding-right: 0;
+
+        .meeting-path__info {
+            left: 0;
+            right: auto;
+        }
+    }
+}
+
+.meeting-path__image {
+    border-radius: 12px;
+    display: block;
+    overflow: hidden;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+.meeting-path__info {
+    .display-flex();
+    .align-items-start();
+    gap: 24px;
+    background-color: #fff;
+    border-radius: 12px;
+    color: @gray;
+    font-size: 20px;
+    padding: 32px;
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    max-width: 620px;
+    z-index: 10;
+
+    &::before {
+        .flex(0,0,auto);
+        content: '0'counter(meeting-path);
+        border: 1px solid #C5AE85;
+        border-radius: 50%;
+        color: #C5AE85;
+        font-size: 24px;
+        line-height: 46px;
+        width: 48px;
+        height: 48px;
+        text-align: center;
+    }
+}
+
+.online-contacts {
+    padding-top: var(--padding-vertical);
+}
+
+.online-contacts__list {
+    .display-flex();
+    .row-wrap();
+    gap: var(--gap);
+}
+
+.online-contact {
+    .display-flex();
+    .align-items-start();
+    gap: 24px;
+    background-color: @black-dark;
+    border-radius: 12px;
+    color: #fff;
+    padding: 32px;
+    width: ~'calc(50% - var(--gap) / 2)';
+}
+
+.online-contact__icon {
+    .flex(0,0,auto);
+        width: 48px;
+        height: auto;
+}
+
+.online-contact__title {
+    color: @beige;
+    margin-bottom: 8px;
+}
+
+.online-contact__value {
+    font-size: 24px;
+    font-weight: 400;
+
+    a {
+        color: #fff;
+
+        &:hover {
+            color: @dark-beige;
+        }
+    }
+}
+
+
+
+
+
+@media all and (max-width: @bp-1590) {
+    .meeting-path__info {font-size: 14px;}
+}
+
+@media all and (max-width: @bp-1350) {
+    .order-ways__list {.row-wrap();}
+    .order-way {width: ~'calc(50% - var(--gap) / 2)';}
+    .order-way__description {padding: 24px; margin-left: 20px; margin-top: -20px;}
+    .order-way__title {font-size: 18px;}
+
+    .meeting-path__item {padding-right: 136px; padding-left: 0;}
+    .meeting-path__item:nth-child(2n) {padding-left: 136px;}
+    .meeting-path__info {gap: 15px; max-width: 520px; padding: 24px;}
+    .meeting-path__info::before {font-size: 20px; line-height: 39px; width: 40px; height: 40px;}
+
+    .online-contact {gap: 16px; padding: 24px;}
+    .online-contact__icon {width: 32px;}
+    .online-contact__value {font-size: 20px;}
+}
+
+@media all and (max-width: @bp-836) {
+    .order-way {width: 100%;}
+
+    .meeting-path__item {padding-right: 0;}
+    .meeting-path__image {margin-right: 20px;}
+    .meeting-path__info {margin-top: -50px; margin-left: auto; position: relative; bottom: auto; width: ~'calc(100% - 20px)';}
+    .meeting-path__item:nth-child(2n) {padding-left: 0;}
+    .meeting-path__item:nth-child(2n) .meeting-path__image {margin-right: 0; margin-left: 20px;}
+    .meeting-path__item:nth-child(2n) .meeting-path__info {margin-left: 0;}
+
+    .online-contact {.column(); padding: 16px;}
+    .online-contact__value {font-size: 18px;}
+}
+
+@media all and (max-width: @bp-599) {
+    .order-way__description {padding: 16px;}
+
+    .meeting-path__info {padding: 16px;}
+
+    .online-contact {.row-nowrap(); width: 100%;}
+}

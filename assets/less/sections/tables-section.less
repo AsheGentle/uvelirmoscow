@@ -1,0 +1,164 @@
+.tables-section {
+    padding-left: var(--padding-horizontal);
+    padding-right: var(--padding-horizontal);
+    padding-top: var(--padding-vertical);
+    padding-bottom: var(--padding-vertical);
+
+    h3, .h3 {
+        font-size: 32px;
+    }
+}
+
+.table {
+    &:not(:last-child) {
+        margin-bottom: var(--gap);
+    }
+
+    table {
+        border-spacing: 0;
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    th {
+        background-color: @black;
+        border-top: 1px solid fade(#6D624E, 50%);
+        border-bottom: 1px solid fade(#6D624E, 50%);
+        border-right: 1px solid fade(#6D624E, 50%);
+        color: @beige;
+        font-size: 18px;
+        font-weight: 400;
+        padding: 8px 24px;
+        text-align: left;
+
+        &:first-child {
+            border-left: 1px solid fade(#6D624E, 50%);
+            border-radius: 12px 0 0 0;
+        }
+
+        &:last-child {
+            border-radius: 0 12px 0 0;
+        }
+    }
+
+    td {
+        background-color: #fff;
+        border-bottom: 1px solid fade(#6D624E, 50%);
+        border-right: 1px solid fade(#6D624E, 50%);
+        font-size: 14px;
+        line-height: 1.35;
+        padding: 10px 24px;
+
+        &:first-child {
+            border-left: 1px solid fade(#6D624E, 50%);
+        }
+
+        img {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    tr:last-child {
+        td:first-child {
+            border-radius: 0 0 0 12px;
+        }
+
+        td:last-child {
+            border-radius: 0 0 12px 0;
+        }
+    }
+
+    .table__carat {
+        display: inline-block;
+        vertical-align: middle;
+        width: 90px;
+    }
+}
+
+.table--light {
+    th {
+        background-color: @dark-beige;
+        color: @black;
+    }
+
+    td {
+        color: @gray;
+    }
+}
+
+.table--small {
+    th {
+        background-color: @dark-beige;
+        color: @black;
+        font-size: 10px;
+        padding: 2px 6px;
+
+        &:first-child {
+            border-radius: 6px 0 0 0;
+        }
+
+        &:last-child {
+            border-radius: 0 6px 0 0;
+        }
+    }
+
+    td {
+        color: @gray;
+        font-size: 10px;
+        padding: 2px 6px;
+    }
+
+    tr:last-child {
+        td:first-child {
+            border-radius: 0 0 0 6px;
+        }
+
+        td:last-child {
+            border-radius: 0 0 6px 0;
+        }
+    }
+}
+
+.bg-section {
+    background-color: @black;
+    background-image: url('../images/design/bg/bg.webp');
+    background-position: center center;
+    background-size: cover;
+    color: @dark-beige;
+
+    .text {
+        color: @dark-beige;
+    }
+
+    h2, .h2,
+    h3, .h3 {
+        color: @beige;
+    }
+}
+
+@media all and (max-width: @bp-1590) {
+    .tables-section {h3, .h3 {font-size: 24px;}}
+}
+
+@media all and (max-width: @bp-1350) {
+    .tables-section {h3, .h3 {font-size: 20px;}}
+    .table {.display-flex(); overflow: auto; margin-left: -20px; margin-right: -20px;}
+    .table::before, .table::after {.flex(0,0,auto); content: ''; width: 20px;}
+    .table th {font-size: 14px;}
+    .table--small th {font-size: 10px;}
+
+    .table--scroll {/*display: block;*/ max-height: 100%; overflow: auto;}
+    .table--scroll th {position: sticky; top: 0; z-index: 1;}
+}
+
+@media all and (max-width: @bp-836) {
+    .tables-section {overflow: hidden;}
+    .table table {table-layout: auto;}
+    .table th {min-width: 160px;}
+}
+
+@media all and (max-width: @bp-359) {
+    .table {margin-left: -12px; margin-right: -12px;}
+    .table::before, .table::after {width: 12px;}
+}
