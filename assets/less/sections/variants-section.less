@@ -29,7 +29,9 @@
 }
 
 .variants, .variants-4 {
-    margin-bottom: var(--gap);
+    &:not(:last-child) {
+        margin-bottom: var(--gap);
+    }
 }
 
 .variant--image {
@@ -100,6 +102,11 @@
     &:not(:last-child) {
         margin-bottom: 24px;
     }
+}
+
+.variant__image + .variant__title {
+    margin-bottom: 8px;
+    text-align: left;
 }
 
 .variant__title {

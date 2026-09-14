@@ -839,7 +839,7 @@ $(function(){
     });
 
     let initExtra = responsiveSwiper({
-        selector: ".inner-extra__list",
+        selector: ".inner-extras",
         breakpoint: 837,
         options: {
             slidesPerView: "auto",
@@ -857,7 +857,7 @@ $(function(){
     });
 
     let initExtra4 = responsiveSwiper({
-        selector: ".inner-extra__list-4",
+        selector: ".inner-extras-4",
         breakpoint: 837,
         options: {
             slidesPerView: "auto",
@@ -1274,7 +1274,7 @@ $(function(){
             }
 
             var isExpanded = $list.hasClass("show");
-            var isOverflowing = listEl.scrollHeight > 48;
+            var isOverflowing = listEl.scrollHeight > parseInt($list.css('max-height'));
 
             $more.toggle(isExpanded || isOverflowing);
         });

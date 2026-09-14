@@ -20,6 +20,14 @@
     .display-flex();
     .row-wrap();
     gap: 12px;
+
+    &.nowrap {
+        .row-nowrap();
+
+        .catalog-categories__link omg {
+            width: 50px;
+        }
+    }
 }
 
 .catalog-categories__link {
@@ -34,9 +42,22 @@
     background-size: auto 100%;
     border-radius: 12px;
     color: #fff;
-    font-size: 10px;
-    padding: 10px 8px 0 10px;
-    width: ~'calc(16.66666666666667% - 10px)';
+    font-size: 14px;
+    line-height: 1.17;
+    min-height: 68px;
+    overflow: hidden;
+    padding: 10px 0 0 10px;
+    width: ~'calc(20% - 9.6px)';
+
+    span {
+        display: block;
+        padding-bottom: 10px;
+    }
+
+    img {
+        .align-self-end();
+        .flex(0,0,auto);
+    }
 }
 
 .catalog-settings {
@@ -120,7 +141,7 @@
     .display-flex();
     .row-wrap();
     gap: 8px;
-    max-height: 48px;
+    max-height: 52px;
     overflow: hidden;
 
     &.show {
@@ -132,7 +153,8 @@
     background-color: #fff;
     border-radius: 4px;
     color: @gray;
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 18px;
     padding: 2px 8px;
 }
 
@@ -426,17 +448,24 @@
 
 @media all and (max-width: @bp-1590) {
     .catalog-aside {width: 300px;}
+    .catalog-categories__link {font-size: 12px;}
+    .catalog-populars__list {max-height: 48px;}
+    .catalog-populars__link {font-size: 12px; line-height: 16px;}
 }
 
 @media all and (max-width: @bp-1350) {
     .catalog-aside {display: none;}
     .catalog-categories {margin-bottom: 20px;}
     .catalog-categories__list {gap: 8px;}
-    .catalog-categories__link {border-radius: 8px; font-size: 8px; padding: 8px 8px 0 8px; width: ~'calc(16.666667% - 6.666667px)';}
+    .catalog-categories__list.nowrap {.row-wrap();}
+    .catalog-categories__link {gap: 8px; border-radius: 8px; font-size: 10px; min-height: 48px; padding: 8px 0 0 8px;}
     .catalog-categories__link img {width: 40px; height: auto;}
+    .catalog-categories__link span {padding-bottom: 8px;}
     .catalog-sorting {gap: 10px;}
     .catalog-sorting__select {width: 184px;}
     .catalog-populars {margin-bottom: 20px;}
+    .catalog-populars__list {max-height: 44px;}
+    .catalog-populars__link {font-size: 10px; line-height: 14px;}
     .catalog-list {gap: 20px;}
     .catalog-list .item {width: ~'calc(33.333333% - 13.333333px)';}
     .item {padding: 16px 24px 24px;}
@@ -457,8 +486,9 @@
     .catalog-sorting__select {padding: 2px 8px; width: 138px;}
     .catalog-view {width: 22px; height: 22px;}
     .catalog-view svg {width: 16px; height: 16px;}
-    .catalog-populars__link {font-size: 10px;}
-    .catalog-populars__more {margin-top: 0;}
+    .catalog-populars__list {gap: 6px; max-height: 42px;}
+    //.catalog-populars__link {font-size: 10px;}
+    .catalog-populars__more {font-size: 10px; margin-top: 6px;}
     .catalog-list {margin-bottom: 20px;}
     .catalog-list .item {width: ~'calc(50% - 10px)';}
     .catalog-pagination {margin-bottom: 20px;}
@@ -484,14 +514,17 @@
 
 @media all and (max-width: @bp-599) {
     .catalog-categories {overflow: hidden; margin-left: -20px; margin-right: -20px; width: 100dvw;}
+    .catalog-categories__list.nowrap {.row-nowrap();}
     .catalog-categories__list {.row-nowrap(); overflow: auto;}
     .catalog-categories__list::before, .catalog-categories__list::after {.flex(0,0,auto); content: ''; width: 12px;}
-    .catalog-categories__link {.flex(0,0,auto); width: 84px; height: 78px; position: relative;}
-    .catalog-categories__link img {position: absolute; bottom: 0; right: 22px;}
+    .catalog-categories__link {.flex(0,0,auto); .column(); width: 100px; padding: 8px 8px 0;}
+    .catalog-categories__link img {.align-self-center(); width: 50px;}
+    .catalog-categories__link span {padding-bottom: 4px;}
     .catalog-settings {.row-wrap();}
     .catalog-sorting {.flex-order(2); margin-top: 10px; width: 100%;}
     .catalog-sorting__select {width: 50%;}
-    .catalog-list .item {}
+    .catalog-list {gap: 10px;}
+    .catalog-list .item {width: ~'calc(50% - 5px)';}
     .item {padding: 8px 16px 16px;}
     .item__image {width: 100%;}
     .item__title {font-size: 12px;}
@@ -513,6 +546,8 @@
 }
 
 @media all and (max-width: @bp-359) {
+    .catalog-categories {margin-left: -12px; margin-right: -12px;}
+    .catalog-categories__list::before, .catalog-categories__list::after {width: 4px;}
     .catalog-list.list {
         .item__image {width: 80px;}
         .item__description {width: ~'calc(100% - 96px)';}
