@@ -56,6 +56,15 @@ select.inputbox {
             transform: scale(1);
         }
     }
+
+    a {
+        color: @dark-beige;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 .checkbox__label {
@@ -93,15 +102,6 @@ select.inputbox {
         transition: all 0.3s ease;
     }
 
-    a {
-        color: @dark-beige;
-        text-decoration: underline;
-
-        &:hover {
-            text-decoration: none;
-        }
-    }
-
     span {
         opacity: 0.5;
     }
@@ -115,6 +115,15 @@ select.inputbox {
     input:checked + .radiobox__label {
         &::before {
             border: 6px solid @black;
+        }
+    }
+
+    a {
+        color: @dark-beige;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
         }
     }
 }
@@ -139,17 +148,81 @@ select.inputbox {
         .transition(border);
     }
 
-    a {
-        color: @dark-beige;
-        text-decoration: underline;
+    span {
+        opacity: 0.5;
+    }
+}
 
-        &:hover {
-            text-decoration: none;
+.form {
+    .btn {
+        width: 100%;
+    }
+}
+
+.form__row {
+    .display-flex();
+    gap: 20px;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.form__checkbox {
+    .column();
+    gap: 10px;
+    margin-top: -10px;
+
+    .checkbox {
+        color: @gray;
+        font-size: 12px;
+
+        a {
+            color: @gray;
         }
     }
 
-    span {
-        opacity: 0.5;
+    .checkbox__label {
+        color: @gray;
+        font-size: 12px;
+        line-height: 15px;
+        padding-left: 24px;
+
+        &::before, &::after {
+            height: 16px;
+            width: 16px;
+        }
+
+        a {color: @gray;}
+    }
+}
+
+.inputfile {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+
+    input {.visually-hidden();}
+}
+
+.inputfile__label {
+    .display-flex();
+    .align-items-center();
+    .justify-content-between();
+    gap: 20px;
+    color: @gray;
+    font-size: 24px;
+    font-weight: 400;
+
+    svg {
+        fill: currentColor;
+        width: 32px;
+        height: 32px;
+    }
+
+    .small {
+        font-size: 16px;
+        margin-left: auto;
     }
 }
 
@@ -160,4 +233,16 @@ select.inputbox {
 
 @media all and (max-width: @bp-1350) {
     .inputbox {padding: 9px 16px;}
+
+    .form__row {gap: 10px;}
+    .form__row:not(:last-child) {margin-bottom: 10px;}
+    .form__checkbox {margin-top: 0;}
+
+    .inputfile__label {font-size: 20px;}
+}
+
+@media all and (max-width: @bp-599) {
+    .form__row {.column();}
+
+    .inputfile__label {.row-wrap();}
 }

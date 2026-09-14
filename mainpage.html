@@ -29,59 +29,58 @@
                 <div class="header-top">
                     <ul class="top-menu">
                         <li class="top-menu__item">
-                            <a href="" class="top-menu__link">
+                            <a href="/otzyvy" class="top-menu__link">
                                 <img src="assets/images/icons/icon-message-star.svg" alt="" width="24" height="24">
                                 <span>Отзывы</span>
                             </a>
                         </li>
                         <li class="top-menu__item">
-                            <a href="" class="top-menu__link">
+                            <a href="/dostavka-i-oplata" class="top-menu__link">
                                 <img src="assets/images/icons/icon-truck.svg" alt="" width="24" height="24">
                                 <span>Доставка и&nbsp;оплата</span>
                             </a>
                         </li>
                         <li class="top-menu__item">
-                            <a href="" class="top-menu__link">
+                            <a href="/sertifikaty-i-podarochnye-karty" class="top-menu__link">
                                 <img src="assets/images/icons/icon-giftcard.svg" alt="" width="24" height="24">
                                 <span>Подарочные карты</span>
                             </a>
                         </li>
                         <li class="top-menu__item has-submenu">
-                            <a href="" class="top-menu__link">
+                            <a href="/o-studii" class="top-menu__link">
                                 <img src="assets/images/icons/icon-necklaces.svg" alt="" width="24" height="24">
                                 <span>Студия</span>
                             </a>
                             <ul class="top-submenu">
-                                <li class="top-submenu__item"><a href="">О&nbsp;студии</a></li>
-                                <li class="top-submenu__item"><a href="">Наши работы</a></li>
-                                <li class="top-submenu__item"><a href="">Отзывы</a></li>
-                                <li class="top-submenu__item"><a href="">Обзоры</a></li>
-                                <li class="top-submenu__item"><a href="">Статьи</a></li>
-                                <li class="top-submenu__item"><a href="">Сотрудничество</a></li>
-                                <li class="top-submenu__item"><a href="">Оптовикам и&nbsp;B2B сегменту</a></li>
-                                <li class="top-submenu__item"><a href="">Реквизиты</a></li>
-                                <li class="top-submenu__item"><a href="">Контакты</a></li>
+                                <li class="top-submenu__item"><a href="/o-studii">О&nbsp;студии</a></li>
+                                <li class="top-submenu__item"><a href="/nashi-raboty">Наши работы</a></li>
+                                <li class="top-submenu__item"><a href="/obzory">Обзоры</a></li>
+                                <li class="top-submenu__item"><a href="/stati">Статьи</a></li>
+                                <li class="top-submenu__item"><a href="/sotrudnichestvo">Сотрудничество</a></li>
+                                <li class="top-submenu__item"><a href="/optovikam-i-b2b">Оптовикам и&nbsp;B2B сегменту</a></li>
+                                <li class="top-submenu__item"><a href="/rekvizity">Реквизиты</a></li>
+                                <li class="top-submenu__item"><a href="/kontakty">Контакты</a></li>
                             </ul>
                         </li>
                     </ul>
-                    <button type="button" class="btn btn--small">Заказать звонок</button>
+                    <button type="button" class="btn btn--small" data-modal="#modal-1">Заказать звонок</button>
                 </div>
-                    <a href="/" class="logo">
-                        <img src="assets/images/design/logo.svg" alt="Логотип UvelirMoscow Jewellery." width="214" height="58">
+                <a href="/" class="logo">
+                    <img src="assets/images/design/logo.svg" alt="Логотип UvelirMoscow Jewellery." width="214" height="58">
+                </a>
+                <div class="header-contacts">
+                    <a href="tel:84957418614" class="header-phone">
+                        <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#phone" /></svg>
+                        <span>8 (495) 741-86-14</span>
                     </a>
-                    <div class="header-contacts">
-                        <a href="tel:84957418614" class="header-phone">
-                            <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#phone" /></svg>
-                            <span>8 (495) 741-86-14</span>
-                        </a>
-                        <button type="button" class="btn btn--small">Заказать звонок</button>
-                        <div class="header-address">Москва, Кузнецкий мост, дом 7, стр. 3</div>
-                        <div class="header-hours">
-                            <div class="header-hours__title">Режим работы:</div>
-                            <div class="header-hours__item">ПН-ПТ: 10:00&nbsp;&mdash; 20:00</div>
-                            <div class="header-hours__item">СБ-ВС: 12:00&nbsp;&mdash; 17:00</div>
-                        </div>
+                    <button type="button" class="btn btn--small" data-modal="#modal-1">Заказать звонок</button>
+                    <div class="header-address">Москва, Кузнецкий мост, дом 7, стр. 3</div>
+                    <div class="header-hours">
+                        <div class="header-hours__title">Режим работы:</div>
+                        <div class="header-hours__item">ПН-ПТ: 10:00&nbsp;&mdash; 20:00</div>
+                        <div class="header-hours__item">СБ-ВС: 12:00&nbsp;&mdash; 17:00</div>
                     </div>
+                </div>
                 <nav class="header-bottom">
                     <ul class="menu">
                         <li class="menu__item has-submenu">
@@ -848,7 +847,7 @@
                         </div>
                     </div>
                     <div class="showcase__buttons">
-                        <a href="" class="btn btn--medium">Заказать украшение</a>
+                        <button type="button" class="btn btn--medium" data-modal="#modal-1" data-modal-title="Заказать украшение">Заказать украшение</button>
                     </div>
                 </div>
                 <picture class="showcase__image">
@@ -942,7 +941,7 @@
                         </div>
 
                         <div class="swiper-buttons">
-                            <a href="" class="btn btn--big btn--border btn--dark">Все шортсы</a>
+                            <a href="/obzory" class="btn btn--big btn--border btn--dark">Все шортсы</a>
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-pagination"></div>
                             <div class="swiper-button-next"></div>
@@ -962,7 +961,7 @@
                                     <img src="assets/images/content/service-1.webp" alt="" width="275" height="275" loading="lazy">
                                 </picture>
                                 <div class="service__text">Создаем украшения по&nbsp;вашему эскизу или с&nbsp;нуля. Работаем с&nbsp;вашими материалами.</div>
-                                <a href="" class="btn btn--more">
+                                <a href="/izgotovlenie" class="btn btn--more">
                                     <svg role="img" aria-label="Подробнее"><use href="assets/images/icons/icons.svg#arrow-long" /></svg>
                                 </a>
                             </div>
@@ -974,7 +973,7 @@
                                     <img src="assets/images/content/service-2.webp" alt="" width="275" height="275" loading="lazy">
                                 </picture>
                                 <div class="service__text">Восстановим любимые украшения: пайка, полировка, замена замков, ремонт оправы.</div>
-                                <a href="" class="btn btn--more">
+                                <a href="/remont" class="btn btn--more">
                                     <svg role="img" aria-label="Подробнее"><use href="assets/images/icons/icons.svg#arrow-long" /></svg>
                                 </a>
                             </div>
@@ -986,7 +985,7 @@
                                     <img src="assets/images/content/service-3.webp" alt="" width="275" height="275" loading="lazy">
                                 </picture>
                                 <div class="service__text">Профессиональная диагностика, оценка качества огранки, чистоты и&nbsp;подлинности с&nbsp;помощью геммологического оборудования.</div>
-                                <a href="" class="btn btn--more">
+                                <a href="/proverka-brilliantov-i-kamnej" class="btn btn--more">
                                     <svg role="img" aria-label="Подробнее"><use href="assets/images/icons/icons.svg#arrow-long" /></svg>
                                 </a>
                             </div>
@@ -999,7 +998,7 @@
                     </div>
                 </div>
                 <div class="buttons">
-                    <a href="" class="btn btn--big">Смотреть все услуги</a>
+                    <a href="/uslugi" class="btn btn--big">Смотреть все услуги</a>
                 </div>
             </section>
 
@@ -1013,8 +1012,8 @@
                             <img src="assets/images/content/category-1.webp" alt="" width="587" height="587" loading="lazy">
                         </picture>
                         <div class="category__buttons">
-                            <a href="" class="btn">Изготовление</a>
-                            <a href="" class="btn btn--border">Каталог</a>
+                            <a href="/uslugi/izgotovlenie/kolca-na-zakaz" class="btn">Изготовление</a>
+                            <a href="/katalog/kolca" class="btn btn--border">Каталог</a>
                         </div>
                     </div>
                     <div class="category">
@@ -1024,8 +1023,8 @@
                             <img src="assets/images/content/category-2.webp" alt="" width="184" height="184" loading="lazy">
                         </picture>
                         <div class="category__buttons">
-                            <a href="" class="btn">Изготовление</a>
-                            <a href="" class="btn btn--border">Каталог</a>
+                            <a href="/uslugi/izgotovlenie/sergi-na-zakaz" class="btn">Изготовление</a>
+                            <a href="/katalog/sergi" class="btn btn--border">Каталог</a>
                         </div>
                     </div>
                     <div class="category">
@@ -1035,8 +1034,8 @@
                             <img src="assets/images/content/category-3.webp" alt="" width="184" height="184" loading="lazy">
                         </picture>
                         <div class="category__buttons">
-                            <a href="" class="btn">Изготовление</a>
-                            <a href="" class="btn btn--border">Каталог</a>
+                            <a href="/uslugi/izgotovlenie/braslety-na-zakaz" class="btn">Изготовление</a>
+                            <a href="/katalog/braslety" class="btn btn--border">Каталог</a>
                         </div>
                     </div>
                     <div class="category">
@@ -1046,8 +1045,8 @@
                             <img src="assets/images/content/category-4.webp" alt="" width="328" height="328" loading="lazy">
                         </picture>
                         <div class="category__buttons">
-                            <a href="" class="btn">Изготовление</a>
-                            <a href="" class="btn btn--border">Каталог</a>
+                            <a href="/uslugi/izgotovlenie/cepochki-na-zakaz" class="btn">Изготовление</a>
+                            <a href="/katalog/cepochki" class="btn btn--border">Каталог</a>
                         </div>
                     </div>
                     <div class="category">
@@ -1057,8 +1056,8 @@
                             <img src="assets/images/content/category-5.webp" alt="" width="328" height="328" loading="lazy">
                         </picture>
                         <div class="category__buttons">
-                            <a href="" class="btn">Изготовление</a>
-                            <a href="" class="btn btn--border">Каталог</a>
+                            <a href="/uslugi/izgotovlenie/podveski-i-kulony-na-zakaz" class="btn">Изготовление</a>
+                            <a href="/katalog/podveski-i-kulony" class="btn btn--border">Каталог</a>
                         </div>
                     </div>
                     <div class="category">
@@ -1068,8 +1067,8 @@
                             <img src="assets/images/content/category-6.webp" alt="" width="184" height="184" loading="lazy">
                         </picture>
                         <div class="category__buttons">
-                            <a href="" class="btn">Изготовление</a>
-                            <a href="" class="btn btn--border">Каталог</a>
+                            <a href="/uslugi/izgotovlenie/kole-na-zakaz" class="btn">Изготовление</a>
+                            <a href="/katalog/kole" class="btn btn--border">Каталог</a>
                         </div>
                     </div>
                     <div class="category">
@@ -1079,8 +1078,8 @@
                             <img src="assets/images/content/category-7.webp" alt="" width="184" height="184" loading="lazy">
                         </picture>
                         <div class="category__buttons">
-                            <a href="" class="btn">Изготовление</a>
-                            <a href="" class="btn btn--border">Каталог</a>
+                            <a href="/uslugi/izgotovlenie/zaponok" class="btn">Изготовление</a>
+                            <a href="/katalog/zaponki" class="btn btn--border">Каталог</a>
                         </div>
                     </div>
                     <div class="category">
@@ -1090,8 +1089,8 @@
                             <img src="assets/images/content/category-8.webp" alt="" width="184" height="184" loading="lazy">
                         </picture>
                         <div class="category__buttons">
-                            <a href="" class="btn">Изготовление</a>
-                            <a href="" class="btn btn--border">Каталог</a>
+                            <a href="/uslugi/izgotovlenie/broshi-na-zakaz" class="btn">Изготовление</a>
+                            <a href="/katalog/broshi" class="btn btn--border">Каталог</a>
                         </div>
                     </div>
                     <div class="category">
@@ -1101,8 +1100,8 @@
                             <img src="assets/images/content/category-9.webp" alt="" width="184" height="184" loading="lazy">
                         </picture>
                         <div class="category__buttons">
-                            <a href="" class="btn">Изготовление</a>
-                            <a href="" class="btn btn--border">Каталог</a>
+                            <a href="/uslugi/izgotovlenie/bodichejny-na-zakaz" class="btn">Изготовление</a>
+                            <a href="/katalog/bodichejny" class="btn btn--border">Каталог</a>
                         </div>
                     </div>
                     <div class="category">
@@ -1112,8 +1111,8 @@
                             <img src="assets/images/content/category-10.webp" alt="" width="328" height="328" loading="lazy">
                         </picture>
                         <div class="category__buttons">
-                            <a href="" class="btn">Изготовление</a>
-                            <a href="" class="btn btn--border">Каталог</a>
+                            <a href="/uslugi/izgotovlenie/diademy-i-tiary-na-zakaz" class="btn">Изготовление</a>
+                            <a href="/katalog/diademy-i-tiary" class="btn btn--border">Каталог</a>
                         </div>
                     </div>
                     <div class="category">
@@ -1123,8 +1122,8 @@
                             <img src="assets/images/content/category-11.webp" alt="" width="328" height="328" loading="lazy">
                         </picture>
                         <div class="category__buttons">
-                            <a href="" class="btn">Изготовление</a>
-                            <a href="" class="btn btn--border">Каталог</a>
+                            <a href="/uslugi/izgotovlenie/talismany-i-amulety-na-zakaz" class="btn">Изготовление</a>
+                            <a href="/katalog/talismany-i-amulety" class="btn btn--border">Каталог</a>
                         </div>
                     </div>
                     <div class="category">
@@ -1134,8 +1133,8 @@
                             <img src="assets/images/content/category-12.webp" alt="" width="184" height="184" loading="lazy">
                         </picture>
                         <div class="category__buttons">
-                            <a href="" class="btn">Изготовление</a>
-                            <a href="" class="btn btn--border">Каталог</a>
+                            <a href="/uslugi/izgotovlenie/yuvelirnyh-suvenirov-zakaz" class="btn">Изготовление</a>
+                            <a href="/katalog/yuvelirnye-suveniry" class="btn btn--border">Каталог</a>
                         </div>
                     </div>
                     <div class="category">
@@ -1145,8 +1144,8 @@
                             <img src="assets/images/content/category-13.webp" alt="" width="184" height="184" loading="lazy">
                         </picture>
                         <div class="category__buttons">
-                            <a href="" class="btn">Изготовление</a>
-                            <a href="" class="btn btn--border">Каталог</a>
+                            <a href="/uslugi/izgotovlenie/breloki-na-zakaz" class="btn">Изготовление</a>
+                            <a href="/katalog/breloki" class="btn btn--border">Каталог</a>
                         </div>
                     </div>
                 </div>
@@ -1219,7 +1218,7 @@
                     </div>
                 </div>
                 <div class="buttons">
-                    <a href="" class="btn btn--big">Воплотить свою идею</a>
+                    <button type="button" class="btn btn--big" data-modal="#modal-3" data-modal-title="Воплотить свою идею">Воплотить свою идею</button>
                 </div>
             </section>
 
@@ -1240,7 +1239,7 @@
                                     <img src="assets/images/content/moment-1.webp" alt="" width="718" height="400" loading="lazy">
                                 </picture>
                                 <div class="moment__button">
-                                    <a href="" class="btn btn--more btn--fill">
+                                    <a href="/katalog/obruchalnye-kolca" class="btn btn--more btn--fill">
                                         <svg role="img" aria-label="Подробнее"><use href="assets/images/icons/icons.svg#arrow-long" /></svg>
                                     </a>
                                 </div>
@@ -1258,7 +1257,7 @@
                                     <img src="assets/images/content/moment-2.webp" alt="" width="718" height="400" loading="lazy">
                                 </picture>
                                 <div class="moment__button">
-                                    <a href="" class="btn btn--more btn--fill">
+                                    <a href="/katalog/podarki-na-rozhdenie-rebenka" class="btn btn--more btn--fill">
                                         <svg role="img" aria-label="Подробнее"><use href="assets/images/icons/icons.svg#arrow-long" /></svg>
                                     </a>
                                 </div>
@@ -1276,7 +1275,7 @@
                                     <img src="assets/images/content/moment-3.webp" alt="" width="718" height="400" loading="lazy">
                                 </picture>
                                 <div class="moment__button">
-                                    <a href="" class="btn btn--more btn--fill">
+                                    <a href="/katalog/pomolvochnye-kolca" class="btn btn--more btn--fill">
                                         <svg role="img" aria-label="Подробнее"><use href="assets/images/icons/icons.svg#arrow-long" /></svg>
                                     </a>
                                 </div>
@@ -1294,7 +1293,7 @@
                                     <img src="assets/images/content/moment-4.webp" alt="" width="718" height="400" loading="lazy">
                                 </picture>
                                 <div class="moment__button">
-                                    <a href="" class="btn btn--more btn--fill">
+                                    <a href="/katalog/yuvelirnye-suveniry" class="btn btn--more btn--fill">
                                         <svg role="img" aria-label="Подробнее"><use href="assets/images/icons/icons.svg#arrow-long" /></svg>
                                     </a>
                                 </div>
@@ -1312,7 +1311,7 @@
                                     <img src="assets/images/content/moment-5.webp" alt="" width="718" height="400" loading="lazy">
                                 </picture>
                                 <div class="moment__button">
-                                    <a href="" class="btn btn--more btn--fill">
+                                    <a href="/katalog/muzhskie-ukrasheniya" class="btn btn--more btn--fill">
                                         <svg role="img" aria-label="Подробнее"><use href="assets/images/icons/icons.svg#arrow-long" /></svg>
                                     </a>
                                 </div>
@@ -1330,7 +1329,7 @@
                                     <img src="assets/images/content/moment-6.webp" alt="" width="718" height="400" loading="lazy">
                                 </picture>
                                 <div class="moment__button">
-                                    <a href="" class="btn btn--more btn--fill">
+                                    <a href="/katalog/zhenskie-ukrasheniya" class="btn btn--more btn--fill">
                                         <svg role="img" aria-label="Подробнее"><use href="assets/images/icons/icons.svg#arrow-long" /></svg>
                                     </a>
                                 </div>
@@ -1458,7 +1457,7 @@
                         </div>
                     </div>
                     <div class="swiper-buttons">
-                        <a href="" class="btn btn--big btn--border btn--dark">Все отзывы</a>
+                        <a href="/otzyvy" class="btn btn--big btn--border btn--dark">Все отзывы</a>
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-pagination"></div>
                         <div class="swiper-button-next"></div>
@@ -1470,8 +1469,8 @@
                 <h2>Приглашаем в&nbsp;нашу дизайн-студию <br>в&nbsp;центре Москвы!</h2>
                 <div class="text">Совместно со&nbsp;всеми специалистами&nbsp;Вы сможете обсудить Ваше будущее украшение.</div>
                 <div class="consultation__buttons">
-                    <a href="" class="btn btn--big">Заказать консультацию</a>
-                    <a href="" class="btn btn--big btn--border">Рассчитать стоимость</a>
+                    <button type="button" class="btn btn--big" data-modal="#modal-1" data-modal-title="Заказать консультацию">Заказать консультацию</button>
+                    <button type="button" class="btn btn--big btn--border" data-modal="#modal-2">Рассчитать стоимость</button>
                 </div>
             </section>
 
@@ -1486,7 +1485,7 @@
                                     <h3>Сертификаты GIA</h3>
                                     <p>Бриллианты от&nbsp;0,4 карат сопровождаются международными сертификатами GIA (Gemological Institute of&nbsp;America). Это гарантия подлинности, чистоты, цвета, огранки и&nbsp;происхождения камня. Все характеристики подтверждены независимой экспертизой.</p>
                                 </div>
-                                <a href="" class="btn btn--more btn--fill">
+                                <a href="https://www.gia.edu/report-check-landing" target="_blank" class="btn btn--more btn--fill">
                                     <svg role="img" aria-label="Подробнее"><use href="assets/images/icons/icons.svg#arrow-long" /></svg>
                                 </a>
                             </div>
@@ -1498,9 +1497,6 @@
                                     <h3>Геммологическая экспертиза</h3>
                                     <p>Каждый драгоценный камень, используемый в&nbsp;наших украшениях, проходит проверку в&nbsp;геммологической лаборатории. По&nbsp;запросу предоставляется заключение о&nbsp;происхождении и&nbsp;характеристиках камня&nbsp;&mdash; будь&nbsp;то изумруд, рубин, сапфир или редкий турмалин.</p>
                                 </div>
-                                <a href="" class="btn btn--more btn--fill">
-                                    <svg role="img" aria-label="Подробнее"><use href="assets/images/icons/icons.svg#arrow-long" /></svg>
-                                </a>
                             </div>
                         </div>
                         <div class="guarantee swiper-slide">
@@ -1510,9 +1506,6 @@
                                     <h3>Сертифицированные металлы</h3>
                                     <p>Золото, серебро и&nbsp;платину мы&nbsp;закупаем напрямую у&nbsp;крупных промышленных заводов и&nbsp;в&nbsp;Сбербанке России. Это исключает посредников и&nbsp;гарантирует чистоту сплава, соответствие заявленной пробе и&nbsp;стабильность качества.</p>
                                 </div>
-                                <a href="" class="btn btn--more btn--fill">
-                                    <svg role="img" aria-label="Подробнее"><use href="assets/images/icons/icons.svg#arrow-long" /></svg>
-                                </a>
                             </div>
                         </div>
                         <div class="guarantee swiper-slide">
@@ -1522,9 +1515,6 @@
                                     <h3>Апробирование в&nbsp;Пробирной палате</h3>
                                     <p>Каждое готовое изделие проходит обязательный контроль в&nbsp;Государственной пробирной палате. После проверки на&nbsp;него ставится официальное клеймо пробы и&nbsp;именник производителя. Вы&nbsp;получаете украшение с&nbsp;полным юридическим подтверждением качества.</p>
                                 </div>
-                                <a href="" class="btn btn--more btn--fill">
-                                    <svg role="img" aria-label="Подробнее"><use href="assets/images/icons/icons.svg#arrow-long" /></svg>
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -1753,7 +1743,7 @@
                         </div>
                     </div>
                     <div class="swiper-buttons">
-                        <a href="" class="btn btn--big btn--border btn--dark">Смотреть все работы</a>
+                        <a href="/nashi-raboty" class="btn btn--big btn--border btn--dark">Смотреть все работы</a>
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-pagination"></div>
                         <div class="swiper-button-next"></div>
@@ -1827,7 +1817,7 @@
                     </div>
                 </div>
                 <div class="buttons">
-                    <a href="" class="btn btn--big">Получить консультацию</a>
+                    <button type="button" class="btn btn--big" data-modal="#modal-1" data-modal-title="Получить консультацию">Получить консультацию</button>
                 </div>
             </section>
 
@@ -1879,10 +1869,10 @@
                             </div>
                         </div>
                         <div class="history__buttons">
-                            <a href="" class="btn btn--big btn--arrow">
+                            <button type="button" class="btn btn--big btn--arrow" data-modal="#modal-3" data-modal-title="Начать свою историю">
                                 <span>Начать свою историю</span>
                                 <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#arrow" /></svg>
-                            </a>
+                            </button>
                         </div>
                     </div>
                     <div class="history-image">
@@ -2031,7 +2021,7 @@
                         </div>
                     </div>
                     <div class="swiper-buttons beige">
-                        <a href="" class="btn btn--big btn--border">О&nbsp;компании</a>
+                        <a href="/o-studii" class="btn btn--big btn--border">О&nbsp;компании</a>
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-pagination"></div>
                         <div class="swiper-button-next"></div>
@@ -2087,7 +2077,7 @@
                 <p>Остались вопросы по&nbsp;материалу, срокам или дизайну? Свяжитесь с&nbsp;нами любым удобным способом&nbsp;&mdash; мы&nbsp;с&nbsp;радостью проконсультируем и&nbsp;подготовим предварительный расчёт уже сегодня.</p>
 
                 <div class="buttons">
-                    <a href="" class="btn btn--big">Обсудить идею</a>
+                    <button type="button" class="btn btn--big" data-modal="#modal-3" data-modal-title="Обсудить идею">Обсудить идею</button>
                 </div>
             </section>
         </main>
@@ -2096,54 +2086,54 @@
             <div class="footer-top">
                 <div class="footer-menu">
                     <div class="footer-menu__item">
-                        <a href="" class="footer-menu__title">Изготовление украшений</a>
+                        <a href="/izgotovlenie" class="footer-menu__title">Изготовление украшений</a>
                         <ul class="footer-menu__list">
-                            <li><a href="">Кольца</a></li>
-                            <li><a href="">Серьги</a></li>
-                            <li><a href="">Браслеты</a></li>
-                            <li><a href="">Цепочки</a></li>
-                            <li><a href="">Подвески и&nbsp;кулоны</a></li>
-                            <li><a href="">Колье</a></li>
-                            <li><a href="">Запонки</a></li>
-                            <li><a href="">Броши</a></li>
-                            <li><a href="">Диадемы и&nbsp;тиары</a></li>
-                            <li><a href="">Бодичейны</a></li>
-                            <li><a href="">Талисманы и&nbsp;амулеты</a></li>
-                            <li><a href="">Сувениры и&nbsp;брелоки</a></li>
-                            <li><a href="">Брелоки</a></li>
+                            <li><a href="/kolca-na-zakaz">Кольца</a></li>
+                            <li><a href="/sergi-na-zakaz">Серьги</a></li>
+                            <li><a href="/braslety-na-zakaz">Браслеты</a></li>
+                            <li><a href="/cepochki-na-zakaz">Цепочки</a></li>
+                            <li><a href="/podveski-i-kulony-na-zakaz">Подвески и&nbsp;кулоны</a></li>
+                            <li><a href="/kole-na-zakaz">Колье</a></li>
+                            <li><a href="/zaponki-na-zakaz">Запонки</a></li>
+                            <li><a href="/broshi-na-zakaz">Броши</a></li>
+                            <li><a href="/diademy-i-tiary-na-zakaz">Диадемы и&nbsp;тиары</a></li>
+                            <li><a href="/bodichejny-na-zakaz">Бодичейны</a></li>
+                            <li><a href="/talismany-i-amulety-na-zakaz">Талисманы и&nbsp;амулеты</a></li>
+                            <li><a href="/yuvelirnyh-suvenirov">Сувениры и&nbsp;брелоки</a></li>
+                            <li><a href="/breloki-na-zakaz">Брелоки</a></li>
                         </ul>
                     </div>
                     <div class="footer-menu__item">
-                        <a href="" class="footer-menu__title">Услуги</a>
+                        <a href="/uslugi" class="footer-menu__title">Услуги</a>
                         <ul class="footer-menu__list">
-                            <li><a href="">Изготовление ювелирных изделий</a></li>
-                            <li><a href="">Изготовление из&nbsp;ваших материалов</a></li>
-                            <li><a href="">Ремонт ювелирных изделий</a></li>
-                            <li><a href="">Дизайн ювелирных изделий</a></li>
-                            <li><a href="">Проверка бриллиантов (камней)</a></li>
-                            <li><a href="">Сертификаты и подарочные карты</a></li>
+                            <li><a href="/izgotovlenie">Изготовление ювелирных изделий</a></li>
+                            <li><a href="/izgotovlenie-iz-vashih-materialov">Изготовление из&nbsp;ваших материалов</a></li>
+                            <li><a href="/remont">Ремонт ювелирных изделий</a></li>
+                            <li><a href="/dizajn">Дизайн ювелирных изделий</a></li>
+                            <li><a href="/proverka-brilliantov-i-kamnej">Проверка бриллиантов (камней)</a></li>
+                            <li><a href="/sertifikaty-i-podarochnye-karty">Сертификаты и подарочные карты</a></li>
                         </ul>
                     </div>
                     <div class="footer-menu__item">
-                        <a href="" class="footer-menu__title">Покупателям</a>
+                        <a href="/pokupatelyam" class="footer-menu__title">Покупателям</a>
                         <ul class="footer-menu__list">
-                            <li><a href="">Доставка и&nbsp;оплата</a></li>
-                            <li><a href="">Гарантии</a></li>
-                            <li><a href="">Сертификаты студии</a></li>
-                            <li><a href="">Как заказать</a></li>
+                            <li><a href="/dostavka-i-oplata">Доставка и&nbsp;оплата</a></li>
+                            <li><a href="/garantii">Гарантии</a></li>
+                            <li><a href="/sertifikaty-studii">Сертификаты студии</a></li>
+                            <li><a href="/kak-zakazat">Как заказать</a></li>
                         </ul>
                     </div>
                     <div class="footer-menu__item">
-                        <a href="" class="footer-menu__title">О&nbsp;студии</a>
+                        <a href="/o-studii" class="footer-menu__title">О&nbsp;студии</a>
                         <ul class="footer-menu__list">
-                            <li><a href="">Наши работы</a></li>
-                            <li><a href="">Отзывы</a></li>
-                            <li><a href="">Обзоры</a></li>
-                            <li><a href="">Статьи</a></li>
-                            <li><a href="">Сотрудничество</a></li>
-                            <li><a href="">Оптовикам и&nbsp;B2B сегменту</a></li>
-                            <li><a href="">Реквизиты</a></li>
-                            <li><a href="">Контакты</a></li>
+                            <li><a href="/nashi-raboty">Наши работы</a></li>
+                            <li><a href="/otzyvy">Отзывы</a></li>
+                            <li><a href="/obzory">Обзоры</a></li>
+                            <li><a href="/stati">Статьи</a></li>
+                            <li><a href="/sotrudnichestvo">Сотрудничество</a></li>
+                            <li><a href="/optovikam-i-b2b">Оптовикам и&nbsp;B2B сегменту</a></li>
+                            <li><a href="/rekvizity">Реквизиты</a></li>
+                            <li><a href="/kontakty">Контакты</a></li>
                         </ul>
                     </div>
                 </div>
@@ -2172,7 +2162,7 @@
                     </div>
                 </div>
                 <div class="footer-contacts__item">
-                    <div class="footer-contacts__title">Адрес место нахождения</div>
+                    <div class="footer-contacts__title">Адрес студии</div>
                     <div class="footer-contacts__text">Москва, Кузнецкий мост, д.&nbsp;7, стр.&nbsp;3</div>
                 </div>
                 <div class="footer-contacts__item">
@@ -2186,13 +2176,15 @@
                         <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#phone" /></svg>
                         <span>8 (495) 741-86-14</span>
                     </a>
-                    <button type="button" class="btn btn--small">Заказать звонок</button>
+                    <button type="button" class="btn btn--small" data-modal="#modal-1">Заказать звонок</button>
                 </div>
             </div>
             <div class="footer-links">
-                <a href="">Политика конфиденциальности</a>
-                <a href="">Юридическая информация</a>
-                <a href="">Правовая информация</a>
+                <a href="/politika-konfidentsialnosti">Политика конфиденциальности</a>
+                <a href="/soglasie-na-obrabotku-dannyh">Согласие на обработку данных</a>
+                <a href="/soglasie-na-rassylku">Согласие на рассылку</a>
+                <a href="/pravila-sajta">Правила сайта</a>
+                <a href="/rekomendatelnye-tehnologii">Рекомендательные технологии</a>
             </div>
             <div class="footer-bottom">
                 <p>Полное или частичное воспроизведение материалов данного сайта разрешено только с&nbsp;указанием активной гиперссылки на&nbsp;источник и&nbsp;обязательным уведомлением администрации данного сайта.<br>
@@ -2202,6 +2194,174 @@
                 <p class="center">UvelirMoscow®</p>
             </div>
         </footer>
+
+        <div class="modal modal--form open" id="modal-1">
+            <button type="button" class="modal__close">
+                <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#close"></use></svg>
+                <span>Закрыть</span>
+            </button>
+            <div class="modal__content">
+                <div class="modal__body">
+                    <div class="modal__title">Заказать звонок</div>
+                    <form class="form">
+                        <div class="form__row">
+                            <input type="text" class="inputbox" placeholder="Ваше имя*">
+                            <input type="text" class="inputbox inputbox-phone" placeholder="+7 (___)___-__-__*">
+                        </div>
+                        <div class="form__row">
+                            <button type="submit" class="btn btn--medium">Оставить заявку</button>
+                        </div>
+                        <div class="form__row form__checkbox">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__label">Оставляя заявку, я&nbsp;даю согласие на&nbsp;<a href="">обработку моих персональных данных</a> (ФИО, телефон, e-mail) для связи со&nbsp;мной.</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__label">Я&nbsp;даю согласие на&nbsp;<a href="">получение рекламных рассылок</a></span>
+                            </label>
+                            <div class="checkbox">Оставляя текущую заявку, я&nbsp;соглашаюсь, что сайт носит информационный характер и&nbsp;не&nbsp;является публичной офертой.</div>
+                            <div class="checkbox"><a href="">Политика обработки персональных данных</a></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal--form" id="modal-2">
+            <button type="button" class="modal__close">
+                <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#close"></use></svg>
+                <span>Закрыть</span>
+            </button>
+            <div class="modal__content">
+                <div class="modal__body">
+                    <div class="modal__title">Рассчитать стоимость</div>
+                    <form class="form">
+                        <div class="form__row">
+                            <input type="text" class="inputbox" placeholder="Ваше имя*">
+                            <input type="text" class="inputbox inputbox-phone" placeholder="+7 (___)___-__-__*">
+                        </div>
+                        <div class="form__row">
+                            <select class="inputbox">
+                                <option value="" selected disabled>Тип материала</option>
+                                <option value="1">Золото</option>
+                                <option value="2">Серебро</option>
+                                <option value="3">Платина</option>
+                                <option value="4">Драгоценные камни</option>
+                                <option value="5">Полудрагоценные камни</option>
+                            </select>
+                            <input type="text" class="inputbox" placeholder="Вес материала (приблизительно)">
+                        </div>
+                        <div class="form__row">
+                            <textarea class="inputbox" placeholder="Желаемое изделие"></textarea>
+                        </div>
+                        <div class="form__row">
+                            <button type="submit" class="btn btn--medium">Оставить заявку</button>
+                        </div>
+                        <div class="form__row form__checkbox">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__label">Оставляя заявку, я&nbsp;даю согласие на&nbsp;<a href="">обработку моих персональных данных</a> (ФИО, телефон, e-mail) для связи со&nbsp;мной.</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__label">Я&nbsp;даю согласие на&nbsp;<a href="">получение рекламных рассылок</a></span>
+                            </label>
+                            <div class="checkbox">Оставляя текущую заявку, я&nbsp;соглашаюсь, что сайт носит информационный характер и&nbsp;не&nbsp;является публичной офертой.</div>
+                            <div class="checkbox"><a href="">Политика обработки персональных данных</a></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal--form" id="modal-3">
+            <button type="button" class="modal__close">
+                <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#close"></use></svg>
+                <span>Закрыть</span>
+            </button>
+            <div class="modal__content">
+                <div class="modal__body">
+                    <div class="modal__title">Обсудить идею</div>
+                    <form class="form">
+                        <div class="form__row">
+                            <input type="text" class="inputbox" placeholder="Ваше имя*">
+                            <input type="text" class="inputbox inputbox-phone" placeholder="+7 (___)___-__-__*">
+                        </div>
+                        <div class="form__row">
+                            <textarea class="inputbox" placeholder="Описание идеи"></textarea>
+                        </div>
+                        <div class="form__row">
+                            <button type="submit" class="btn btn--medium">Оставить заявку</button>
+                        </div>
+                        <div class="form__row form__checkbox">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__label">Оставляя заявку, я&nbsp;даю согласие на&nbsp;<a href="">обработку моих персональных данных</a> (ФИО, телефон, e-mail) для связи со&nbsp;мной.</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__label">Я&nbsp;даю согласие на&nbsp;<a href="">получение рекламных рассылок</a></span>
+                            </label>
+                            <div class="checkbox">Оставляя текущую заявку, я&nbsp;соглашаюсь, что сайт носит информационный характер и&nbsp;не&nbsp;является публичной офертой.</div>
+                            <div class="checkbox"><a href="">Политика обработки персональных данных</a></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal--form" id="modal-4">
+            <button type="button" class="modal__close">
+                <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#close"></use></svg>
+                <span>Закрыть</span>
+            </button>
+            <div class="modal__content">
+                <div class="modal__body">
+                    <div class="modal__title">Прислать фото</div>
+                    <form class="form">
+                        <div class="form__row">
+                            <input type="text" class="inputbox" placeholder="Ваше имя*">
+                            <input type="text" class="inputbox inputbox-phone" placeholder="+7 (___)___-__-__*">
+                        </div>
+                        <div class="form__row">
+                            <textarea class="inputbox" placeholder="Вставьте ссылки на референсы"></textarea>
+                        </div>
+                        <div class="form__row">
+                            <label class="inputfile">
+                                <input type="file">
+                                <span class="inputfile__label">
+                                    <span>Прикрепить фото</span>
+                                    <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#download" /></svg>
+                                </span>
+                            </label>
+                            <!--div class="inputfile">
+                                <span class="inputfile__label">
+                                    <span>Прикрепить фото</span>
+                                    <span class="small">Загружено 3 фотографии</span>
+                                    <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#close" /></svg>
+                                </span>
+                            </div-->
+                        </div>
+                        <div class="form__row">
+                            <button type="submit" class="btn btn--medium">Оставить заявку</button>
+                        </div>
+                        <div class="form__row form__checkbox">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__label">Оставляя заявку, я&nbsp;даю согласие на&nbsp;<a href="">обработку моих персональных данных</a> (ФИО, телефон, e-mail) для связи со&nbsp;мной.</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__label">Я&nbsp;даю согласие на&nbsp;<a href="">получение рекламных рассылок</a></span>
+                            </label>
+                            <div class="checkbox">Оставляя текущую заявку, я&nbsp;соглашаюсь, что сайт носит информационный характер и&nbsp;не&nbsp;является публичной офертой.</div>
+                            <div class="checkbox"><a href="">Политика обработки персональных данных</a></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
         <script src="assets/js/swiper-bundle.min.js" defer></script>
         <script src="assets/js/fancybox.umd.js" defer></script>

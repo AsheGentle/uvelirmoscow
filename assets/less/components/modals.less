@@ -3,7 +3,7 @@
 }
 
 .modal {
-    background-color: fade(@black, 80%);
+    background-color: fade(#000, 90%);
     position: fixed;
     top: 0;
     right: 0;
@@ -21,9 +21,9 @@
     }
 }
 
-.modal--small {
+.modal--form {
     .modal__content {
-        //width: 600px;
+        background-color: #EEE8E0
     }
 }
 
@@ -67,11 +67,23 @@
     padding: 30px;
 }
 
+.modal__title {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media all and (max-width: @bp-1590) {
+    .modal__title {font-size: 32px;}
+}
+
 @media all and (max-width: @bp-1350) {
     .modal__close {top: 30px; right: 30px; width: 32px; height: 32px;}
     .modal__close svg {width: 20px; height: 20px;}
     .modal__content {margin-top: 62px; max-height: ~'calc(100dvh - 102px)';}
     .modal__content .table--scroll {max-height: ~'calc(100dvh - 102px - 60px)';}
+    .modal__title {font-size: 24px; margin-bottom: 10px;}
 }
 
 @media all and (max-width: @bp-836) {
@@ -79,6 +91,7 @@
     .modal__content {margin-top: 52px; max-height: ~'calc(100dvh - 92px)';}
     .modal__content .table--scroll {max-height: ~'calc(100dvh - 92px - 40px)';}
     .modal__body {padding: 20px;}
+    .modal__title {font-size: 20px;}
 }
 
 @media all and (max-width: @bp-599) {

@@ -18,10 +18,7 @@
     margin-bottom: 30px;
 }
 
-.types {
-    .display-flex();
-    .row-wrap();
-    gap: 30px;
+.types {    
     max-height: 750px;
     overflow: hidden;
     position: relative;
@@ -39,7 +36,7 @@
     }
 
     &.collapsed {
-        max-height: 3000px;
+        max-height: 4000px;
         padding-bottom: 94px;
 
         &::after {
@@ -50,6 +47,23 @@
             bottom: 0;
         }
     }
+}
+
+.types__title {
+    color: @gray;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: var(--gap);
+
+    &:not(:first-child) {
+        margin-top: 50px;
+    }
+}
+
+.types__list {
+    .display-flex();
+    .row-wrap();
+    gap: var(--gap);
 }
 
 .types__item {
@@ -122,6 +136,8 @@
 }
 
 @media all and (max-width: @bp-1590) {
+    .types__title {font-size: 20px;}
+    .types__title:not(:first-child) {margin-top: 40px;}
     .types__subtitle {font-size: 20px;}
     .types__text {font-size: 16px;}
     .types {max-height: 630px;}
@@ -134,7 +150,7 @@
 @media all and (max-width: @bp-1350) {
     .types__subtitle {margin-bottom: 12px;}
     .types__text {font-size: 14px; margin-bottom: 20px;}
-    .types {gap: 20px; max-height: 1030px;}
+    .types {max-height: 1030px;}
     .types.collapsed {padding-bottom: 62px;}
     .types__item {.column(); gap: 20px; padding: 24px 24px 0;}
     .types__item {h3, .h3 {font-size: 18px; padding-right: 30px;
@@ -152,6 +168,7 @@
 }
 
 @media all and (max-width: @bp-599) {
+    .types__title {font-size: 18px;}
     .types__subtitle {font-size: 18px; margin-bottom: 8px;}
     .types {max-height: 1572px;}
     .types.collapsed {max-height: 6000px;}

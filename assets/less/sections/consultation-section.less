@@ -79,40 +79,7 @@
     border-radius: 12px;
     padding: 32px;
     width: 740px;
-
-    .btn {
-        width: 100%;
-    }
 }
-
-.consultation-form__row {
-    .display-flex();
-    gap: 20px;
-
-    &:not(:last-child) {
-        margin-bottom: 20px;
-    }
-}
-
-.consultation-form__checkbox {
-    .column();
-    gap: 6px;
-    margin-top: -10px;
-
-    .checkbox__label {
-        color: @gray;
-        font-size: 12px;
-        padding-left: 24px;
-
-        &::before, &::after {
-            height: 16px;
-            width: 16px;
-        }
-
-        a {color: @gray;}
-    }
-}
-
 
 @media all and (max-width: @bp-1590) {
     .consultation__contacts {font-size: 18px;}
@@ -128,9 +95,6 @@
         h2, .h2, .text {text-align: center;}}
     .consultation-section__description {width: 100%;}
     .consultation-section__form {padding: 24px; width: 100%;}
-    .consultation-form__row {gap: 10px;}
-    .consultation-form__row:not(:last-child) {margin-bottom: 10px;}
-    .consultation-form__checkbox {margin-top: 0;}
 }
 
 @media all and (max-width: @bp-836) {
@@ -142,6 +106,4 @@
 @media all and (max-width: @bp-599) {
     .consultation__buttons {.column(); gap: 16px;}
     .consultation__contacts {.column(); gap: 16px;}
-
-    .consultation-form__row {.column();}
 }

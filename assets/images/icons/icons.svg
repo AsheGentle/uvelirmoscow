@@ -50,4 +50,7 @@
     <symbol id="chevron" viewBox="0 0 32 32">
         <path stroke="#694f3f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.828 16a2 2 0 0 1 .586-1.413L20 7m0 18-7.586-7.587A2 2 0 0 1 11.829 16"/>
     </symbol>
+    <symbol id="download" viewBox="0 0 32 32">
+        <path d="M4.334 22.667v-1.328a1 1 0 1 1 2 0v1.328a3 3 0 0 0 3 3h13.333a3 3 0 0 0 3-3v-1.334a1 1 0 0 1 2 0v1.334a5 5 0 0 1-5 5H9.333a5 5 0 0 1-5-5m10.667-2V8.414l-2.96 2.96a1 1 0 0 1-1.415-1.414l4.668-4.667.075-.068a1 1 0 0 1 1.338.068l4.666 4.667a1 1 0 1 1-1.414 1.414L17 8.414v12.253a1 1 0 0 1-2 0"/>
+    </symbol>
 </svg>

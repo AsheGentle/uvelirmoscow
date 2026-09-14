@@ -1,5 +1,4 @@
-.variants-section {
-    
+.variants-section {    
     padding-left: var(--padding-horizontal);
     padding-right: var(--padding-horizontal);
     padding-top: var(--padding-vertical);
@@ -31,6 +30,43 @@
 
 .variants, .variants-4 {
     margin-bottom: var(--gap);
+}
+
+.variant--image {
+    .variant__inner {
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+
+        h3, .h3 {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+    }
+
+    .variant__text {
+        background-image: linear-gradient(180deg, rgba(26, 9, 0, 0%) 0%, rgba(26, 9, 0, 70%) 33%, #1A0900 100%);
+        min-height: 50%;
+        padding: 84px 32px 32px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        p:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+
+    .variant__image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+        margin-bottom: 0 !important;
+    }
 }
 
 .variant__inner {
@@ -71,12 +107,20 @@
     font-weight: 400;
     margin-bottom: 24px;
     text-align: center;
+    width: 100%;
 }
 
 .variant__text {
+    width: 100%;
+    
     strong {
         color: #fff;
         font-weight: 600;
+    }
+
+    svg {
+        display: inline;
+        vertical-align: middle;
     }
 }
 
@@ -91,6 +135,9 @@
     .variant__inner {padding: 24px;}
     .variants-block:not(:last-child) {margin-bottom: 30px;}
     .variant__title {margin-bottom: 16px;}
+
+    .variant--image .variant__inner {h3, .h3 {font-size: 18px; margin-bottom: 8px; min-height: 0;}}
+    .variant--image .variant__text {padding: 24px; position: relative;}
 }
 
 @media all and (max-width: @bp-836) {
@@ -104,4 +151,6 @@
 @media all and (max-width: @bp-599) {
     .variant {width: 235px;}
     .variant__inner {padding: 16px;}
+
+    .variant--image .variant__text {padding: 16px;}
 }

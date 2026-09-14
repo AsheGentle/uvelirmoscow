@@ -1451,15 +1451,34 @@ $(function(){
     // Модалки
     $("[data-modal]").on("click", function(){
         let modalId = $(this).data("modal");
+        let modalTitle = $(this).data("modal-title");
+
+        let $modal = $(modalId);
+        let $title = $modal.find(".modal__title");
+
+        if ($title.length && !$title.data("original-title")) {
+            $title.data("original-title", $title.text());
+        }
+
+        if (modalTitle && $title.length) {
+            $title.text(modalTitle);
+        }
+
         $(".modal").removeClass("open");
-        $(modalId).addClass("open");
+        $modal.addClass("open");
         $("body").addClass("overflow").css("padding-right", scrollWidth);
     });
 
     $(".modal__close, .modal").on("click", function(e){
         if (e.target === this || $(e.target).hasClass("modal__close")) {
-            let modalId = "#" + $(this).closest(".modal").attr("id");
-            $(this).closest(".modal").removeClass("open");
+            let $modal = $(this).closest(".modal");
+            let $title = $modal.find(".modal__title");
+
+            if ($title.length && $title.data("original-title")) {
+                $title.text($title.data("original-title"));
+            }
+
+            $modal.removeClass("open");
             $("body").removeClass("overflow").css("padding-right", 0);
         }
     });
