@@ -189,6 +189,16 @@
     list-style: none;
     margin: 0;
     padding: 0;
+
+    &:hover {
+        .menu__link {
+            opacity: 0.5;            
+        }
+
+        .menu__item:hover > .menu__link {
+            opacity: 1;
+        }
+    }
 }
 
 .has-submenu {
@@ -333,7 +343,7 @@
         .header > .logo {width: 120px; justify-self: start; padding: 0;}
         .header-contacts {.display-flex(); .align-items-center(); gap: 12px; width: auto; padding: 0;}
         .header-contacts .btn {.display-inline-flex(); width: auto;}
-        .header-phone {.display-flex(); font-size: 10px; margin-bottom: 0; white-space: nowrap;}
+        .header-phone {.display-flex(); font-size: 14px; margin-bottom: 0; white-space: nowrap;}
         .header-hours {display: none;}
         .header-bottom {padding: 0; position: static;}
         .header-bottom::before {display: none;}
@@ -346,6 +356,7 @@
 
 @media all and (max-width: @bp-1590) and (min-width: @bp-1351) {
     header.fixed .header-phone {font-size: 12px;}
+    header.fixed .menu__link {font-size: 12px;}
 }
 
 @media all and (max-width: @bp-1350) and (min-width: @bp-837) {
@@ -354,7 +365,7 @@
     header.fixed .menu {gap: 12px;}
     header.fixed .menu__link {font-size: 10px;}
     header.fixed .has-submenu .menu__link {padding-right: 16px;}
-    
+    header.fixed .header-phone {font-size: 10px;}
 }
 
 @media all and (max-width: @bp-1590) {

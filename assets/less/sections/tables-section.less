@@ -120,6 +120,17 @@
     }
 }
 
+.table--scroll {
+    max-height: 100%;
+    overflow: auto;
+
+    th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+}
+
 .bg-section {
     background-color: @black;
     background-image: url('../images/design/bg/bg.webp');
@@ -147,9 +158,6 @@
     .table::before, .table::after {.flex(0,0,auto); content: ''; width: 20px;}
     .table th {font-size: 14px;}
     .table--small th {font-size: 10px;}
-
-    .table--scroll {/*display: block;*/ max-height: 100%; overflow: auto;}
-    .table--scroll th {position: sticky; top: 0; z-index: 1;}
 }
 
 @media all and (max-width: @bp-836) {
