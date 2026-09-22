@@ -425,7 +425,7 @@
         .header-toggle span {opacity: 0;}
         .header-toggle::before {transform: translate(1px, -2px) rotate(45deg);}
         .header-toggle::after {transform: translate(-1px, 2px) rotate(-45deg);}
-        header {height: 100dvh; overflow: auto; padding-top: 74px; position: fixed; top: 0; left: 0; right: 0; z-index: 200;}
+        header {height: 100dvh; overflow: auto; padding-top: var(--header-height); position: fixed; top: 0; left: 0; right: 0; z-index: 200;}
         .header-nav {background-color: #fff; position: fixed; top: 0; left: 0; width: 100%; z-index: 250;}
         .header-nav::before {display: block;}
         .header {.display-flex(); .column(); overflow: hidden; position: relative;}
@@ -436,4 +436,6 @@
 
 @media all and (max-width: @bp-599) {
     .header-contacts {padding-top: 10px; padding-bottom: 10px;}
+    .header-nav {padding-top: 10px; padding-bottom: 10px;}
+    //.open-menu header {padding-top: 54px;}
 }
