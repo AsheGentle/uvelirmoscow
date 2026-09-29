@@ -4009,7 +4009,7 @@ html.with-fancybox body.hide-scrollbar {
   display: flex;
   gap: 30px;
   position: sticky;
-  top: 30px;
+  top: 80px;
 }
 .product-thumbs-wrap {
   -webkit-box-flex: 0;
@@ -4641,6 +4641,7 @@ html.with-fancybox body.hide-scrollbar {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 10px;
+    top: 60px;
   }
   .product-thumbs-wrap {
     -webkit-box-ordinal-group: 3;
