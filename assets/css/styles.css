@@ -10688,8 +10688,8 @@ footer {
   padding-right: 38px;
   position: relative;
 }
-.types__item h3::after,
-.types__item .h3::after {
+a.types__item h3::after,
+a.types__item .h3::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none' viewBox='0 0 30 30'%3E%3Cpath stroke='%23e4cda4' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.031' d='M17.75 15c0-.364-.145-.714-.402-.972l-5.216-5.216m0 12.376 5.216-5.216c.257-.258.401-.608.401-.972'/%3E%3C/svg%3E");
   background-size: 100%;
   background-repeat: no-repeat;
