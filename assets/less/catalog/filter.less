@@ -328,7 +328,7 @@
     .filter-toggle {.display-flex();}
     .filter-back {.display-flex();}
     .open-filter {overflow: hidden;
-        .catalog-aside {background-color: fade(#000, 20%); .blur(10px); display: block; position: fixed; top: 0; left: 0; height: 100dvh; width: 100dvw; z-index: 200;}
+        .catalog-aside {background-color: fade(#000, 20%); .blur(10px); display: block; position: fixed; top: var(--header-height); left: 0; height: ~'calc(100dvh - var(--header-height))'; width: 100dvw; z-index: 200;}
         .filter {border-radius: 0; box-shadow: 0 4px 8px 30px fade(#000, 15%); overflow: auto; position: fixed; left: 0; top: 0; height: 100%; width: 620px;}
     }
 }

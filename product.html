@@ -1,0 +1,2199 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Карточка</title>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="assets/fonts/onest-v9-cyrillic_latin-300.woff2" rel="preload" as="font" crossorigin>
+        <link href="assets/fonts/onest-v9-cyrillic_latin-regular.woff2" rel="preload" as="font" crossorigin>
+        <link href="assets/fonts/onest-v9-cyrillic_latin-600.woff2" rel="preload" as="font" crossorigin>
+        <link href="assets/fonts/onest-v9-cyrillic_latin-700.woff2" rel="preload" as="font" crossorigin>
+
+        <link rel="stylesheet" href="assets/css/styles.css?ver=12">
+        <script src="assets/js/jquery.min.js" defer></script>
+    </head>
+    <body>
+
+        <header>
+            <div class="header-nav">
+                <a href="/" class="logo">
+                    <img src="assets/images/design/logo.svg" alt="Логотип UvelirMoscow Jewellery." width="214" height="58">
+                </a>
+                <button type="button" class="header-toggle">
+                    <span>Меню</span>
+                </button>
+            </div>
+            <div class="header">
+                <div class="header-top">
+                    <ul class="top-menu">
+                        <li class="top-menu__item">
+                            <a href="/otzyvy" class="top-menu__link">
+                                <img src="assets/images/icons/icon-message-star.svg" alt="" width="24" height="24">
+                                <span>Отзывы</span>
+                            </a>
+                        </li>
+                        <li class="top-menu__item">
+                            <a href="/dostavka-i-oplata" class="top-menu__link">
+                                <img src="assets/images/icons/icon-truck.svg" alt="" width="24" height="24">
+                                <span>Доставка и&nbsp;оплата</span>
+                            </a>
+                        </li>
+                        <li class="top-menu__item">
+                            <a href="/sertifikaty-i-podarochnye-karty" class="top-menu__link">
+                                <img src="assets/images/icons/icon-giftcard.svg" alt="" width="24" height="24">
+                                <span>Подарочные карты</span>
+                            </a>
+                        </li>
+                        <li class="top-menu__item has-submenu">
+                            <a href="/o-studii" class="top-menu__link">
+                                <img src="assets/images/icons/icon-necklaces.svg" alt="" width="24" height="24">
+                                <span>Студия</span>
+                            </a>
+                            <ul class="top-submenu">
+                                <li class="top-submenu__item"><a href="/o-studii">О&nbsp;студии</a></li>
+                                <li class="top-submenu__item"><a href="/nashi-raboty">Наши работы</a></li>
+                                <li class="top-submenu__item"><a href="/obzory">Обзоры</a></li>
+                                <li class="top-submenu__item"><a href="/stati">Статьи</a></li>
+                                <li class="top-submenu__item"><a href="/sotrudnichestvo">Сотрудничество</a></li>
+                                <li class="top-submenu__item"><a href="/optovikam-i-b2b">Оптовикам и&nbsp;B2B сегменту</a></li>
+                                <li class="top-submenu__item"><a href="/rekvizity">Реквизиты</a></li>
+                                <li class="top-submenu__item"><a href="/kontakty">Контакты</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn btn--small" data-modal="#modal-1">Заказать звонок</button>
+                </div>
+                <a href="/" class="logo">
+                    <img src="assets/images/design/logo.svg" alt="Логотип UvelirMoscow Jewellery." width="214" height="58">
+                </a>
+                <div class="header-contacts">
+                    <a href="tel:84957418614" class="header-phone">
+                        <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#phone" /></svg>
+                        <span>8 (495) 741-86-14</span>
+                    </a>
+                    <button type="button" class="btn btn--small" data-modal="#modal-1">Заказать звонок</button>
+                    <div class="header-address">Москва, Кузнецкий мост, дом 7, стр. 3</div>
+                    <div class="header-hours">
+                        <div class="header-hours__title">Режим работы:</div>
+                        <div class="header-hours__item">ПН-ПТ: 10:00&nbsp;&mdash; 20:00</div>
+                        <div class="header-hours__item">СБ-ВС: 12:00&nbsp;&mdash; 17:00</div>
+                    </div>
+                </div>
+                <nav class="header-bottom">
+                    <ul class="menu">
+                        <li class="menu__item has-submenu">
+                            <a href="" class="menu__link">
+                                <img src="assets/images/icons/icon-tweezers.svg" alt="" width="24" height="24">
+                                <span>Изготовление</span>
+                            </a>
+                            <div class="submenu">
+                                <div class="submenu__wrap">
+                                    <div class="submenu__description">
+                                        <div class="submenu__description-title">Изготовление ювелирных изделий на&nbsp;заказ</div>
+                                        <div class="submenu__description-text">Создаём украшения по&nbsp;вашим эскизам или из&nbsp;каталога. Индивидуальный подход, любые металлы и&nbsp;камни. От&nbsp;эскиза до&nbsp;готового изделия.</div>
+                                    </div>
+                                    <div class="submenu__block">
+                                        <div class="submenu__list active" data-category="rings">
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-1.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Изготовление колец</span>
+                                            </a>
+
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-2.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Изготовление серег</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-3.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Изготовление браслетов</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-4.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Изготовление цепочек</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-5.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Изготовление подвесок и кулонов</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-6.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Изготовление запонок</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-7.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Изготовление колье</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-8.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Изготовление брошей</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-9.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Изготовление диадем и тиар</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-10.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Изготовление талисманов и амулетов</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-11.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Изготовление сувениров</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-12.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Изготовление бодичейнов</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-13.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Изготовление брелоков</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu__item has-submenu active">
+                            <a href="" class="menu__link">
+                                <img src="assets/images/icons/icon-schedule.svg" alt="" width="24" height="24">
+                                <span>Каталог</span>
+                            </a>
+                            <div class="submenu">
+                                <div class="submenu__wrap">
+                                    <div class="submenu__description">
+                                        <div class="submenu__description-title">Каталог ювелирных изделий</div>
+                                        <div class="submenu__description-text">Выберите дизайн, который вам нравится,&nbsp;&mdash; мы&nbsp;изготовим его с&nbsp;учётом ваших пожеланий. Вдохновляйтесь и&nbsp;заказывайте эксклюзив.</div>
+                                    </div>
+                                    <div class="submenu__block">
+                                        <div class="submenu__aside">
+                                            <div class="submenu__category active" data-category="rings">
+                                                <img src="assets/images/icons/icon-ring.svg" alt="" width="32" height="32">
+                                                <span>Кольца</span>
+                                            </div>
+                                            <div class="submenu__category" data-category="earrings">
+                                                <img src="assets/images/icons/icon-earrings.svg" alt="" width="32" height="32">
+                                                <span>Серьги</span>
+                                            </div>
+                                            <div class="submenu__category" data-category="bracelets">
+                                                <img src="assets/images/icons/icon-bracelets.svg" alt="" width="32" height="32">
+                                                <span>Браслеты</span>
+                                            </div>
+                                            <div class="submenu__category" data-category="chains">
+                                                <img src="assets/images/icons/icon-chains.svg" alt="" width="32" height="32">
+                                                <span>Цепочки</span>
+                                            </div>
+                                            <div class="submenu__category" data-category="pendants">
+                                                <img src="assets/images/icons/icon-pendants.svg" alt="" width="32" height="32">
+                                                <span>Подвески и кулоны</span>
+                                            </div>
+                                            <div class="submenu__category" data-category="necklaces">
+                                                <img src="assets/images/icons/icon-necklaces.svg" alt="" width="32" height="32">
+                                                <span>Колье</span>
+                                            </div>
+                                            <div class="submenu__category" data-category="cufflinks">
+                                                <img src="assets/images/icons/icon-cufflinks.svg" alt="" width="32" height="32">
+                                                <span>Запонки</span>
+                                            </div>
+                                            <div class="submenu__category" data-category="brooches">
+                                                <img src="assets/images/icons/icon-brooches.svg" alt="" width="32" height="32">
+                                                <span>Броши</span>
+                                            </div>
+                                            <div class="submenu__category" data-category="tiaras">
+                                                <img src="assets/images/icons/icon-tiaras.svg" alt="" width="32" height="32">
+                                                <span>Диадемы и тиары</span>
+                                            </div>
+                                            <div class="submenu__category" data-category="bodychains">
+                                                <img src="assets/images/icons/icon-bodychains.svg" alt="" width="32" height="32">
+                                                <span>Бодичейны</span>
+                                            </div>
+                                            <div class="submenu__category" data-category="talismans">
+                                                <img src="assets/images/icons/icon-talismans.svg" alt="" width="32" height="32">
+                                                <span>Талисманы и амулеты</span>
+                                            </div>
+                                            <div class="submenu__category" data-category="souvenirs">
+                                                <img src="assets/images/icons/icon-souvenirs.svg" alt="" width="32" height="32">
+                                                <span>Сувениры</span>
+                                            </div>
+                                            <div class="submenu__category" data-category="keychains">
+                                                <img src="assets/images/icons/icon-keychains.svg" alt="" width="32" height="32">
+                                                <span>Брелоки</span>
+                                            </div>
+                                            <div class="submenu__category" data-category="decorations">
+                                                <img src="assets/images/icons/icon-diamond.svg" alt="" width="32" height="32">
+                                                <span>Украшения</span>
+                                            </div>
+                                        </div>
+                                        <div class="submenu__list active" data-category="rings">
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-1-1.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Обручальные кольца</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-1-2.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Помолвочные кольца</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-1-3.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Кольца с бриллиантами</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-1-4.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Кольца с камнями</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-1-5.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Золотые кольца</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-1-6.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Серебряные кольца</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-1-7.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Мужские кольца</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-1-8.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Женские кольца</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-1-9.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Кольца-печатки</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-1-10.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Кольца из платины</span>
+                                            </a>
+                                        </div>
+                                        <div class="submenu__list" data-category="earrings">
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-2-1.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Золотые серьги</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-2-2.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Серебряные серьги</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-2-3.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Серьги с бриллиантами</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-2-4.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Серьги с жемчугом</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-2-5.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Серьги с камнями</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-2-6.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Серьги-пусеты (гвоздики)</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-2-7.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Серьги-кольца (конго)</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-2-8.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Женские серьги</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-2-9.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Мужские серьги</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-2-10.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Серьги для пирсинга</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-2-11.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Платиновые серьги</span>
+                                            </a>
+                                        </div>
+                                        <div class="submenu__list" data-category="bracelets">
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-3-1.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Браслеты из платины</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-3-2.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Золотые браслеты</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-3-3.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Серебряные браслеты</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-3-4.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Женские браслеты</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-3-5.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Мужские браслеты</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-3-6.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Браслеты с бриллиантами</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-3-7.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Браслеты-цепочки</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-3-8.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Браслеты-шамбалы</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-3-9.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Браслеты Пандора</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-3-10.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Браслеты-теннисные</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-3-11.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Браслеты-манжеты</span>
+                                            </a>
+                                        </div>
+                                        <div class="submenu__list" data-category="chains">
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-4-1.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Цепи из платины</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-4-2.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Золотые цепочки</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-4-3.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Серебряные цепочки</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-4-4.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Женские цепочки</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-4-5.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Мужские цепочки</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-4-6.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Цепочки для крестика</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-4-7.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Цепочки Бисмарк</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-4-8.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Цепочки Якорного плетения</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-4-9.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Цепочки с кулоном</span>
+                                            </a>
+                                        </div>
+                                        <div class="submenu__list" data-category="pendants">
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-5-1.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Золотые подвески и кулоны</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-5-2.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Серебряные подвески и кулоны</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-5-3.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Платиновые подвески и кулоны</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-5-4.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Подвески и кулоны с бриллиантами</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-5-5.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Подвески и кулоны с камнями</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-5-6.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Подвески и кулоны с жемчугом</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-5-7.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Мужские подвески и кулоны</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-5-8.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Женские подвески и кулоны</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-5-9.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Подвески и кулоны в виде сердца</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-5-10.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Подвески и кулоны в виде креста</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-5-11.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Подвески и кулоны-медальоны</span>
+                                            </a>
+                                        </div>
+                                        <div class="submenu__list" data-category="necklaces">
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-6-1.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Золотые колье</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-6-2.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Серебряные колье</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-6-3.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Колье с камнями</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-6-4.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Колье с бриллиантами</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-6-5.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Колье с жемчугом</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-6-6.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Колье с подвеской / кулоном</span>
+                                            </a>
+                                        </div>
+                                        <div class="submenu__list" data-category="cufflinks">
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-7-1.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Золотые запонки</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-7-2.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Серебряные запонки</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-7-3.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Запонки из платины</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-7-4.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Запонки с бриллиантами</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-7-5.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Запонки с гравировкой</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-7-6.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Классические запонки</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-7-7.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Запонки-монеты</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-7-8.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Запонки с ониксом</span>
+                                            </a>
+                                        </div>
+                                        <div class="submenu__list" data-category="brooches">
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-8-1.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Золотые броши</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-8-2.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Серебряные броши</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-8-3.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Броши с бриллиантами</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-8-4.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Броши с камнями</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-8-5.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Броши с жемчугом</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-8-6.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Броши-цветы</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-8-7.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Винтажные броши</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-8-8.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Броши-бабочки</span>
+                                            </a>
+                                        </div>
+                                        <div class="submenu__list" data-category="tiaras">
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-9-1.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Золотые диадемы</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-9-2.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Серебряные диадемы</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-9-3.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Диадемы с бриллиантами</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-9-4.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Диадемы с камнями</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-9-5.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Свадебные диадемы</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-9-6.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Диадемы для волос</span>
+                                            </a>
+                                        </div>
+                                        <div class="submenu__list" data-category="bodychains">
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-10-1.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Золотые бодичейны</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-10-2.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Серебряные бодичейны</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-10-3.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Бодичейны с бриллиантами</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-10-4.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Бодичейны на шею</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-10-5.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Бодичейны на талию</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-10-6.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Бодичейны из жемчуга</span>
+                                            </a>
+                                        </div>
+                                        <div class="submenu__list" data-category="talismans">
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-11-1.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Талисманы на удачу</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-11-2.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Амулеты для любви</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-11-3.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Защитные амулеты</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-11-4.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Талисманы по знакам зодиака</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-11-5.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Золотые талисманы</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-11-6.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Серебряные талисманы</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-11-7.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Талисманы с камнями</span>
+                                            </a>
+                                        </div>
+                                        <div class="submenu__list" data-category="souvenirs">
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-12-1.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Сувенирные подвески</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-12-2.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Сувенирные монеты</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-12-3.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Подарочные ложки</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-12-4.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Ювелирные фигурки (из серебра/золота)</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-12-5.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Сувениры с символикой</span>
+                                            </a>
+                                        </div>
+                                        <div class="submenu__list" data-category="keychains">
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-13-1.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Золотые брелоки</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-13-2.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Серебряные брелоки</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-13-3.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Брелоки с бриллиантами</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-13-4.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Брелоки-сердца</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-13-5.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Брелоки-инициалы</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-13-6.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Брелоки-животные</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-13-7.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Брелоки на сумку</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-13-8.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Брелоки на ключи</span>
+                                            </a>
+                                        </div>
+                                        <div class="submenu__list" data-category="decorations">
+                                            <div class="submenu__list-title">По материалу</div>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-14-1.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Все платиновые украшения</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-14-2.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Все золотые украшения</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-14-3.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Все серебряные украшения</span>
+                                            </a>
+                                            <div class="submenu__list-title">По полу и событию</div>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-14-4.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Все женские украшения</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-14-5.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Все мужские украшения</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-14-6.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Все свадебные украшения</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-14-7.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Все подарочные украшения</span>
+                                            </a>
+                                            <div class="submenu__list-title">По вставкам</div>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-14-8.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Все украшения с бриллиантами</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-14-9.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Все украшения с камнями</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-14-10.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Все украшения с жемчугом</span>
+                                            </a>
+                                            <div class="submenu__list-title">По стилю</div>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-14-11.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Все дизайнерские украшения</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">
+                                <img src="assets/images/icons/icon-making.svg" alt="" width="24" height="24">
+                                <span>Услуги</span>
+                            </a>
+                        </li>
+                        <li class="menu__item has-submenu">
+                            <a href="" class="menu__link">
+                                <img src="assets/images/icons/icon-ring.svg" alt="" width="24" height="24">
+                                <span>Наши работы</span>
+                            </a>
+                            <div class="submenu">
+                                <div class="submenu__wrap">
+                                    <div class="submenu__description">
+                                        <div class="submenu__description-title">Примеры выполненных работ</div>
+                                        <div class="submenu__description-text">Реальные фотографии украшений, созданных для наших клиентов. Оцените качество исполнения и&nbsp;вдохновитесь на&nbsp;свой заказ.</div>
+                                    </div>
+                                    <div class="submenu__block">
+                                        <div class="submenu__list active" data-category="rings">
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-1.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Кольца</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-2.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Серьги</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-3.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Браслеты</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-4.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Цепочки</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-5.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Подвески и кулоны</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-6.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Запонки</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-7.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Колье</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-8.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Броши</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-9.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Диадемы и тиары</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-10.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Талисманы и амулеты</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-11.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Сувениры</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-12.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Бодичейны</span>
+                                            </a>
+                                            <a href="" class="submenu__link">
+                                                <img src="assets/images/menu/menu-0-13.webp" alt="" width="90" height="90" loading="lazy">
+                                                <span>Брелоки</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">
+                                <img src="assets/images/icons/icon-shield.svg" alt="" width="24" height="24">
+                                <span>Гарантии</span>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">
+                                <img src="assets/images/icons/icon-basket.svg" alt="" width="24" height="24">
+                                <span>Как заказать</span>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">
+                                <img src="assets/images/icons/icon-folder.svg" alt="" width="24" height="24">
+                                <span>Контакты</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="product-section">
+                <ul class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="/" class="breadcrumbs__link" itemprop="item">
+                            <span itemprop="name">Главная</span>
+                            <meta itemprop="position" content="1">
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="/" class="breadcrumbs__link" itemprop="item">
+                            <span itemprop="name">Каталог ювелирных изделий</span>
+                            <meta itemprop="position" content="2">
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="/" class="breadcrumbs__link" itemprop="item">
+                            <span itemprop="name">Золотые кольца</span>
+                            <meta itemprop="position" content="3">
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <span class="breadcrumbs__link">
+                            <span itemprop="name">Мужское Золотое кольцо из&nbsp;комбинированного золота с&nbsp;изумрудом 7&nbsp;Ct</span>
+                            <meta itemprop="position" content="4">
+                        </span>
+                    </li>
+                </ul>
+                <div class="product">
+                    <h1>Мужское Золотое кольцо из&nbsp;комбинированного золота с&nbsp;изумрудом 7&nbsp;Ct</h1>
+                    <div class="product__gallery">
+                        <div class="product__gallery-wrap">
+                            <div class="product-thumbs-wrap">
+                                <div class="product-thumbs swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="product-thumbs__item swiper-slide">
+                                            <img src="assets/images/sample/dagaz-3.webp" alt="" width="100" height="100">
+                                        </div>
+                                        <div class="product-thumbs__item swiper-slide">
+                                            <img src="assets/images/sample/item-2.webp" alt="" width="100" height="100">
+                                        </div>
+                                        <div class="product-thumbs__item swiper-slide">
+                                            <img src="assets/images/sample/item-3.webp" alt="" width="100" height="100">
+                                        </div>
+                                        <div class="product-thumbs__item swiper-slide">
+                                            <img src="assets/images/sample/item-4.webp" alt="" width="100" height="100">
+                                        </div>
+                                        <div class="product-thumbs__item swiper-slide">
+                                            <img src="assets/images/sample/item-5.webp" alt="" width="100" height="100">
+                                        </div>
+                                        <div class="product-thumbs__item swiper-slide">
+                                            <img src="assets/images/sample/item-1.webp" alt="" width="100" height="100">
+                                        </div>
+                                        <div class="product-thumbs__item swiper-slide">
+                                            <img src="assets/images/sample/item-2.webp" alt="" width="100" height="100">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                            <div class="product-main swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="product-main__item swiper-slide">
+                                        <a href="assets/images/sample/dagaz-3.webp" data-fancybox="product">
+                                            <img src="assets/images/sample/dagaz-3.webp" alt="" width="600" height="600">
+                                        </a>
+                                    </div>
+                                    <div class="product-main__item swiper-slide">
+                                        <a href="assets/images/sample/item-2.webp" data-fancybox="product">
+                                            <img src="assets/images/sample/item-2.webp" alt="" width="600" height="600" loading="lazy">
+                                        </a>
+                                    </div>
+                                    <div class="product-main__item swiper-slide">
+                                        <a href="assets/images/sample/item-3.webp" data-fancybox="product">
+                                            <img src="assets/images/sample/item-3.webp" alt="" width="600" height="600" loading="lazy">
+                                        </a>
+                                    </div>
+                                    <div class="product-main__item swiper-slide">
+                                        <a href="assets/images/sample/item-4.webp" data-fancybox="product">
+                                            <img src="assets/images/sample/item-4.webp" alt="" width="600" height="600" loading="lazy">
+                                        </a>
+                                    </div>
+                                    <div class="product-main__item swiper-slide">
+                                        <a href="assets/images/sample/item-5.webp" data-fancybox="product">
+                                            <img src="assets/images/sample/item-5.webp" alt="" width="600" height="600" loading="lazy">
+                                        </a>
+                                    </div>
+                                    <div class="product-main__item swiper-slide">
+                                        <a href="assets/images/sample/item-1.webp" data-fancybox="product">
+                                            <img src="assets/images/sample/item-1.webp" alt="" width="600" height="600" loading="lazy">
+                                        </a>
+                                    </div>
+                                    <div class="product-main__item swiper-slide">
+                                        <a href="assets/images/sample/item-2.webp" data-fancybox="product">
+                                            <img src="assets/images/sample/item-2.webp" alt="" width="600" height="600" loading="lazy">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__content">
+                        <div class="product-block product-order">
+                            <div class="product-order__top">
+                                <button type="button" class="product-order__favorite">
+                                    <span>В&nbsp;избранное</span>
+                                    <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#favorite" /></svg>
+                                </button>
+                                <div class="product-order__manufacturer">
+                                    <div class="product-order__manufacturer-title">Производитель:</div>
+                                    <div class="product-order__manufacturer-value">UvelirMoscow</div>
+                                </div>
+                            </div>
+                            <div class="product-order__meta">
+                                <span class="product-order__meta-title">Модель (Артикул):</span>
+                                <span class="product-order__meta-value">2435353FDS</span>
+                            </div>
+                            <div class="product-order__price">
+                                <span>433&nbsp;768 руб (₽)</span>
+                                <div class="tooltip">
+                                    <div class="tooltip__icon">
+                                        <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                        <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                    </div>
+                                    <div class="tooltip__text">Цена данного изделия с&nbsp;работой и&nbsp;материалами (описаны в&nbsp;карточке).</div>
+                                </div>
+                            </div>
+                            <div class="product-order__prices">
+                                <div class="product-order__prices-item">
+                                    <span>Работа: 133&nbsp;594 руб (₽)</span>
+                                    <div class="tooltip">
+                                        <div class="tooltip__icon">
+                                            <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                            <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                        </div>
+                                        <div class="tooltip__text">Стоимость работы из&nbsp;материалов заказчика.</div>
+                                    </div>
+                                </div>
+                                <div class="product-order__prices-item">
+                                    <span>Материалы: 317&nbsp;600 руб (₽)</span>
+                                    <div class="tooltip">
+                                        <div class="tooltip__icon">
+                                            <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                            <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                        </div>
+                                        <div class="tooltip__text">Стоимость драгоценных камней и&nbsp;металлов использованных для изготовления данного украшения. Если Вы&nbsp;выберете другие камни, либо украшение будет другого размера, эта цифра&nbsp;&mdash; изменится.</div>
+                                    </div>
+                                </div>
+                                <div class="product-order__prices-item">
+                                    <span>Цена зависит от&nbsp;курса</span>
+                                    <div class="tooltip">
+                                        <div class="tooltip__icon">
+                                            <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#price" /></svg>
+                                            <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#price-fill" /></svg>
+                                        </div>
+                                        <div class="tooltip__text">Цена на&nbsp;сайте носит информационный характер. Из-за нестабильности курса валют и&nbsp;стоимости металлов актуальная стоимость может отличаться. Пожалуйста, уточняйте цену у&nbsp;менеджера&nbsp;&mdash; мы&nbsp;оперативно подготовим расчёт под текущий курс.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-order__term">Срок изготовления 18&nbsp;&mdash; 25&nbsp;дней</div>
+                            <div class="product-order__note">
+                                <p>Данная модель изделия изготавливается индивидуально с&nbsp;учетом пожеланий заказчика. На&nbsp;данной странице представлена стоимость и&nbsp;характеристики модели, изображенной на&nbsp;фото.</p>
+                                <p>Цены на&nbsp;сайте указаны для предварительного ознакомления и&nbsp;не&nbsp;являются публичной офертой (ст.&nbsp;437&nbsp;ГК РФ). Окончательная стоимость рассчитывается индивидуально, с&nbsp;учётом текущих рыночных цен на&nbsp;металлы и&nbsp;курсов валют. Для получения точного расчёта обратитесь к&nbsp;нашему менеджеру</p>
+                            </div>
+                            <a href="" class="btn btn--medium">Рассчитать стоимость</a>
+                        </div>
+
+                        <div class="product-block product-info">
+                            <div class="product-block__title">
+                                <span>Информация об&nbsp;изделии</span>
+                                <svg class="product-block__arrow" aria-hidden="true"><use href="assets/images/icons/icons.svg#chevron" /></svg>
+                            </div>
+                            <div class="product-block__content js-tabs">
+                                <div class="product-info__tabs">
+                                    <button type="button" class="product-info__tab js-tabs__btn active" data-tab="specs">Характеристики</button>
+                                    <button type="button" class="product-info__tab js-tabs__btn" data-tab="inserts">Вставки</button>
+                                </div>
+                                <div class="product-info__content js-tabs__pane active" data-tab="specs">
+                                    <div class="product-specs">
+                                        <div class="product-specs__item">
+                                            <div class="product-specs__name">Материал</div>
+                                            <div class="product-specs__value">Красное золото&nbsp;/ Платина</div>
+                                        </div>
+                                        <div class="product-specs__item">
+                                            <div class="product-specs__name">Цвет металла</div>
+                                            <div class="product-specs__value">Красное золото&nbsp;/ Платина</div>
+                                        </div>
+                                        <div class="product-specs__item">
+                                            <div class="product-specs__name">Металл</div>
+                                            <div class="product-specs__value">Красное золото 583 пробы&nbsp;&mdash; 2,00&nbsp;г<br>Платина 999 пробы&nbsp;&mdash; 1,00&nbsp;г</div>
+                                        </div>
+                                        <div class="product-specs__item">
+                                            <div class="product-specs__name">Вес металла</div>
+                                            <div class="product-specs__value">3,00&nbsp;г</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-info__content js-tabs__pane" data-tab="inserts">
+                                    <div class="product-specs">
+                                        <div class="product-specs__item">
+                                            <div class="product-specs__name">Материал</div>
+                                            <div class="product-specs__value">Красное золото&nbsp;/ Платина</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-info__description">
+                                    <div class="product-block__subtitle">Описание</div>
+                                    <div class="product-block__text">Кольцо с&nbsp;бриллиантовой композицией. Нежное и&nbsp;броское одновременно. Идеально на&nbsp;каждый день. За&nbsp;счёт необычного крепления (под углом) бриллиантов в&nbsp;Хало, создаётся впечатление, что на&nbsp;пальце один, огромный бриллиант весом более 10ct.</div>
+                                </div>
+                                <a href="" class="btn btn--medium">Заказать изделие</a>
+                            </div>
+                        </div>
+
+                        <div class="product-block product-advantages">
+                            <div class="product-block__title">
+                                <span>Преимущества</span>
+                                <svg class="product-block__arrow" aria-hidden="true"><use href="assets/images/icons/icons.svg#chevron" /></svg>
+                            </div>
+                            <div class="product-block__content">
+                                <div class="product-advantages__list">
+                                    <div class="product-advantages__item">
+                                        <img src="assets/images/icons/icon-ring.svg" alt="" width="60" height="60">
+                                        <span>Изменение дизайна под Ваш вкус</span>
+                                    </div>
+                                    <div class="product-advantages__item">
+                                        <img src="assets/images/icons/icon-expertise.svg" alt="" width="60" height="60">
+                                        <span>Качество исполнения High-jewelry</span>
+                                    </div>
+                                    <div class="product-advantages__item">
+                                        <img src="assets/images/icons/icon-materials.svg" alt="" width="60" height="60">
+                                        <span>Изготовление из&nbsp;Ваших материалов</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-block product-another">
+                            <div class="product-block__title">
+                                <span>Другое исполнение</span>
+                                <svg class="product-block__arrow" aria-hidden="true"><use href="assets/images/icons/icons.svg#chevron" /></svg>
+                            </div>
+                            <div class="product-block__content">
+                                <div class="product-another__list">
+                                    <a href="" class="product-another__item">
+                                        <picture class="product-another__image">
+                                            <img src="assets/images/sample/product-another-1.webp" alt="" width="80" height="80">
+                                        </picture>
+                                        <div class="product-another__description">
+                                            <div class="product-another__title">Мужское Золотое кольцо из&nbsp;комбинированного золота с&nbsp;изумрудом 7&nbsp;Ct</div>
+                                            <div class="product-another__price">433&nbsp;768 руб (₽)</div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="product-another__item">
+                                        <picture class="product-another__image">
+                                            <img src="assets/images/sample/product-another-1.webp" alt="" width="80" height="80">
+                                        </picture>
+                                        <div class="product-another__description">
+                                            <div class="product-another__title">Мужское Золотое кольцо из&nbsp;комбинированного золота с&nbsp;изумрудом 7&nbsp;Ct</div>
+                                            <div class="product-another__price">433&nbsp;768 руб (₽)</div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="product-another__item">
+                                        <picture class="product-another__image">
+                                            <img src="assets/images/sample/product-another-1.webp" alt="" width="80" height="80">
+                                        </picture>
+                                        <div class="product-another__description">
+                                            <div class="product-another__title">Мужское Золотое кольцо из&nbsp;комбинированного золота с&nbsp;изумрудом 7&nbsp;Ct</div>
+                                            <div class="product-another__price">433&nbsp;768 руб (₽)</div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="product-another__item">
+                                        <picture class="product-another__image">
+                                            <img src="assets/images/sample/product-another-1.webp" alt="" width="80" height="80">
+                                        </picture>
+                                        <div class="product-another__description">
+                                            <div class="product-another__title">Мужское Золотое кольцо из&nbsp;комбинированного золота с&nbsp;изумрудом 7&nbsp;Ct</div>
+                                            <div class="product-another__price">433&nbsp;768 руб (₽)</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-block product-stones">
+                            <div class="product-block__title">
+                                <span>Камни</span>
+                                <svg class="product-block__arrow" aria-hidden="true"><use href="assets/images/icons/icons.svg#chevron" /></svg>
+                            </div>
+                            <div class="product-block__content">
+                                <div class="product-block__text">В&nbsp;таблице представлены камни, пользующиеся спросом. Не&nbsp;нашли нужный? Отправьте запрос&nbsp;&mdash; подберем!</div>
+                                <div class="product-stones__palette">
+                                    <div class="product-stones__group">
+                                        <div class="product-block__subtitle">
+                                            <span>Алмаз&nbsp;/ Бриллиант</span>
+                                            <div class="tooltip">
+                                                <div class="tooltip__icon">
+                                                    <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                                    <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                                </div>
+                                                <div class="tooltip__text">Стоимость драгоценных камней и&nbsp;металлов использованных для изготовления данного украшения. Если Вы&nbsp;выберете другие камни, либо украшение будет другого размера, эта цифра&nbsp;&mdash; изменится.</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-stones__items">
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-1.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Алмаз</span>
+                                            </div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-2.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Бриллиант</span>
+                                            </div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-3.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Бриллиант розовый</span>
+                                            </div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-4.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Бриллиант голубой</span>
+                                            </div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-5.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Бриллиант зеленый</span>
+                                            </div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-6.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Бриллиант желтый</span>
+                                            </div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-7.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Бриллиант черный</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-stones__group">
+                                        <div class="product-block__subtitle">
+                                            <span>Драгоценные камни</span>
+                                            <div class="tooltip">
+                                                <div class="tooltip__icon">
+                                                    <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                                    <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                                </div>
+                                                <div class="tooltip__text">Стоимость драгоценных камней и&nbsp;металлов использованных для изготовления данного украшения. Если Вы&nbsp;выберете другие камни, либо украшение будет другого размера, эта цифра&nbsp;&mdash; изменится.</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-stones__items">
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-8.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Рубин</span>
+                                            </div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-9.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Изумруд</span>
+                                            </div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-10.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Сапфир</span>
+                                            </div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-11.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Александрит</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-stones__group">
+                                        <div class="product-block__subtitle">
+                                            <span>Полудрагоценные камни</span>
+                                            <div class="tooltip">
+                                                <div class="tooltip__icon">
+                                                    <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                                    <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                                </div>
+                                                <div class="tooltip__text">Стоимость драгоценных камней и&nbsp;металлов использованных для изготовления данного украшения. Если Вы&nbsp;выберете другие камни, либо украшение будет другого размера, эта цифра&nbsp;&mdash; изменится.</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-stones__items">
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-12.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Аквамарин</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-13.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Аметист</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-14.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Бирюза</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-15.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Горный хрусталь</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-16.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Гранат</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-17.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Лазурит</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-18.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Лунный камень</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-19.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Малахит</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-20.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Нефрит</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-21.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Оникс</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-22.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Опал</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-23.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Раухтопаз</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-24.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Сердолик</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-25.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Танзанит</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-26.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Турмалин</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-27.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Хризолит</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-28.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Хризопраз</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-29.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Циркон</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-30.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Цитрин</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-31.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Шпинель</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-32.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Агат</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-33.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Авантюрин</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-34.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Гематит</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-35.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Карельский камень (Кахолонг)</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-36.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Кошачий глаз</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-37.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Муассанит</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="product-stones__group">
+                                        <div class="product-block__subtitle">
+                                            <span>Органические камни</span>
+                                            <div class="tooltip">
+                                                <div class="tooltip__icon">
+                                                    <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                                    <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                                </div>
+                                                <div class="tooltip__text">Стоимость драгоценных камней и&nbsp;металлов использованных для изготовления данного украшения. Если Вы&nbsp;выберете другие камни, либо украшение будет другого размера, эта цифра&nbsp;&mdash; изменится.</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-stones__items">
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-38.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Жемчуг</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-39.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Коралл</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-40.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Янтарь</span></div>
+                                            <div class="product-stones__item">
+                                                <img src="assets/images/content/stones-41.webp" alt="" width="60" height="60" loading="lazy">
+                                                <span>Перламутр</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-stones__toggle-wrap">
+                                    <button type="button" class="product-stones__toggle">Свернуть палитру</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-banner">
+                            <span>&laquo;У&nbsp;вас есть свой камень?&raquo;</span>
+                            <a href="" class="btn">Обсудить детали</a>
+                        </div>
+
+                        <div class="product-block product-metal">
+                            <div class="product-block__title">
+                                <span>Металл</span>
+                                <div class="tooltip">
+                                    <div class="tooltip__icon">
+                                        <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                        <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                    </div>
+                                    <div class="tooltip__text">Стоимость работы из&nbsp;материалов заказчика.</div>
+                                </div>
+                                <svg class="product-block__arrow" aria-hidden="true"><use href="assets/images/icons/icons.svg#chevron" /></svg>
+                            </div>
+                            <div class="product-block__content">
+                                <div class="product-block__text">Выберите металл для изготовления из&nbsp;доступных</div>
+                                <div class="product-metals">
+                                    <div class="product-metals__item">
+                                        <img src="assets/images/content/material-1.webp" alt="" width="60" height="60">
+                                        <span>Желтое золото 585 и&nbsp;750</span>
+                                    </div>
+                                    <div class="product-metals__item">
+                                        <img src="assets/images/content/material-2.webp" alt="" width="60" height="60">
+                                        <span>Белое золото 585 и&nbsp;750</span>
+                                    </div>
+                                    <div class="product-metals__item">
+                                        <img src="assets/images/content/material-3.webp" alt="" width="60" height="60">
+                                        <span>Красное золото 585 и&nbsp;750</span>
+                                    </div>
+                                    <div class="product-metals__item">
+                                        <img src="assets/images/content/material-4.webp" alt="" width="60" height="60">
+                                        <span>Платина 950 пробы</span>
+                                    </div>
+                                    <div class="product-metals__item">
+                                        <img src="assets/images/content/material-5.webp" alt="" width="60" height="60">
+                                        <span>Серебро 925 пробы</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-banner">
+                            <span>Изготовим изделие из&nbsp;вашего металла</span>
+                            <a href="" class="btn">Обсудить детали</a>
+                        </div>
+
+                        <div class="product-block product-delivery">
+                            <div class="product-block__title">
+                                <span>Доставка</span>
+                                <svg class="product-block__arrow" aria-hidden="true"><use href="assets/images/icons/icons.svg#chevron" /></svg>
+                            </div>
+                            <div class="product-block__content">
+                                <div class="product-block__ol">
+                                    <div class="product-block__ol-item">
+                                        <span>Самовывоз из&nbsp;нашего офиса в&nbsp;г.&nbsp;Москва</span>
+                                    </div>
+                                    <div class="product-block__ol-item">
+                                        <span>Курьерской службой СПСР-ЭКСПРЕСС по&nbsp;всей России</span>
+                                    </div>
+                                    <div class="product-block__ol-item">
+                                        <span>Курьерской службой по&nbsp;Москве и&nbsp;Санкт-Петербургу</span>
+                                    </div>
+                                    <div class="product-block__ol-item">
+                                        <span>По&nbsp;всему миру</span>
+                                    </div>
+                                </div>
+                                <a href="" class="product-block__link">Подробнее</a>
+                            </div>
+                        </div>
+
+                        <div class="product-block">
+                            <div class="product-block__title">
+                                <span>Оплата</span>
+                                <svg class="product-block__arrow" aria-hidden="true"><use href="assets/images/icons/icons.svg#chevron" /></svg>
+                            </div>
+                            <div class="product-block__content">
+                                <div class="product-block__text">
+                                    <p>Наличный расчет, Безналичный расчет, Онлайн платеж Visa, MasterCard, Мир, UnionPay, Яндекс.Деньги, Оплата при получении.</p>
+                                    <p>После оформления заказа в&nbsp;ювелирной студии UvelirMoscow, формируется счет на&nbsp;оплату. Предоплата за&nbsp;заказ составляет 30-50% (в&nbsp;зависимости от&nbsp;материалов) от&nbsp;общей стоимости заказа. Остальная сумма оплачивается при получении заказа.</p>
+                                </div>
+                                <a href="" class="product-block__link">Подробнее</a>
+                            </div>
+                        </div>
+
+                        <div class="product-block">
+                            <div class="product-block__title">
+                                <span>Гарантии и&nbsp;Сервис</span>
+                                <svg class="product-block__arrow" aria-hidden="true"><use href="assets/images/icons/icons.svg#chevron" /></svg>
+                            </div>
+                            <div class="product-block__content">
+                                <div class="product-block__text">На&nbsp;все украшения, сделанные в&nbsp;нашей студии, действует пожизненная гарантия, а&nbsp;также мы&nbsp;проводим 1&nbsp;раз в&nbsp;6&nbsp;месяцев бесплатное сервисное обслуживание: чистку и&nbsp;полировку украшений.</div>
+                                <div class="product-guarantees">
+                                    <div class="product-guarantees__item">
+                                        <img src="assets/images/icons/icon-guarantees-1.svg" alt="" width="60" height="60">
+                                        <div class="product-guarantees__title">Апробирование ювелирных изделий</div>
+                                        <div class="product-guarantees__text">Каждое изделие имеет клеймо пробы и&nbsp;проверяется государственной пробирной инспекцией.</div>
+                                    </div>
+                                    <div class="product-guarantees__item">
+                                        <img src="assets/images/icons/icon-guarantees-2.svg" alt="" width="60" height="60">
+                                        <div class="product-guarantees__title">Сертифицированные драгоценные камни</div>
+                                        <div class="product-guarantees__text">Подлинность драгоценных камней подтверждается сертификатами GRS, а&nbsp;бриллиантов&nbsp;&mdash; сертификатами GIA.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-showcases">
+                    <div class="catalog-showcase">
+                        <div class="catalog-showcase__description">
+                            <div class="catalog-showcase__title">Нужен уникальный дизайн?</div>
+                            <div class="catalog-showcase__text">Сделаем на&nbsp;заказ</div>
+                            <a href="" class="btn btn--more btn--fill">
+                                <svg role="img" aria-label="Подробнее"><use href="assets/images/icons/icons.svg#arrow-long" /></svg>
+                            </a>
+                        </div>
+                        <picture class="catalog-showcase__image">
+                            <img src="assets/images/content/catalog-showcase-1.webp" alt="" width="125" height="125" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="catalog-showcase">
+                        <div class="catalog-showcase__description">
+                            <div class="catalog-showcase__title">Примеры работ</div>
+                            <div class="catalog-showcase__text">Смотрите реальные фото изготовленных украшений</div>
+                            <a href="" class="btn btn--more btn--fill">
+                                <svg role="img" aria-label="Подробнее"><use href="assets/images/icons/icons.svg#arrow-long" /></svg>
+                            </a>
+                        </div>
+                        <picture class="catalog-showcase__image">
+                            <img src="assets/images/content/catalog-showcase-2.webp" alt="" width="125" height="125" loading="lazy">
+                        </picture>
+                    </div>
+                </div>
+
+                <div class="product-block">
+                    <div class="product-block__title">Изготовим с&nbsp;любыми характеристиками</div>
+                    <div class="product-block__content">
+                        <div class="product-params">
+                            <div class="product-params__item">
+                                <div class="product-params__name">Материал</div>
+                                <div class="product-params__dots"></div>
+                                <div class="product-params__value"><a href="">Золото</a>, <a href="">Платина</a>, <a href="">Серебро</a></div>
+                            </div>
+                            <div class="product-params__item">
+                                <div class="product-params__name">Цвет металла</div>
+                                <div class="product-params__dots"></div>
+                                <div class="product-params__value"><a href="">Желтое золото</a>, <a href="">Белое золото</a>, <a href="">Красное золото</a>, <a href="">Платина</a>, <a href="">Серебро</a></div>
+                            </div>
+                            <div class="product-params__item">
+                                <div class="product-params__name">Камни</div>
+                                <div class="product-params__dots"></div>
+                                <div class="product-params__value"><a href="">Алмаз</a>&nbsp;/ <a href="">Бриллиант</a>, <a href="">Драгоценные камни</a>, <a href="">Полудрагоценные камни</a>, <a href="">Органические камни</a></div>
+                            </div>
+                            <div class="product-params__item">
+                                <div class="product-params__name">Обработка</div>
+                                <div class="product-params__dots"></div>
+                                <div class="product-params__value"><a href="">Гладкая</a>, <a href="">Матовая</a>, <a href="">Рифленая</a>, <a href="">Плетеная</a>, <a href="">С&nbsp;алмазной огранкой</a>, <a href="">Родирование</a>, <a href="">Чернение</a>, <a href="">Эмаль</a>, <a href="">Комбинированная</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="process-section">
+                <h2>Как мы&nbsp;изготавливаем ювелирные изделия</h2>
+                <div class="text">От&nbsp;эскиза до&nbsp;финишной полировки&nbsp;&mdash; полный цикл производства в&nbsp;нашей студии.</div>
+                <div class="process swiper">
+                    <div class="swiper-wrapper">
+                        <div class="process-item swiper-slide">
+                            <div class="process-item__inner">
+                                <picture class="process-item__image">
+                                    <img src="assets/images/content/process-1.webp" alt="" width="1010" height="595" loading="lazy">
+                                </picture>
+                                <div class="process-item__desription">
+                                    <h3>Разработка эскиза и&nbsp;3D-модели</h3>
+                                    <p>Художник создает эскиз вашей идеи, а&nbsp;затем 3D-дизайнер превращает его в&nbsp;объемную модель, где видны все детали и&nbsp;пропорции.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process-item swiper-slide">
+                            <div class="process-item__inner">
+                                <picture class="process-item__image">
+                                    <img src="assets/images/content/process-2.webp" alt="" width="1010" height="595" loading="lazy">
+                                </picture>
+                                <div class="process-item__desription">
+                                    <h3>Выращивание восковки (3D-печать)</h3>
+                                    <p>Восковая модель будущего украшения выращивается на высокоточном 3D-принтере — точная копия для дальнейшего литья.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process-item swiper-slide">
+                            <div class="process-item__inner">
+                                <picture class="process-item__image">
+                                    <img src="assets/images/content/process-3.webp" alt="" width="1010" height="595" loading="lazy">
+                                </picture>
+                                <div class="process-item__desription">
+                                    <h3>Литье металла</h3>
+                                    <p>Воск выжигается, а&nbsp;в&nbsp;пустоту заливается расплавленное золото, платина или серебро, создавая металлическую отливку.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process-item swiper-slide">
+                            <div class="process-item__inner">
+                                <picture class="process-item__image">
+                                    <img src="assets/images/content/process-4.webp" alt="" width="1010" height="595" loading="lazy">
+                                </picture>
+                                <div class="process-item__desription">
+                                    <h3>Ручная работа и&nbsp;шлифовка</h3>
+                                    <p>Ювелир вручную обрабатывает отливку: удаляет литники, подгоняет детали и&nbsp;полирует поверхность.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process-item swiper-slide">
+                            <div class="process-item__inner">
+                                <picture class="process-item__image">
+                                    <img src="assets/images/content/process-5.webp" alt="" width="1010" height="595" loading="lazy">
+                                </picture>
+                                <div class="process-item__desription">
+                                    <h3>Пробирование и&nbsp;клеймение</h3>
+                                    <p>Каждое изделие проходит контроль в&nbsp;Пробирной палате, где на&nbsp;него ставят государственное клеймо пробы.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process-item swiper-slide">
+                            <div class="process-item__inner">
+                                <picture class="process-item__image">
+                                    <img src="assets/images/content/process-6.webp" alt="" width="1010" height="595" loading="lazy">
+                                </picture>
+                                <div class="process-item__desription">
+                                    <h3>Закрепка камней под микроскопом</h3>
+                                    <p>Самый тонкий этап: мастер закрепляет каждый камень в&nbsp;оправе, работая с&nbsp;микроскопом, чтобы крепление было надежным и&nbsp;красивым.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process-item swiper-slide">
+                            <div class="process-item__inner">
+                                <picture class="process-item__image">
+                                    <img src="assets/images/content/process-7.webp" alt="" width="1010" height="595" loading="lazy">
+                                </picture>
+                                <div class="process-item__desription">
+                                    <h3>Финишная обработка и&nbsp;полировка</h3>
+                                    <p>Финальная доводка изделия: придание блеска, матирование или нанесение покрытия. Украшение готово!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-buttons beige">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="catalog-slider-section">
+                <h2>Вас может заинтересовать</h2>
+                <div class="catalog-slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="item swiper-slide">
+                            <div class="item__buttons">
+                                <a href="" class="btn btn--prices">Рассчитать стоимость</a>
+                                <button type="button" class="item__favorite">
+                                    <span>В избранное</span>
+                                    <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#favorite" /></svg>
+                                </button>
+                                <span class="btn btn--border btn--dark btn--item-more">Подробнее</span>
+                            </div>
+                            <picture class="item__image">
+                                <img src="assets/images/sample/item-1.webp" alt="" width="235" height="235" loading="lazy">
+                            </picture>
+                            <div class="item__description">
+                                <a href="" class="item__title">Кольцо с&nbsp;Сапфиром 3&nbsp;ct</a>
+                                <div class="item__price">
+                                    <span>441&nbsp;600&nbsp;руб. (₽)</span>
+                                    <div class="tooltip">
+                                        <div class="tooltip__icon">
+                                            <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                            <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                        </div>
+                                        <div class="tooltip__text">Стоимость работы из&nbsp;материалов заказчика.</div>
+                                    </div>
+                                </div>
+                                <div class="item__price-sub">68&nbsp;600&nbsp;руб. (₽) с&nbsp;материалами заказчика</div>
+                                <div class="item__prices">
+                                    <div class="item__prices-item">
+                                        <span>Работа: 68&nbsp;600 руб (₽)</span>
+                                        <div class="tooltip">
+                                            <div class="tooltip__icon">
+                                                <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                                <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                            </div>
+                                            <div class="tooltip__text">Стоимость работы из&nbsp;материалов заказчика.</div>
+                                        </div>
+                                    </div>
+                                    <div class="item__prices-item">
+                                        <span>Материалы: 373&nbsp;000 руб (₽)</span>
+                                        <div class="tooltip">
+                                            <div class="tooltip__icon">
+                                                <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                                <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                            </div>
+                                            <div class="tooltip__text">Стоимость драгоценных камней и&nbsp;металлов использованных для изготовления данного украшения. Если Вы&nbsp;выберете другие камни, либо украшение будет другого размера, эта цифра&nbsp;&mdash; изменится.</div>
+                                        </div>
+                                    </div>
+                                    <div class="item__prices-item">
+                                        <span>Цена зависит от&nbsp;курса</span>
+                                        <div class="tooltip">
+                                            <div class="tooltip__icon">
+                                                <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#price" /></svg>
+                                                <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#price-fill" /></svg>
+                                            </div>
+                                            <div class="tooltip__text">Цена на&nbsp;сайте носит информационный характер. Из-за нестабильности курса валют и&nbsp;стоимости металлов актуальная стоимость может отличаться. Пожалуйста, уточняйте цену у&nbsp;менеджера&nbsp;&mdash; мы&nbsp;оперативно подготовим расчёт под текущий курс.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item swiper-slide">
+                            <div class="item__buttons">
+                                <a href="" class="btn btn--prices">Рассчитать стоимость</a>
+                                <button type="button" class="item__favorite active">
+                                    <span>Убрать из избранного</span>
+                                    <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#favorite" /></svg>
+                                </button>
+                                <span class="btn btn--border btn--dark btn--item-more">Подробнее</span>
+                            </div>
+                            <picture class="item__image">
+                                <img src="assets/images/sample/item-2.webp" alt="" width="235" height="235" loading="lazy">
+                            </picture>
+                            <div class="item__description">
+                                <a href="" class="item__title">Женское кольцо &laquo;Хиромантия&raquo;</a>
+                                <div class="item__price">
+                                    <span>69&nbsp;400&nbsp;руб. (₽)</span>
+                                    <div class="tooltip">
+                                        <div class="tooltip__icon">
+                                            <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                            <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                        </div>
+                                        <div class="tooltip__text">Стоимость работы из&nbsp;материалов заказчика.</div>
+                                    </div>
+                                </div>
+                                <div class="item__price-sub">28&nbsp;000&nbsp;руб. (₽) с&nbsp;материалами заказчика</div>
+                                <div class="item__prices">
+                                    <div class="item__prices-item">
+                                        <span>Работа: 68&nbsp;600 руб (₽)</span>
+                                        <div class="tooltip">
+                                            <div class="tooltip__icon">
+                                                <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                                <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                            </div>
+                                            <div class="tooltip__text">Стоимость работы из&nbsp;материалов заказчика.</div>
+                                        </div>
+                                    </div>
+                                    <div class="item__prices-item">
+                                        <span>Материалы: 373&nbsp;000 руб (₽)</span>
+                                        <div class="tooltip">
+                                            <div class="tooltip__icon">
+                                                <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                                <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                            </div>
+                                            <div class="tooltip__text">Стоимость драгоценных камней и&nbsp;металлов использованных для изготовления данного украшения. Если Вы&nbsp;выберете другие камни, либо украшение будет другого размера, эта цифра&nbsp;&mdash; изменится.</div>
+                                        </div>
+                                    </div>
+                                    <div class="item__prices-item">
+                                        <span>Цена зависит от&nbsp;курса</span>
+                                        <div class="tooltip">
+                                            <div class="tooltip__icon">
+                                                <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#price" /></svg>
+                                                <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#price-fill" /></svg>
+                                            </div>
+                                            <div class="tooltip__text">Цена на&nbsp;сайте носит информационный характер. Из-за нестабильности курса валют и&nbsp;стоимости металлов актуальная стоимость может отличаться. Пожалуйста, уточняйте цену у&nbsp;менеджера&nbsp;&mdash; мы&nbsp;оперативно подготовим расчёт под текущий курс.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item swiper-slide">
+                            <div class="item__buttons">
+                                <a href="" class="btn btn--prices">Рассчитать стоимость</a>
+                                <button type="button" class="item__favorite">
+                                    <span>В избранное</span>
+                                    <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#favorite" /></svg>
+                                </button>
+                                <span class="btn btn--border btn--dark btn--item-more">Подробнее</span>
+                            </div>
+                            <picture class="item__image">
+                                <img src="assets/images/sample/item-3.webp" alt="" width="235" height="235" loading="lazy">
+                            </picture>
+                            <div class="item__description">
+                                <a href="" class="item__title">Кольцо Бриллиантовое Женское &laquo;Хало&raquo;</a>
+                                <div class="item__price">
+                                    <span>258&nbsp;020&nbsp;руб. (₽)</span>
+                                    <div class="tooltip">
+                                        <div class="tooltip__icon">
+                                            <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                            <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                        </div>
+                                        <div class="tooltip__text">Стоимость работы из&nbsp;материалов заказчика.</div>
+                                    </div>
+                                </div>
+                                <div class="item__price-sub">48&nbsp;438&nbsp;руб. (₽) с&nbsp;материалами заказчика</div>
+                                <div class="item__prices">
+                                    <div class="item__prices-item">
+                                        <span>Работа: 68&nbsp;600 руб (₽)</span>
+                                        <div class="tooltip">
+                                            <div class="tooltip__icon">
+                                                <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                                <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                            </div>
+                                            <div class="tooltip__text">Стоимость работы из&nbsp;материалов заказчика.</div>
+                                        </div>
+                                    </div>
+                                    <div class="item__prices-item">
+                                        <span>Материалы: 373&nbsp;000 руб (₽)</span>
+                                        <div class="tooltip">
+                                            <div class="tooltip__icon">
+                                                <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                                <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                            </div>
+                                            <div class="tooltip__text">Стоимость драгоценных камней и&nbsp;металлов использованных для изготовления данного украшения. Если Вы&nbsp;выберете другие камни, либо украшение будет другого размера, эта цифра&nbsp;&mdash; изменится.</div>
+                                        </div>
+                                    </div>
+                                    <div class="item__prices-item">
+                                        <span>Цена зависит от&nbsp;курса</span>
+                                        <div class="tooltip">
+                                            <div class="tooltip__icon">
+                                                <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#price" /></svg>
+                                                <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#price-fill" /></svg>
+                                            </div>
+                                            <div class="tooltip__text">Цена на&nbsp;сайте носит информационный характер. Из-за нестабильности курса валют и&nbsp;стоимости металлов актуальная стоимость может отличаться. Пожалуйста, уточняйте цену у&nbsp;менеджера&nbsp;&mdash; мы&nbsp;оперативно подготовим расчёт под текущий курс.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item swiper-slide">
+                            <div class="item__buttons">
+                                <a href="" class="btn btn--prices">Рассчитать стоимость</a>
+                                <button type="button" class="item__favorite">
+                                    <span>В избранное</span>
+                                    <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#favorite" /></svg>
+                                </button>
+                                <span class="btn btn--border btn--dark btn--item-more">Подробнее</span>
+                            </div>
+                            <picture class="item__image">
+                                <img src="assets/images/sample/item-4.webp" alt="" width="235" height="235" loading="lazy">
+                            </picture>
+                            <div class="item__description">
+                                <a href="" class="item__title">Печатка &laquo;Чёрный Принц&raquo; с&nbsp;бриллиантом</a>
+                                <div class="item__price">
+                                    <span>339&nbsp;890&nbsp;руб. (₽)</span>
+                                    <div class="tooltip">
+                                        <div class="tooltip__icon">
+                                            <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                            <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                        </div>
+                                        <div class="tooltip__text">Стоимость работы из&nbsp;материалов заказчика.</div>
+                                    </div>
+                                </div>
+                                <div class="item__price-sub">119&nbsp;819&nbsp;руб. (₽) с&nbsp;материалами заказчика</div>
+                                <div class="item__prices">
+                                    <div class="item__prices-item">
+                                        <span>Работа: 68&nbsp;600 руб (₽)</span>
+                                        <div class="tooltip">
+                                            <div class="tooltip__icon">
+                                                <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                                <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                            </div>
+                                            <div class="tooltip__text">Стоимость работы из&nbsp;материалов заказчика.</div>
+                                        </div>
+                                    </div>
+                                    <div class="item__prices-item">
+                                        <span>Материалы: 373&nbsp;000 руб (₽)</span>
+                                        <div class="tooltip">
+                                            <div class="tooltip__icon">
+                                                <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                                <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                            </div>
+                                            <div class="tooltip__text">Стоимость драгоценных камней и&nbsp;металлов использованных для изготовления данного украшения. Если Вы&nbsp;выберете другие камни, либо украшение будет другого размера, эта цифра&nbsp;&mdash; изменится.</div>
+                                        </div>
+                                    </div>
+                                    <div class="item__prices-item">
+                                        <span>Цена зависит от&nbsp;курса</span>
+                                        <div class="tooltip">
+                                            <div class="tooltip__icon">
+                                                <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#price" /></svg>
+                                                <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#price-fill" /></svg>
+                                            </div>
+                                            <div class="tooltip__text">Цена на&nbsp;сайте носит информационный характер. Из-за нестабильности курса валют и&nbsp;стоимости металлов актуальная стоимость может отличаться. Пожалуйста, уточняйте цену у&nbsp;менеджера&nbsp;&mdash; мы&nbsp;оперативно подготовим расчёт под текущий курс.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item swiper-slide">
+                            <div class="item__buttons">
+                                <a href="" class="btn btn--prices">Рассчитать стоимость</a>
+                                <button type="button" class="item__favorite">
+                                    <span>В избранное</span>
+                                    <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#favorite" /></svg>
+                                </button>
+                                <span class="btn btn--border btn--dark btn--item-more">Подробнее</span>
+                            </div>
+                            <picture class="item__image">
+                                <img src="assets/images/sample/item-5.webp" alt="" width="235" height="235" loading="lazy">
+                            </picture>
+                            <div class="item__description">
+                                <a href="" class="item__title">Кольцо с&nbsp;центральным бриллиантом круг</a>
+                                <div class="item__price">
+                                    <span>150&nbsp;600&nbsp;руб. (₽)</span>
+                                    <div class="tooltip">
+                                        <div class="tooltip__icon">
+                                            <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                            <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                        </div>
+                                        <div class="tooltip__text">Стоимость работы из&nbsp;материалов заказчика.</div>
+                                    </div>
+                                </div>
+                                <div class="item__price-sub">55&nbsp;545&nbsp;руб. (₽) с&nbsp;материалами заказчика</div>
+                                <div class="item__prices">
+                                    <div class="item__prices-item">
+                                        <span>Работа: 68&nbsp;600 руб (₽)</span>
+                                        <div class="tooltip">
+                                            <div class="tooltip__icon">
+                                                <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                                <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                            </div>
+                                            <div class="tooltip__text">Стоимость работы из&nbsp;материалов заказчика.</div>
+                                        </div>
+                                    </div>
+                                    <div class="item__prices-item">
+                                        <span>Материалы: 373&nbsp;000 руб (₽)</span>
+                                        <div class="tooltip">
+                                            <div class="tooltip__icon">
+                                                <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip" /></svg>
+                                                <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#tooltip-fill" /></svg>
+                                            </div>
+                                            <div class="tooltip__text">Стоимость драгоценных камней и&nbsp;металлов использованных для изготовления данного украшения. Если Вы&nbsp;выберете другие камни, либо украшение будет другого размера, эта цифра&nbsp;&mdash; изменится.</div>
+                                        </div>
+                                    </div>
+                                    <div class="item__prices-item">
+                                        <span>Цена зависит от&nbsp;курса</span>
+                                        <div class="tooltip">
+                                            <div class="tooltip__icon">
+                                                <svg class="tooltip__svg" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#price" /></svg>
+                                                <svg class="tooltip__svg-hover" role="img" aria-label="Подсказка"><use href="assets/images/icons/icons.svg#price-fill" /></svg>
+                                            </div>
+                                            <div class="tooltip__text">Цена на&nbsp;сайте носит информационный характер. Из-за нестабильности курса валют и&nbsp;стоимости металлов актуальная стоимость может отличаться. Пожалуйста, уточняйте цену у&nbsp;менеджера&nbsp;&mdash; мы&nbsp;оперативно подготовим расчёт под текущий курс.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-buttons">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-top">
+                <div class="footer-menu">
+                    <div class="footer-menu__item">
+                        <a href="/izgotovlenie" class="footer-menu__title">Изготовление украшений</a>
+                        <ul class="footer-menu__list">
+                            <li><a href="/kolca-na-zakaz">Кольца</a></li>
+                            <li><a href="/sergi-na-zakaz">Серьги</a></li>
+                            <li><a href="/braslety-na-zakaz">Браслеты</a></li>
+                            <li><a href="/cepochki-na-zakaz">Цепочки</a></li>
+                            <li><a href="/podveski-i-kulony-na-zakaz">Подвески и&nbsp;кулоны</a></li>
+                            <li><a href="/kole-na-zakaz">Колье</a></li>
+                            <li><a href="/zaponki-na-zakaz">Запонки</a></li>
+                            <li><a href="/broshi-na-zakaz">Броши</a></li>
+                            <li><a href="/diademy-i-tiary-na-zakaz">Диадемы и&nbsp;тиары</a></li>
+                            <li><a href="/bodichejny-na-zakaz">Бодичейны</a></li>
+                            <li><a href="/talismany-i-amulety-na-zakaz">Талисманы и&nbsp;амулеты</a></li>
+                            <li><a href="/yuvelirnyh-suvenirov">Сувениры и&nbsp;брелоки</a></li>
+                            <li><a href="/breloki-na-zakaz">Брелоки</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu__item">
+                        <a href="/uslugi" class="footer-menu__title">Услуги</a>
+                        <ul class="footer-menu__list">
+                            <li><a href="/izgotovlenie">Изготовление ювелирных изделий</a></li>
+                            <li><a href="/izgotovlenie-iz-vashih-materialov">Изготовление из&nbsp;ваших материалов</a></li>
+                            <li><a href="/remont">Ремонт ювелирных изделий</a></li>
+                            <li><a href="/dizajn">Дизайн ювелирных изделий</a></li>
+                            <li><a href="/proverka-brilliantov-i-kamnej">Проверка бриллиантов (камней)</a></li>
+                            <li><a href="/sertifikaty-i-podarochnye-karty">Сертификаты и подарочные карты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu__item">
+                        <a href="/pokupatelyam" class="footer-menu__title">Покупателям</a>
+                        <ul class="footer-menu__list">
+                            <li><a href="/dostavka-i-oplata">Доставка и&nbsp;оплата</a></li>
+                            <li><a href="/garantii">Гарантии</a></li>
+                            <li><a href="/sertifikaty-studii">Сертификаты студии</a></li>
+                            <li><a href="/kak-zakazat">Как заказать</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu__item">
+                        <a href="/o-studii" class="footer-menu__title">О&nbsp;студии</a>
+                        <ul class="footer-menu__list">
+                            <li><a href="/nashi-raboty">Наши работы</a></li>
+                            <li><a href="/otzyvy">Отзывы</a></li>
+                            <li><a href="/obzory">Обзоры</a></li>
+                            <li><a href="/stati">Статьи</a></li>
+                            <li><a href="/sotrudnichestvo">Сотрудничество</a></li>
+                            <li><a href="/optovikam-i-b2b">Оптовикам и&nbsp;B2B сегменту</a></li>
+                            <li><a href="/rekvizity">Реквизиты</a></li>
+                            <li><a href="/kontakty">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-contacts">
+                <div class="footer-information">
+                    <div class="footer-logo">
+                        <img src="assets/images/design/logo-white.svg" alt="Логотип UvelirMoscow Jewellery." width="214" height="58" loading="lazy">
+                    </div>
+                    <div class="footer-copyrights">
+                        &copy;&nbsp;2005&nbsp;&mdash; 2026&nbsp;ИП Хомич Олег Дмитриевич,  Все права защищены.
+                    </div>
+                </div>
+                <div class="footer-contacts__item">
+                    <div class="footer-contacts__title">Социальные сети</div>
+                    <div class="socials">
+                        <a href="https://max.ru/id490900906710_bot" target="_blank" class="socials__item">
+                            <img src="assets/images/icons/social-max.webp" alt="Max." width="30" height="30" loading="lazy">
+                        </a>
+                        <a href="tg://resolve/?domain=UvelirMoscowbot" target="_blank" class="socials__item">
+                            <img src="assets/images/icons/social-tg.svg" alt="Телеграм." width="30" height="30" loading="lazy">
+                        </a>
+                        <a href="https://vk.me/club46483382" target="_blank" class="socials__item">
+                            <img src="assets/images/icons/social-vk.svg" alt="Вконтакте." width="30" height="30" loading="lazy">
+                        </a>
+                        <a href="https://wa.me/79264080071" target="_blank" class="socials__item">
+                            <img src="assets/images/icons/social-wa.svg" alt="Whatsapp." width="30" height="30" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-contacts__item">
+                    <div class="footer-contacts__title">Адрес студии</div>
+                    <div class="footer-contacts__text">Москва, Кузнецкий мост, д.&nbsp;7, стр.&nbsp;3</div>
+                </div>
+                <div class="footer-contacts__item">
+                    <div class="footer-contacts__title">Режим работы</div>
+                    <div class="footer-contacts__text">Пн-Пт: с&nbsp;10:00 до&nbsp;20:00</div>
+                    <div class="footer-contacts__text">Сб-Вс: с&nbsp;12:00 до&nbsp;19:00</div>
+                </div>
+                <div class="footer-contacts__item">
+                    <div class="footer-contacts__title">Контактная информация</div>
+                    <a href="tel:84957418614" class="footer-contacts__phone">
+                        <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#phone" /></svg>
+                        <span>8 (495) 741-86-14</span>
+                    </a>
+                    <button type="button" class="btn btn--small" data-modal="#modal-1">Заказать звонок</button>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="/politika-obrabotku-personalnyh-dannyh">Политика конфиденциальности</a>
+                <a href="/soglasie-na-obrabotku-dannyh">Согласие на обработку данных</a>
+                <a href="/soglasie-na-rassylku">Согласие на рассылку</a>
+                <a href="/pravila-sajta">Правила сайта</a>
+                <a href="/rekomendatelnye-tehnologii">Рекомендательные технологии</a>
+            </div>
+            <div class="footer-bottom">
+                <p>Полное или частичное воспроизведение материалов данного сайта разрешено только с&nbsp;указанием активной гиперссылки на&nbsp;источник и&nbsp;обязательным уведомлением администрации данного сайта.<br>
+                    Все права на&nbsp;изображения ювелирных изделий на&nbsp;данном сайте принадлежат компании ИП&nbsp;Хомич Олег Дмитриевич.<br>
+                    Обращаем Ваше внимание на&nbsp;то, что данный интернет-сайт носит исключительно информационный характер и&nbsp;ни&nbsp;при каких условиях не&nbsp;является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федерации.</p>
+
+                <p class="center">UvelirMoscow®</p>
+            </div>
+        </footer>
+
+        <div class="modal modal--form" id="modal-1">
+            <button type="button" class="modal__close">
+                <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#close"></use></svg>
+                <span>Закрыть</span>
+            </button>
+            <div class="modal__content">
+                <div class="modal__body">
+                    <div class="modal__title">Заказать звонок</div>
+                    <form class="form">
+                        <div class="form__row">
+                            <label class="form__element">
+                                <input type="text" class="inputbox" placeholder="Ваше имя*" required>
+                            </label>
+                            <label class="form__element">
+                                <input type="text" class="inputbox inputbox-phone" placeholder="+7 (___)___-__-__*" required>
+                            </label>
+                        </div>
+                        <div class="form__row">
+                            <button type="submit" class="btn btn--medium">Оставить заявку</button>
+                        </div>
+                        <div class="form__row form__checkbox">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__label">Я&nbsp;даю согласие на&nbsp;<a href="/soglasie-na-obrabotku-dannyh">обработку персональных данных</a></span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__label">Я&nbsp;даю согласие на&nbsp;<a href="/soglasie-na-rassylku">получение рекламных рассылок</a></span>
+                            </label>
+                            <div class="checkbox">Оставляя текущую заявку, я&nbsp;соглашаюсь, что сайт носит информационный характер и&nbsp;не&nbsp;является публичной офертой.</div>
+                            <div class="checkbox"><a href="/politika-obrabotku-personalnyh-dannyh">Политика обработки персональных данных</a></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal--form" id="modal-2">
+            <button type="button" class="modal__close">
+                <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#close"></use></svg>
+                <span>Закрыть</span>
+            </button>
+            <div class="modal__content">
+                <div class="modal__body">
+                    <div class="modal__title">Рассчитать стоимость</div>
+                    <form class="form">
+                        <div class="form__row">
+                            <label class="form__element">
+                                <input type="text" class="inputbox" placeholder="Ваше имя*" required>
+                            </label>
+                            <label class="form__element">
+                                <input type="text" class="inputbox inputbox-phone" placeholder="+7 (___)___-__-__*" required>
+                            </label>
+                        </div>
+                        <div class="form__row">
+                            <label class="form__element">
+                                <select class="inputbox">
+                                    <option value="" selected disabled>Тип материала</option>
+                                    <option value="1">Золото</option>
+                                    <option value="2">Серебро</option>
+                                    <option value="3">Платина</option>
+                                    <option value="4">Драгоценные камни</option>
+                                    <option value="5">Полудрагоценные камни</option>
+                                </select>
+                            </label>
+                            <label class="form__element">
+                                <input type="text" class="inputbox" placeholder="Вес материала (приблизительно)">
+                            </label>
+                        </div>
+                        <div class="form__row">
+                            <label class="form__element">
+                                <textarea class="inputbox" placeholder="Желаемое изделие"></textarea>
+                            </label>
+                        </div>
+                        <div class="form__row">
+                            <button type="submit" class="btn btn--medium">Оставить заявку</button>
+                        </div>
+                        <div class="form__row form__checkbox">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__label">Я&nbsp;даю согласие на&nbsp;<a href="/soglasie-na-obrabotku-dannyh">обработку персональных данных</a></span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__label">Я&nbsp;даю согласие на&nbsp;<a href="/soglasie-na-rassylku">получение рекламных рассылок</a></span>
+                            </label>
+                            <div class="checkbox">Оставляя текущую заявку, я&nbsp;соглашаюсь, что сайт носит информационный характер и&nbsp;не&nbsp;является публичной офертой.</div>
+                            <div class="checkbox"><a href="/politika-obrabotku-personalnyh-dannyh">Политика обработки персональных данных</a></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal--form" id="modal-3">
+            <button type="button" class="modal__close">
+                <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#close"></use></svg>
+                <span>Закрыть</span>
+            </button>
+            <div class="modal__content">
+                <div class="modal__body">
+                    <div class="modal__title">Обсудить идею</div>
+                    <form class="form">
+                        <div class="form__row">
+                            <label class="form__element">
+                                <input type="text" class="inputbox" placeholder="Ваше имя*" required>
+                            </label>
+                            <label class="form__element">
+                                <input type="text" class="inputbox inputbox-phone" placeholder="+7 (___)___-__-__*" required>
+                            </label>
+                        </div>
+                        <div class="form__row">
+                            <label class="form__element">
+                                <textarea class="inputbox" placeholder="Описание идеи"></textarea>
+                            </label>
+                        </div>
+                        <div class="form__row">
+                            <button type="submit" class="btn btn--medium">Оставить заявку</button>
+                        </div>
+                        <div class="form__row form__checkbox">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__label">Я&nbsp;даю согласие на&nbsp;<a href="/soglasie-na-obrabotku-dannyh">обработку персональных данных</a></span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__label">Я&nbsp;даю согласие на&nbsp;<a href="/soglasie-na-rassylku">получение рекламных рассылок</a></span>
+                            </label>
+                            <div class="checkbox">Оставляя текущую заявку, я&nbsp;соглашаюсь, что сайт носит информационный характер и&nbsp;не&nbsp;является публичной офертой.</div>
+                            <div class="checkbox"><a href="/politika-obrabotku-personalnyh-dannyh">Политика обработки персональных данных</a></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal--form" id="modal-4">
+            <button type="button" class="modal__close">
+                <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#close"></use></svg>
+                <span>Закрыть</span>
+            </button>
+            <div class="modal__content">
+                <div class="modal__body">
+                    <div class="modal__title">Прислать фото</div>
+                    <form class="form">
+                        <div class="form__row">
+                            <label class="form__element">
+                                <input type="text" class="inputbox" placeholder="Ваше имя*" required>
+                            </label>
+                            <label class="form__element">
+                                <input type="text" class="inputbox inputbox-phone" placeholder="+7 (___)___-__-__*" required>
+                            </label>
+                        </div>
+                        <div class="form__row">
+                            <label class="form__element">
+                                <textarea class="inputbox" placeholder="Вставьте ссылки на референсы"></textarea>
+                            </label>
+                        </div>
+                        <div class="form__row">
+                            <label class="inputfile">
+                                <input type="file">
+                                <span class="inputfile__label">
+                                    <span>Прикрепить фото</span>
+                                    <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#download" /></svg>
+                                </span>
+                            </label>
+                            <!--div class="inputfile">
+                                <span class="inputfile__label">
+                                    <span>Прикрепить фото</span>
+                                    <span class="small">Загружено 3 фотографии</span>
+                                    <svg aria-hidden="true"><use href="assets/images/icons/icons.svg#close" /></svg>
+                                </span>
+                            </div-->
+                        </div>
+                        <div class="form__row">
+                            <button type="submit" class="btn btn--medium">Оставить заявку</button>
+                        </div>
+                        <div class="form__row form__checkbox">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__label">Я&nbsp;даю согласие на&nbsp;<a href="/soglasie-na-obrabotku-dannyh">обработку персональных данных</a></span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__label">Я&nbsp;даю согласие на&nbsp;<a href="/soglasie-na-rassylku">получение рекламных рассылок</a></span>
+                            </label>
+                            <div class="checkbox">Оставляя текущую заявку, я&nbsp;соглашаюсь, что сайт носит информационный характер и&nbsp;не&nbsp;является публичной офертой.</div>
+                            <div class="checkbox"><a href="/politika-obrabotku-personalnyh-dannyh">Политика обработки персональных данных</a></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/swiper-bundle.min.js" defer></script>
+        <script src="assets/js/fancybox.umd.js" defer></script>
+        <script src="assets/js/jquery.maskedinput.min.js" defer></script>
+        <script src="assets/js/script.js?ver=12" defer></script>
+    </body>
+</html>

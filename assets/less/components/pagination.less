@@ -24,11 +24,24 @@
     &.prev {
         background-image: url('../images/icons/arrow-left.svg');
         margin-right: 16px;
+
+        &:hover {
+            background-image: url('../images/icons/arrow-left-beige.svg');
+        }
     }
 
     &.next {
         background-image: url('../images/icons/arrow-right.svg');
         margin-left: 16px;
+
+        &:hover {
+            background-image: url('../images/icons/arrow-right-beige.svg');
+        }
+    }
+
+    &:hover {
+        border-color: @black;
+        background-color: @black;
     }
 
     &.current {

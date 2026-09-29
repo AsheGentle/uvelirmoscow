@@ -370,7 +370,7 @@ $(function(){
 
     if ($(".catalog-slider").length > 0) {
         let swiperPrices = new Swiper(".catalog-slider", {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 20,
             navigation: {
                 enabled: true,
@@ -382,10 +382,6 @@ $(function(){
                 type: 'fraction'
             },
             breakpoints: {
-                600: {
-                    slidesPerView: 2,
-                    spaceBetween: 20
-                },
                 837: {
                     slidesPerView: 3,
                     spaceBetween: 20
@@ -451,7 +447,7 @@ $(function(){
                 1591: {
                     direction: "vertical",
                     slidesPerView: 5,
-                    spaceBetween: 30
+                    spaceBetween: 20
                 }
             }
         });
