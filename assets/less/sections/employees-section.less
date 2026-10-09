@@ -10,6 +10,16 @@
     padding-bottom: var(--padding-vertical);
 }
 
+.employees--grid {
+    .display-flex();
+    .row-wrap();
+    gap: var(--gap);
+
+    .employee {
+        width: ~'calc(33.33333% - var(--gap) * 2 / 3)';
+    }
+}
+
 .employee__inner {
     .display-flex();
     .column();

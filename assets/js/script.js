@@ -30,8 +30,8 @@ $(function(){
         });
     }
 
-    if ($(".about-videos").length > 0) {
-        let swiperVideos = new Swiper(".about-videos", {
+    if ($(".about-videos.swiper").length > 0) {
+        let swiperVideos = new Swiper(".about-videos.swiper", {
             slidesPerView: 2,
             spaceBetween: 20,
             navigation: {
@@ -159,8 +159,8 @@ $(function(){
         });
     }
 
-    if ($(".reviews").length > 0) {
-        let swiperReviews = new Swiper(".reviews", {
+    if ($(".reviews.swiper").length > 0) {
+        let swiperReviews = new Swiper(".reviews.swiper", {
             slidesPerView: 'auto',
             spaceBetween: 20,
             navigation: {
@@ -179,6 +179,31 @@ $(function(){
                 },
                 1351: {
                     slidesPerView: 2,
+                    spaceBetween: 30
+                }
+            }
+        });
+    }
+
+    if ($(".reviews-texts").length > 0) {
+        let swiperReviewsText = new Swiper(".reviews-texts", {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction"
+            },
+            breakpoints: {
+                837: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                1351: {
+                    slidesPerView: 3,
                     spaceBetween: 30
                 }
             }
@@ -204,8 +229,8 @@ $(function(){
         });
     }
 
-    if ($(".examples").length > 0) {
-        let swiperExamples = new Swiper(".examples", {
+    if ($(".examples.swiper").length > 0) {
+        let swiperExamples = new Swiper(".examples.swiper", {
             slidesPerView: 2,
             spaceBetween: 10,
             navigation: {
@@ -234,8 +259,8 @@ $(function(){
         });
     }
 
-    if ($(".employees").length > 0) {
-        let swiperEmployees = new Swiper(".employees", {
+    if ($(".employees.swiper").length > 0) {
+        let swiperEmployees = new Swiper(".employees.swiper", {
             slidesPerView: 1,
             spaceBetween: 20,
             navigation: {
@@ -424,70 +449,187 @@ $(function(){
         });
     }
 
-    if ($(".product__gallery").length > 0) {
-        let $gallery = $(".product__gallery");
-
-        let thumbsSwiper = new Swiper($gallery.find(".product-thumbs")[0], {
-            direction: "horizontal",
-            slidesPerView: 5,
-            spaceBetween: 10,
-            watchSlidesProgress: true,
-            loop: true,
+    if ($(".inner-services").length > 0) {
+        let swiperServices = new Swiper(".inner-services", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            navigation: {
+                enabled: true,
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction'
+            },
             breakpoints: {
+                600: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
                 837: {
-                    direction: "horizontal",
-                    slidesPerView: 5,
-                    spaceBetween: 6
+                    slidesPerView: 3,
+                    spaceBetween: 20
                 },
                 1351: {
-                    direction: "vertical",
-                    slidesPerView: 5,
-                    spaceBetween: 15
-                },
-                1591: {
-                    direction: "vertical",
-                    slidesPerView: 5,
-                    spaceBetween: 20
+                    slidesPerView: 4,
+                    spaceBetween: 30
                 }
             }
         });
+    }
 
-        let mainSwiper = new Swiper($gallery.find(".product-main")[0], {
+    if ($(".inner-service__images").length > 0) {
+        let swiperServicesImages = new Swiper(".inner-service__images", {
+            slidesPerView: 1,
+            navigation: {
+                enabled: true,
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        });
+    }
+
+    if ($(".inner-slider").length > 0) {
+        let swiperInner = new Swiper(".inner-slider", {
+            slidesPerView: 1,
+            navigation: {
+                enabled: true,
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction'
+            }
+        });
+    }
+
+    if ($(".inner-pictures").length > 0) {
+        let swiperBeforeAfter = new Swiper(".inner-pictures", {
+            slidesPerView: 1,
+            navigation: {
+                enabled: true,
+                nextEl: '.inner-pictures-next',
+                prevEl: '.inner-pictures-prev'
+            },
+            pagination: {
+                el: '.inner-pictures-pagination',
+                type: 'fraction'
+            }
+        });
+    }
+
+    function initGalleryThumbs({
+    $gallery,
+            thumbsSelector,
+            mainSelector,
+            nextSelector,
+            perView = 5,
+            breakpointsSpace = { 837: 6, 1351: 15, 1591: 20 },
+            breakpointsPerView = { 837: 5, 1351: 5, 1591: 5 }
+    }) {
+        const $thumbsEl = $gallery.find(thumbsSelector)[0];
+        const $mainEl = $gallery.find(mainSelector)[0];
+
+        if (!$thumbsEl || !$mainEl)
+            return;
+
+        const thumbsCount = $thumbsEl.querySelectorAll(".swiper-slide").length;
+        const mainCount = $mainEl.querySelectorAll(".swiper-slide").length;
+
+        const goTo = (swiper, index) => {
+            if (swiper.params.loop)
+                swiper.slideToLoop(index);
+            else
+                swiper.slideTo(index);
+        };
+
+        const thumbsSwiper = new Swiper($thumbsEl, {
+            direction: "horizontal",
+            slidesPerView: perView,
             spaceBetween: 10,
-            loop: true
+            loop: thumbsCount > perView,
+            breakpoints: {
+                837: {direction: "horizontal", slidesPerView: breakpointsPerView[837], spaceBetween: breakpointsSpace[837]},
+                1351: {direction: "vertical", slidesPerView: breakpointsPerView[1351], spaceBetween: breakpointsSpace[1351]},
+                1591: {direction: "vertical", slidesPerView: breakpointsPerView[1591], spaceBetween: breakpointsSpace[1591]}
+            },
+            on: {
+                init: (s) => updateLoopState(s),
+                resize: (s) => updateLoopState(s)
+            }
+        });
+
+        function updateLoopState(swiper){
+            const view = swiper.params.slidesPerView;
+            const needLoop = thumbsCount > view;
+
+            $gallery.find(nextSelector).toggle(needLoop);
+
+            if (swiper.params.loop === needLoop)
+                return;
+
+            swiper.params.loop = needLoop;
+            swiper.loopDestroy();
+            if (needLoop)
+                swiper.loopCreate();
+            swiper.update();
+        }
+
+        const mainSwiper = new Swiper($mainEl, {
+            spaceBetween: 10,
+            loop: mainCount > 1
         });
 
         function setActiveThumb(index){
-            thumbsSwiper.slides.forEach(function(slide){
-                slide.classList.toggle(
-                        "swiper-slide-thumb-active",
-                        Number(slide.getAttribute("data-swiper-slide-index")) === index
-                        );
+            thumbsSwiper.slides.forEach(function(slide, i){
+                const attr = slide.getAttribute("data-swiper-slide-index");
+                const slideIndex = attr !== null ? Number(attr) : i;
+                slide.classList.toggle("swiper-slide-thumb-active", slideIndex === index);
             });
         }
 
         setActiveThumb(0);
 
-        $gallery.find(".swiper-button-next").on("click", function(){
+        $gallery.find(nextSelector).on("click", function(){
             mainSwiper.slideNext();
         });
 
         mainSwiper.on("slideChange", function(){
-            let index = mainSwiper.realIndex;
+            const index = mainSwiper.realIndex;
             setActiveThumb(index);
-            thumbsSwiper.slideToLoop(index);
+            goTo(thumbsSwiper, index);
         });
 
-        thumbsSwiper.on("click", function(swiper, event){
-            let slide = event.target.closest(".swiper-slide");
-            if (!slide)
-                return;
+        $gallery.on("click", thumbsSelector + " .swiper-slide", function(){
+            const index = thumbsSwiper.params.loop
+                    ? Number($(this).attr("data-swiper-slide-index"))
+                    : thumbsSwiper.slides.indexOf(this);
 
-            let index = Number(slide.getAttribute("data-swiper-slide-index"));
-            if (Number.isNaN(index))
+            if (Number.isNaN(index) || index < 0)
                 return;
+            goTo(mainSwiper, index);
+        });
+    }
 
-            mainSwiper.slideToLoop(index);
+    // Блок «work»
+    if ($(".work__gallery").length > 0) {
+        initGalleryThumbs({
+            $gallery: $(".work__gallery"),
+            thumbsSelector: ".work-thumbs",
+            mainSelector: ".work-image",
+            nextSelector: ".work-thumbs-wrap .swiper-button-next"
+        });
+    }
+
+    // Блок «product»
+    if ($(".product__gallery").length > 0) {
+        initGalleryThumbs({
+            $gallery: $(".product__gallery"),
+            thumbsSelector: ".product-thumbs",
+            mainSelector: ".product-main",
+            nextSelector: ".product-thumbs-wrap .swiper-button-next"
         });
     }
 
@@ -835,7 +977,7 @@ $(function(){
     });
 
     let initExtra = responsiveSwiper({
-        selector: ".inner-extras",
+        selector: ".inner-extras.swiper",
         breakpoint: 837,
         options: {
             slidesPerView: "auto",
@@ -853,7 +995,43 @@ $(function(){
     });
 
     let initExtra4 = responsiveSwiper({
-        selector: ".inner-extras-4",
+        selector: ".inner-extras-4.swiper",
+        breakpoint: 837,
+        options: {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            navigation: {
+                enabled: true,
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction'
+            }
+        }
+    });
+
+    let initLinks = responsiveSwiper({
+        selector: ".inner-links",
+        breakpoint: 837,
+        options: {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            navigation: {
+                enabled: true,
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction'
+            }
+        }
+    });
+
+    let initServices = responsiveSwiper({
+        selector: ".services-grid",
         breakpoint: 837,
         options: {
             slidesPerView: "auto",
@@ -1477,6 +1655,11 @@ $(function(){
             $modal.removeClass("open");
             $("body").removeClass("overflow").css("padding-right", 0);
         }
+    });
+
+
+    $(".favorites-popup__close").on("click", function(e){
+        $(".favorites-popup").removeClass("show");
     });
 
 });

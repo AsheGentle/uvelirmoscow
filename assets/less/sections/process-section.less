@@ -30,6 +30,14 @@
     &:not(.swiper-initialized) .process-item:not(:first-child) {
         display: none;
     }
+
+    & + .text {
+        color: #fff;
+        margin-top: 30px;
+        margin-left: 130px;
+        margin-right: 130px;
+        text-align: left;
+    }
 }
 
 .process-item {
@@ -88,6 +96,7 @@
 
 @media all and (max-width: @bp-1590) {
     .process .swiper-buttons {right: 110px;}
+    .process + .text {margin-left: 110px; margin-right: 110px;}
     .process-item__inner {padding: 0 110px 110px;}
     .process-item__image {max-width: 850px;}
     .process-item__desription {left: 110px; width: 410px;}
@@ -96,6 +105,7 @@
 
 @media all and (max-width: @bp-1350) {
     .process .swiper-buttons {right: 60px;}
+    .process + .text {margin-left: 60px; margin-right: 60px;}
     .process-item__inner {padding: 0 60px 96px;}
     .process-item__image {max-width: 524px;}
     .process-item__desription {left: 60px; padding: 24px;width: 388px;}
@@ -106,6 +116,7 @@
 @media all and (max-width: @bp-836) {
     .process-section {background-image: url('../images/design/bg/process-bg-mobile.webp');}
     .process .swiper-buttons {right: 0;}
+    .process + .text {margin-left: 0; margin-right: 0;}
     .process-item__inner {padding: 0 0 126px;}
     .process-item__desription {left: 0; min-width: 270px; width: 60%;}
     .process-item__image {max-width: 69%;}

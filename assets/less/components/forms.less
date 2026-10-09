@@ -144,6 +144,7 @@ select.inputbox {
 
     &::before {
         content: '';
+        background-color: #fff;
         border: 1px solid @dark-beige;
         border-radius: 50%;
         width: 20px;
@@ -169,8 +170,6 @@ select.inputbox {
     .display-flex();
     gap: 20px;
 
-    
-
     &:not(:last-child) {
         margin-bottom: 20px;
     }
@@ -185,6 +184,18 @@ select.inputbox {
             color: #FF0000;
         }
     }
+}
+
+.form__label {
+    font-size: 24px;
+    font-weight: 400;
+    min-width: 250px;
+}
+
+.form__radios {
+    .display-flex();
+    .align-items-center;
+    gap: 20px;
 }
 
 .error__text {
@@ -252,6 +263,55 @@ select.inputbox {
     }
 }
 
+.form__stars {
+    border: none;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    .display-flex();
+    .row-reverse();
+    .justify-content-end();
+    gap: 6px;
+
+    input {
+        display: none;
+    }
+
+    label {
+        display: block;
+        color: #8F8F8F;
+        font-size: 0;
+        overflow: hidden;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+    }
+
+    svg {
+        fill: currentColor;
+        display: block;
+        width: 32px;
+        height: 32px;
+    }
+
+    & > input:checked ~ label, & > input + label:hover ~ label, & > input + label:hover {
+        color: #FFD600;
+    }
+
+    & > .form__stars-clear + label {
+        width: 16px;
+        margin-left: -16px;
+    }
+
+    &:hover > input + label {
+        color: #8F8F8F;
+    }
+
+    &:hover > input + label:hover ~ label, &:hover > input + label:hover {
+        color: #FFD600;
+    }
+}
+
 @media all and (max-width: @bp-1590) {
     .checkbox__label {font-size: 14px;}
     .radiobox__label {font-size: 14px;}
@@ -263,6 +323,7 @@ select.inputbox {
     .form__row {gap: 10px;}
     .form__row:not(:last-child) {margin-bottom: 10px;}
     .form__checkbox {margin-top: 0;}
+    .form__label {font-size: 20px;}
 
     .inputfile__label {font-size: 20px;}
 }

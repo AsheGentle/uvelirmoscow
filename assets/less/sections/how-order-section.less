@@ -14,6 +14,7 @@
 }
 
 .order-way__image {
+    aspect-ratio: ~'460 / 335';
     display: block;
     border-radius: 12px;
     overflow: hidden;
@@ -56,22 +57,6 @@
     color: @gray;
     line-height: 1.35;
     margin-bottom: 24px;
-}
-
-.order-video {
-    padding-top: var(--padding-vertical);
-}
-
-.order-video__wrap {
-    .display-flex();
-    .justify-content-center();
-}
-
-.order-video__frame {
-    border-radius: 12px;
-    overflow: hidden;
-    max-width: 1010px;
-    height: auto;
 }
 
 .meeting-path {
@@ -142,55 +127,6 @@
     }
 }
 
-.online-contacts {
-    padding-top: var(--padding-vertical);
-}
-
-.online-contacts__list {
-    .display-flex();
-    .row-wrap();
-    gap: var(--gap);
-}
-
-.online-contact {
-    .display-flex();
-    .align-items-start();
-    gap: 24px;
-    background-color: @black-dark;
-    border-radius: 12px;
-    color: #fff;
-    padding: 32px;
-    width: ~'calc(50% - var(--gap) / 2)';
-}
-
-.online-contact__icon {
-    .flex(0,0,auto);
-        width: 48px;
-        height: auto;
-}
-
-.online-contact__title {
-    color: @beige;
-    margin-bottom: 8px;
-}
-
-.online-contact__value {
-    font-size: 24px;
-    font-weight: 400;
-
-    a {
-        color: #fff;
-
-        &:hover {
-            color: @dark-beige;
-        }
-    }
-}
-
-
-
-
-
 @media all and (max-width: @bp-1590) {
     .meeting-path__info {font-size: 14px;}
 }
@@ -205,10 +141,6 @@
     .meeting-path__item:nth-child(2n) {padding-left: 136px;}
     .meeting-path__info {gap: 15px; max-width: 520px; padding: 24px;}
     .meeting-path__info::before {font-size: 20px; line-height: 39px; width: 40px; height: 40px;}
-
-    .online-contact {gap: 16px; padding: 24px;}
-    .online-contact__icon {width: 32px;}
-    .online-contact__value {font-size: 20px;}
 }
 
 @media all and (max-width: @bp-836) {
@@ -220,15 +152,10 @@
     .meeting-path__item:nth-child(2n) {padding-left: 0;}
     .meeting-path__item:nth-child(2n) .meeting-path__image {margin-right: 0; margin-left: 20px;}
     .meeting-path__item:nth-child(2n) .meeting-path__info {margin-left: 0;}
-
-    .online-contact {.column(); padding: 16px;}
-    .online-contact__value {font-size: 18px;}
 }
 
 @media all and (max-width: @bp-599) {
     .order-way__description {padding: 16px;}
 
     .meeting-path__info {padding: 16px;}
-
-    .online-contact {.row-nowrap(); width: 100%;}
 }

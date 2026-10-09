@@ -14,7 +14,7 @@
 .product {
     .display-flex();
     .row-wrap();
-    gap: 30px;
+    gap: var(--gap);
     margin-bottom: 30px;
 
     h1 {
@@ -30,7 +30,7 @@
 
 .product__gallery-wrap {
     .display-flex();
-    gap: 30px;
+    gap: var(--gap);
     position: sticky;
     top: 80px;
 }
@@ -102,6 +102,25 @@
 
     a {
         display: block;
+
+        &::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='none' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%23000' fill-opacity='.4' rx='40'/%3E%3Cpath fill='%23fff' d='M31.662 43.334h-3.334v8.333h8.333v-3.333h-5zm-3.334-6.667h3.334v-5h5v-3.333h-8.334zm20 11.667h-5v3.333h8.333v-8.333h-3.333zm-5-20v3.333h5v5h3.333v-8.333z'/%3E%3C/svg%3E");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-color: fade(#000, 40%);
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            .transition(opacity);
+        }
+
+        &:hover::after {
+            opacity: 1;
+        }
     }
 
     img {
@@ -602,13 +621,11 @@
 
 
 @media all and (max-width: @bp-1590) {
-    .product__gallery-wrap {gap: 20px;}
     .product-thumbs {width: 85px; height: 485px;}
 }
 
 @media all and (max-width: @bp-1350) {
-    .product {gap: 20px;
-        h1 {font-size: 24px;}}
+    .product h1 {font-size: 24px;}
     .product__gallery {width: 252px;}
     .product__gallery-wrap {.column(); gap: 10px; top: 60px;}
     .product-thumbs-wrap {.flex-order(2); padding-bottom: 0; padding-right: 28px;}

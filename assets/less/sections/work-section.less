@@ -1,61 +1,52 @@
-.work-section {
-    padding-left: var(--padding-horizontal);
-    padding-right: var(--padding-horizontal);
-    padding-top: 20px;
-    padding-bottom: var(--padding-vertical);
-
-    .catalog-categories__link {
-        width: ~'calc(11.111111% - 10.666667px)';
-    }
-
-    .examples {
-        margin-bottom: 30px;
-    }
-}
-
 .work {
     .display-flex();
     .align-items-start();
-    gap: 30px;
+    gap: var(--gap);
     margin-bottom: 30px;
 }
 
 .work__gallery {
     .display-flex();
     .align-items-start();
-    //.flex(0, 0, auto);
-    gap: 30px;
+    gap: var(--gap);
     width: ~'calc(50% - 15px)';
 }
 
+.work-thumbs-wrap {
+    .flex(0,0,auto);
+    padding-bottom: 40px;
+    position: relative;
 
+    .swiper-button-next {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23694f3f' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.511' d='M11.936 16.115c.533 0 1.045-.212 1.423-.59L21 7.886m-18.129 0 7.641 7.64c.378.378.89.59 1.423.589'/%3E%3C/svg%3E");
+        border: none;
+        border-radius: 0;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        bottom: 0;
+        left: ~'calc(50% - 12px)';
+        .transition(opacity);
 
-.work-section {
-
-    .catalog-showcase .btn--arrow svg {
-        //margin-left: 0;
+        &:hover {
+            background-color: transparent;
+            opacity: 0.6;
+        }
     }
 }
 
-
-
-/*.work__thumbs {
-    .display-flex();
-    .column();
-    .flex(0, 0, auto);
-    gap: 16px;
+.work-thumbs {
     width: 100px;
+    height: 580px;
 }
 
-.work__thumb {
-    background-color: transparent;
+.work-thumbs__item {
     border: 1px solid transparent;
     border-radius: 8px;
+    opacity: 0.5;
     cursor: pointer;
     overflow: hidden;
-    padding: 0;
-    width: 100px;
-    height: 100px;
+        .transition(opacity);
 
     img {
         display: block;
@@ -64,17 +55,50 @@
         object-fit: cover;
     }
 
-    &.active {
-        border-color: @black;
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &.swiper-slide-thumb-active {
+        border-color: @gray;
+        opacity: 1;
     }
 }
 
-.work__image {
-    .flex(1, 1, auto);
+.work-image {
+    .flex-order(2);
+    border-radius: 12px;
+    flex: 1 1 auto;
     min-width: 0;
+    margin: 0;
+}
+
+.work-image__item {
     background-color: #fff;
     border-radius: 12px;
-    overflow: hidden;
+
+    a {
+        display: block;
+
+        &::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='none' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%23000' fill-opacity='.4' rx='40'/%3E%3Cpath fill='%23fff' d='M31.662 43.334h-3.334v8.333h8.333v-3.333h-5zm-3.334-6.667h3.334v-5h5v-3.333h-8.334zm20 11.667h-5v3.333h8.333v-8.333h-3.333zm-5-20v3.333h5v5h3.333v-8.333z'/%3E%3C/svg%3E");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-color: fade(#000, 40%);
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            .transition(opacity);
+        }
+
+        &:hover::after {
+            opacity: 1;
+        }
+    }
 
     img {
         display: block;
@@ -82,16 +106,10 @@
         height: auto;
         object-fit: cover;
     }
-}*/
-
-
-
+}
 
 .work__content {
-    //.flex(1, 1, auto);
-    //min-width: 0;
-    width: ~'calc(50% - 20px)';
-    //padding-top: 10px;
+    width: ~'calc(50% - var(--gap) / 2)';
 
     h1 {
         font-size: 32px;
@@ -105,4 +123,25 @@
 
 .work__text {
     margin-bottom: 30px;
+}
+
+
+@media all and (max-width: @bp-1350) {
+    .work__content h1 {font-size: 24px;}
+    .work__gallery {display: block; width: 252px;}
+    .work-thumbs-wrap {margin-top: 10px; padding-bottom: 0; padding-right: 28px;}
+    .work-thumbs-wrap .swiper-button-next {width: 20px; height: 20px; left: auto; right: 0; .transform(rotate(-90deg)); bottom: ~'calc(50% - 10px)';}
+    .work-thumbs {width: 100%; height: auto;}
+
+    .work__content {width: ~'calc(100% - 272px)';}
+}
+
+@media all and (max-width: @bp-836) {
+    .work__content h1 {font-size: 20px;}
+}
+
+@media all and (max-width: @bp-599) {
+    .work {.column();}
+    .work__gallery {width: 100%;}
+    .work__content {width: 100%;}
 }

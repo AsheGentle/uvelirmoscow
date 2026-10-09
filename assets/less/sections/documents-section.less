@@ -20,15 +20,6 @@
     }
 }
 
-.documents-block {
-    padding-top: var(--padding-vertical);
-
-    h3 {
-        color: @gray;
-        text-align: left;
-    }
-}
-
 .documents {    
     .swiper-wrapper {
         .row-wrap();
@@ -127,47 +118,6 @@
     }
 }
 
-.documents-checks {
-    .display-flex();
-    .row-wrap();
-    gap: var(--gap);
-    margin-bottom: var(--gap);
-}
-
-.documents-check {
-    background-color: @black;
-    border-radius: 12px;
-    color: @beige;
-    counter-increment: documents-check;
-    padding: 32px;
-    padding-left: 104px;
-    position: relative;
-    width: ~'calc(50% - var(--gap) / 2)';
-
-    &::before {
-        display: block;
-        border: 1px solid @dark-beige;
-        border-radius: 50px;
-        content: '0'counter(documents-check);
-        color: @dark-beige;
-        font-size: 24px;
-        line-height: 46px;
-        width: 48px;
-        height: 48px;
-        text-align: center;
-        position: absolute;
-        top: 32px;
-        left: 32px;
-    }
-}
-
-.documents-check__title {
-    color: #fff;
-    font-size: 24px;
-    font-weight: 400;
-    margin-bottom: 8px;
-}
-
 @media all and (max-width: @bp-1590) {
     .documents-wrap > .tabs__pane {
         .guarantee, .document {min-height: 378px;}
@@ -191,10 +141,6 @@
 
     .laboratory__image {height: 78px; margin-bottom: 8px;}
     .laboratories--small .laboratory__image {height: 60px;}
-
-    .documents-check {padding: 24px; padding-left: 80px;}
-    .documents-check::before {font-size: 20px; line-height: 38px; width: 40px; height: 40px; top: 24px; left: 24px;}
-    .documents-check__title {font-size: 20px;}
 }
 
 @media all and (max-width: @bp-836) {
@@ -202,8 +148,6 @@
     .documents.swiper {overflow: visible;}
     .documents .swiper-wrapper {.row-nowrap(); gap: 0;}
     .document {width: 415px !important;}
-    .documents-block .buttons {.row-wrap();}
-    .documents-block .buttons .btn {max-width: none;}
 
     .laboratories {.row-wrap();}
     .laboratory {width: ~'calc(50% - var(--gap) / 2)';}
@@ -219,6 +163,4 @@
 
     .laboratories {gap: 12px;}
     .laboratory {width: 100%;}
-
-    .documents-check {width: 100%;}
 }

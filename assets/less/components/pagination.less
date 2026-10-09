@@ -1,7 +1,13 @@
 .pagination {
     .display-flex();
     .align-items-center();
+    .justify-content-end();
     gap: 16px;
+    margin-top: var(--gap);
+
+    &:not(:last-child) {
+        margin-bottom: var(--gap);
+    }
 }
 
 .pagination__item {
