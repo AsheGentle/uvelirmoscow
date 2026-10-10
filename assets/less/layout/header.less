@@ -305,6 +305,36 @@
     }
 }
 
+.header-additional {
+    .align-items-center();
+    gap: 16px;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        font-size: 0;
+    }
+
+    a {
+        display: block;
+    }
+    
+    svg {
+        display: block;
+        fill: none;
+        width: 24px;
+        height: 24px;
+    }
+
+    .active {
+        svg {
+            fill: @dark-beige
+        }
+    }
+}
+
 
 @media all and (min-width: @bp-837) {
     .header {
@@ -347,6 +377,7 @@
         .header-hours {display: none;}
         .header-bottom {padding: 0; position: static;}
         .header-bottom::before {display: none;}
+        .header-additional {.display-flex();}
 
         .menu {.justify-content-center(); gap: 30px;}
         .menu__link {font-size: 14px; white-space: nowrap;}
@@ -378,6 +409,7 @@
     .header-hours__item {font-size: 10px;}
     .has-submenu .menu__link {padding-right: 26px;}
     .has-submenu .menu__link::after {width: 18px; height: 18px; top: ~'calc(50% - 10px)';}
+    .header-additional svg {width: 20px; height: 20px;}
 }
 
 @media all and (max-width: @bp-1350) {
@@ -392,6 +424,8 @@
     .menu__link > img {display: none;}
     .has-submenu .menu__link {padding-right: 22px;}
     .has-submenu .menu__link::after {width: 14px; height: 14px; top: ~'calc(50% - 7px)';}
+    .header-additional {gap: 12px;}
+    .header-additional svg {width: 16px; height: 16px;}
 }
 
 @media all and (max-width: @bp-836) {

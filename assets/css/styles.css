@@ -7054,6 +7054,33 @@ footer {
   bottom: 8px;
   transform-origin: 0 0 0;
 }
+.header-additional {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  gap: 16px;
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.header-additional li {
+  font-size: 0;
+}
+.header-additional a {
+  display: block;
+}
+.header-additional svg {
+  display: block;
+  fill: none;
+  width: 24px;
+  height: 24px;
+}
+.header-additional .active svg {
+  fill: #E4CDA4;
+}
 @media all and (min-width: 837px) {
   .header {
     display: -ms-grid;
@@ -7157,6 +7184,11 @@ footer {
   header.fixed .header-bottom::before {
     display: none;
   }
+  header.fixed .header-additional {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   header.fixed .menu {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -7236,6 +7268,10 @@ footer {
     height: 18px;
     top: calc(50% - 10px);
   }
+  .header-additional svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 @media all and (max-width: 1350px) {
   .top-menu {
@@ -7278,6 +7314,13 @@ footer {
     width: 14px;
     height: 14px;
     top: calc(50% - 7px);
+  }
+  .header-additional {
+    gap: 12px;
+  }
+  .header-additional svg {
+    width: 16px;
+    height: 16px;
   }
 }
 @media all and (max-width: 836px) {
