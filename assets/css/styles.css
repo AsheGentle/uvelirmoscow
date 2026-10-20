@@ -13523,6 +13523,13 @@ a.types__item .h3::after {
 .inner-section:not(:first-child) {
   padding-top: var(--padding-vertical);
 }
+.inner-section p a:not([class]) {
+  color: currentColor;
+  text-decoration: underline;
+}
+.inner-section p a:not([class]):hover {
+  text-decoration: none;
+}
 .inner-wrap {
   display: -webkit-box;
   display: -ms-flexbox;

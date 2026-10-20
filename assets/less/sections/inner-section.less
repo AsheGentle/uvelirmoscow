@@ -13,6 +13,15 @@
     &:not(:first-child) {
         padding-top: var(--padding-vertical);
     }
+
+    p a:not([class]) {
+        color: currentColor;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 .inner-wrap {
