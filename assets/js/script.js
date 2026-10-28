@@ -1,3 +1,24 @@
+document.addEventListener('DOMContentLoaded', function () {
+  var banner = document.querySelector('.cookies');
+  var acceptBtn = document.querySelector('.cookie__button');
+
+  if (!banner) return;
+
+  if (localStorage.getItem('cookie_consent') === 'accepted') {
+    banner.remove();
+    return;
+  }
+
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', function () {
+      try {
+        localStorage.setItem('cookie_consent', 'accepted');
+      } catch (e) {
+      }
+    });
+  }
+});
+
 $(function(){
     Fancybox.bind("[data-fancybox]", {});
 
@@ -1643,7 +1664,7 @@ $(function(){
         $("body").addClass("overflow").css("padding-right", scrollWidth);
     });
 
-    $(".modal__close, .modal").on("click", function(e){
+    $(".modal__close, .modal, .modal-close").on("click", function(e){
         if (e.target === this || $(e.target).hasClass("modal__close")) {
             let $modal = $(this).closest(".modal");
             let $title = $modal.find(".modal__title");
