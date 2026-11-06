@@ -2,7 +2,7 @@
     .display-flex();
     .align-items-center();
     .justify-content-end();
-    gap: 16px;
+    gap: 8px;
     margin-top: var(--gap);
 
     &:not(:last-child) {
@@ -11,10 +11,14 @@
 }
 
 .pagination__item {
+    border-radius: 5px;
     color: @gray;
     font-size: 16px;
     font-weight: 400;
     opacity: 0.5;
+    padding: 0 2px;
+    width: 26px;
+    text-align: center;
 
     &.prev, &.next {
         .flex(0,0,auto);
@@ -45,14 +49,18 @@
         }
     }
 
-    &:hover {
-        border-color: @black;
-        background-color: @black;
+    a&:hover {
+        background-color: #908378;
+        border-color: #908378;
+        color: @beige;
     }
 
     &.current {
+        background-color: @black;
+        color: @beige;
         font-size: 20px;
         opacity: 1;
+        padding: 0 4px;
     }
 
     span& {

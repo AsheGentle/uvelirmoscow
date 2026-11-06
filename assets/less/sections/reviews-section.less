@@ -192,9 +192,9 @@
 }
 
 .reviews-trust {
-    background-color: #fff;
+    background-color: @black-2;
     border-radius: 12px;
-    color: @black;
+    color: #fff;
     font-size: 20px;
     padding: 32px;
     width: ~'calc(33.333333% - var(--gap) * 2 / 3)';
@@ -207,7 +207,7 @@
 
 .reviews-trust__logo {
     display: block;
-    height: 40px;
+    height: 80px;
     margin-bottom: 8px;
     object-fit: contain;
     width: auto;
@@ -224,7 +224,7 @@
 }
 
 .reviews-trust__text {
-    color: @gray;
+    color: @dark-beige;
     line-height: 1.35;
 }
 
@@ -251,6 +251,7 @@
     .reviews-text__photo {width: 40px; height: 40px;}
 
     .reviews-trust {font-size: 16px; padding: 20px;}
+    .reviews-trust__logo {height: 40px;}
 }
 
 @media all and (max-width: @bp-836) {

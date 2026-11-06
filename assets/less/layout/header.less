@@ -190,13 +190,15 @@
     margin: 0;
     padding: 0;
 
-    &:hover {
-        .menu__link {
-            opacity: 0.5;            
-        }
+    @media all and (min-width: @bp-1351) {
+        &:hover {
+            .menu__link {
+                opacity: 0.5;
+            }
 
-        .menu__item:hover > .menu__link {
-            opacity: 1;
+            .menu__item:hover > .menu__link {
+                opacity: 1;
+            }
         }
     }
 }

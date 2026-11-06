@@ -1,0 +1,824 @@
+<?php echo $header; ?>
+<div class="container" style="background-color:#fff;">
+  <div class="row"><?php echo $column_left; ?>
+    <?php if ($column_left && $column_right) { ?>
+    <?php $class = 'col-sm-6'; ?>
+    <?php } elseif ($column_left || $column_right) { ?>
+    <?php $class = 'col-sm-9'; ?>
+    <?php } else { ?>
+    <?php $class = 'col-sm-12'; ?>
+    <?php } ?>
+    <script>fbq('track', 'ProductView');</script>
+	<div class="xleb"><ul class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList"><?php foreach ($breadcrumbs as $i=> $breadcrumb) { ?><li property="itemListElement" typeof="ListItem"><?php if($i+1<count($breadcrumbs)) { ?><span><a href="<?php echo $breadcrumb['href']; ?>" property="item" typeof="WebPage"><?php echo $breadcrumb['text']; ?></a></span></li> <?php } else { ?><span><?php echo $breadcrumb['text']; ?></span></li><?php } ?><?php } ?> <!-- <link itemprop="url" href="<?php echo $breadcrumb['href']; ?>" /> --></ul></div>
+    <div id="content" itemscope itemtype="http://schema.org/Product" class="<?php echo $class; ?>">
+
+    <h1 itemprop="name"><?php echo $heading_title; ?></h1>
+    <div class="all-content">
+<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="//yastatic.net/share2/share.js"></script>
+
+    <div class="row product-card-all-wrap">
+        <?php if ($column_left || $column_right) { ?>
+        <?php $class = 'col-sm-7'; ?>
+        <?php } else { ?>
+        <?php $class = 'col-sm-5'; ?>
+        <?php } ?>
+        <div class="<?php echo $class; ?> width-slider">
+
+            <?php if ($special) { ?>
+            <div class="percent"><i class="promo-stone"></i></div>
+            <?php } ?>
+          <?php if ($thumb || $images) { ?>
+          <div class="product-zoom-slider">
+            <?php if ($thumb) { ?>
+
+<style>
+div#ster {
+    width: 90%;
+    overflow: hidden; /* clearfix */
+}
+div#ster:before {
+    content: "";
+    padding-top: 100%;
+    float: left;
+}
+</style>
+<div class="slider-nav-main-wrap">
+			<div class="sliderd2" id='slider-nav'>
+			<div>
+				<div class="video-wrapper">
+					<img class="cloudzoom-gallery img-responsive" itemprop="image" alt ="<?php echo $heading_title; ?>" id ="zoom1" src="<?php echo $popup; ?>" data-cloudzoom='zoomSizeMode:"image",autoInside: 550,zoomPosition:"inside", zoomOffsetX:0 '>
+				</div>
+			</div>
+
+
+            <?php if ($images) { ?>
+                  <?php foreach ($images as $image) { ?>
+			<div>
+				<div class="video-wrapper">
+                        <img class="cloudzoom-gallery img-responsive" src="<?php echo $image['popup']; ?>" data-image="<?php echo $image['popup']; ?>" data-cloudzoom ="useZoom:'.cloudzoom', image:'<?php echo $image['popup']; ?>' " alt="<?php echo $heading_title; ?>" />
+				</div>
+			</div>
+                  <?php } ?>
+              <?php } ?>
+
+			  <?php if ($video_review) { ?>
+			<div>
+				<div class="video-wrapper" id=ster>
+					<iframe class="yt-player" style='width:100%;position: absolute; height: 100%; border: none' src="https://www.youtube.com/embed/<?php echo $video_review; ?>?controls=1&rel=0&enablejsapi=1"></iframe>
+				</div>
+			</div>
+			  <?php } ?>
+
+			</div>
+
+
+			<div class="main-slider" id="main-slider">
+			<div>
+				<div class="video-wrapper" style='display: table;'>
+					<img itemprop="image" style="width:100%;" alt ="<?php echo $heading_title; ?>" src="<?php echo $thumb; ?>" />
+				</div>
+			</div>
+            <?php if ($images) { ?>
+                  <?php foreach ($images as $image) { ?>
+			<div>
+				<div class="video-wrapper" style='display: table;'>
+                        <img src="<?php echo $image['thumb']; ?>" style="width:100%;" alt="<?php echo $heading_title; ?>" />
+				</div>
+			</div>
+                  <?php } ?>
+              <?php } ?>
+			  <?php if ($video_review) { ?>
+			<div>
+				<div class="video-wrapper" style='display: table;'>
+					<img src='//i1.ytimg.com/vi/<?php echo $video_review; ?>/hqdefault.jpg' style='width:90%' />
+				</div>
+			</div>
+			  <?php } ?>
+
+		</div>
+</div>
+
+
+		    <?php } ?>
+		  </div>
+          <?php } ?>
+            <script>
+				//document.oncontextmenu=new Function("return false;")
+                        var tag = document.createElement('script');
+        tag.id = 'iframe-demo';
+        tag.src = 'https://www.youtube.com/iframe_api';
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        function onYouTubeIframeAPIReady() {
+            var elems1 = document.getElementsByClassName('yt-player');
+            for(var i = 0; i < elems1.length; i++) {
+
+                player = new YT.Player(elems1[i], {
+                    events: {
+                        //'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                    }
+                });
+            }
+        }
+        function onPlayerReady(event) {
+
+        }
+        function handleVideo(playerStatus) {
+            if (playerStatus == -1) {
+                // unstarted
+                $('#main-slider').slick('slickPause');
+            } else if (playerStatus == 0) {
+                // ended
+                $('#main-slider').slick('slickPlay');
+
+            } else if (playerStatus == 1) {
+                // playing = green
+                $('#main-slider').slick('slickPause');
+            } else if (playerStatus == 2) {
+                // paused = red
+                $('#main-slider').slick('slickPlay');
+            } else if (playerStatus == 3) {
+                // buffering = purple
+            } else if (playerStatus == 5) {
+                // video cued
+            }
+        }
+        function onPlayerStateChange(event) {
+            handleVideo(event.data);
+        }
+
+        $(function() {
+             $('#slider-nav').slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false,
+              fade: true,
+              asNavFor: '#main-slider'
+            });
+            $('#main-slider').slick({
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              dots: false,
+			  asNavFor: '#slider-nav',
+    		  centerMode: true,
+              focusOnSelect: true,
+              arrows: false,
+              vertical: true
+		    });
+        });
+
+
+        $('#main-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+            $('.yt-player').each(function(){
+                this.contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*')
+            });
+        });
+            </script>
+        </div>
+        <?php if ($column_left || $column_right) { ?>
+        <?php $class = 'col-sm-5'; ?>
+        <?php } else { ?>
+        <?php $class = 'col-sm-6'; ?>
+        <?php } ?>
+        <div class="<?php echo $class; ?> width-info">
+          <div id="product" class="product-card-buy-wrap-first">
+                <div class="product-model" style='z-index:1;'><span class="product-card-buy-model"> Модель: <?php echo $model; ?> </span></div>
+	<ul class="product-card-buy-social">
+						<li class="product-card-buy-social__item">
+							<a href="#" class="product-card-buy-social__link">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+						<li class="product-card-buy-social__item">
+							<a href="#" class="product-card-buy-social__link">
+								<i class="fab fa-whatsapp"></i>
+							</a>
+						</li>
+						<li class="product-card-buy-social__item">
+							<a href="#" class="product-card-buy-social__link">
+								<i class="fab fa-telegram"></i>
+							</a>
+						</li>
+					</ul>
+	</div>
+		  
+<div class="product-card-buy-wrap-second">
+					<button type="button" onclick="wishlist.add('<?php echo $prod_id; ?>');" class="product-card-btn-izbrannoe product-card-btn-icon">
+						<i class="far fa-heart"></i>
+						<p>
+							В избранное
+						</p>
+					</button>
+					<button type="button" class="product-card-btn-hochy product-card-btn-icon">
+						<i class="fas fa-gift"></i>
+						<p>
+							Хочу подарок
+						</p>
+					</button>
+				</div>
+
+           
+
+			  <!--noindex--> <div id="fastorder" class="mfp-hide white-popup"></div> <script>--><!--
+    $('#order2').on('click', function() {
+        $.ajax({
+            url: 'index.php?route=module/fastorder/getform',
+            data: {sub: 'Назначить встречу с менеджером'},
+            success: function(html){
+                $("#fastorder").html(html);
+            }
+        });
+        yaCounter18227068.reachGoal('open_zak');
+    });
+    $(function () {
+        $('#order2').magnificPopup({
+            type: 'inline'
+        });
+    });
+    --> </script><!--/noindex-->
+
+<button style="display:block;padding: 10px 20px; margin: 10px;background: #65000b;color:#fff" onclick="cart.add('<?php echo $prod_id; ?>')" class="product-card-buy-btn-order product-card-buy-btn-order_cart">Заказать</button>
+
+
+<script><!--
+    $('#order2').on('click', function() {
+        $.ajax({
+            url: 'index.php?route=module/fastorder/getform',
+            data: {sub: 'Назначить встречу с менеджером'},
+            success: function(html){
+                $("#fastorder").html(html);
+            }
+        });
+        yaCounter18227068.reachGoal('open_zak');
+    });
+    $(function () {
+        $('#order2').magnificPopup({
+            type: 'inline'
+        });
+    });
+    --> </script><!--/noindex-->
+ <?php echo $fastorder; ?>
+          </div>
+		 
+		  <?php If ($pricenull > 20000) { echo 
+		  "<p>Опции доступные для этого изделия:</p>
+<ul>
+<li>Бесплатное изменение дизайна под Ваш вкус</li>
+<li>Анатомическое 3D-моделирование</li>
+<li>Защита от истирания полным анодированием</li>
+<li>Качество исполнения High-jewelry (самый высокий класс)</li>
+<li>Пожизненная гарантия, бесплатная чистка и полировка</li>
+<li>Изготовление из Ваших материалов</li>
+</ul>";
+		  } ?>
+		  
+		  
+
+
+<div class="product-card-desc-section">
+				
+          <div class="text-center width-table-x" style='text-align:left;margin-top:8px;'>
+	<span style='padding-left: 6px; font-size:16px' class="span-desc-product-x"><b>Характеристики товара:</b></span>
+                  <table class="table">
+                      <tbody>				  
+                      <?php if ($options) { ?>
+                      <?php foreach ($options as $option) { ?>
+                      <?php if ($option['type'] == 'select') { ?>
+                      <?php foreach ($option['product_option_value'] as $option_value) { ?>
+                      <? if($option_value['default_value'] == 1) { ?>
+                      <tr>
+                          <td class="name-td-desc"><?php echo $option['name']; ?></td>
+                          <td class="value-td-desc"><?php echo $option_value['name']; ?></td>
+                      </tr>
+                      <? } ?>
+                      <?php } ?>
+                      <?php } ?>
+                      <?php } ?>
+                      <?php } ?>
+                      <?php foreach ($attribute_groups as $attribute_group) { ?>
+                      <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+                      <tr>
+                          <td class="name-td-attr"><?php echo $attribute['name']; ?></td>
+                          <td class="text-td-attr"><?php echo $attribute['text']; ?></td>
+                      </tr>
+                      <?php } ?>
+                      <?php } ?>
+                      <?php if ($weight) { ?>
+                      <tr>
+                          <td class="name-td-text"><?php echo $text_weight; ?></td>
+                          <td class="name-td-weight"><?php echo $weight; ?> г</td>
+                      </tr>
+                     <?php } ?>
+<?php if ($main_category['text']) { ?>					  
+                      <tr>
+                          <td>Категории:</td>
+                          <td><a href="<?php echo $main_category['href']; ?>"><?php echo $main_category['text']; ?></a>﻿﻿﻿﻿﻿﻿</td>
+                      </tr>
+<?php } ?>					  
+					 
+                      </tbody>
+                  </table>
+			</div>
+<?php if ($price) { ?>
+          <ul itemprop="offers" itemscope itemtype="http://schema.org/Offer" style='text-align:left;' class="list-unstyled text-center product-card-list-price">
+              <?php if (!$special) { ?>
+              <li>
+                  <div class="price-main"><div style="float:left;" class="price-main-wrap"> <span class="price-main-wrap-first-span"><?php echo $price_main; ?> от</span> <?php $price = str_replace('руб', '', $price); ?><?php $pricenull = str_replace(' ', '', $price); ?><span itemprop="price" content="<?php echo $pricenull; ?>.00" class="price-main-wrap-second-span"><?php echo $price; ?></span><span class="price-main-wrap-third-span">руб</span> * <span data-toggle="tooltip" class="informer price-main-wrap-fourth-span" title="Стоимость работы за одно украшение, включая материалы (описаны в карточке)."><i class="fa fa-question-circle" style='font-size: 19px;'></i></span><span style="color: #000000;font-size: 11px;" class="price-main-wrap-fifth-span">* (цена указана за 1 изделие)</span></div><span style='color: #ababab;font-size:14px;' class="price-main-wrap-sixth-span">Работа: <?php echo $price_works; ?> <span data-toggle="tooltip" class="informer price-main-wrap-seventh-span" title="Стоимость работы, из материалов заказчика (не включает угар и закрепку камней)."><i class="fa fa-question-circle" style='font-size: 19px;'></i></span><br />Материалы: <?php  echo $price_materials; ?><span data-toggle="tooltip" class="informer price-main-wrap-eighth-span" title="Стоимость драгоценных камней и металлов использованных для изготовления данного украшения. Если Вы выберете другие камни, либо украшение будет другого размера, эта цифра - изменится (как в большую, так и в меньшую сторону)."><i class="fa fa-question-circle" style='font-size: 19px;'></i></span> </span> </div>
+					<meta itemprop="priceCurrency" content="RUB">
+					<link itemprop="availability" href="http://schema.org/InStock">
+              </li>
+              <?php } else { ?>
+              <li>
+                  <div class="price-main"><?php echo $price_main; ?><br><div class="price-comment single"><?php echo $price_comment_single; ?></div><?php $special = str_replace('руб', '', $special); ?><?php $pricenull = str_replace(' ', '', $special); ?><span itemprop="price" content="<?php echo $pricenull; ?>.00"><?php echo $special; ?></span><span>руб</span><span class="price-old" style="text-decoration: line-through;"><?php echo $price; ?></span></div>
+                  <meta itemprop="priceCurrency" content="RUB">
+                  <link itemprop="availability" href="http://schema.org/InStock">
+              </li>
+              <?php } ?>
+              <?php if ($tax) { ?>
+              <li><?php echo $text_tax; ?> <?php echo $tax; ?></li>
+              <?php } ?>
+              <?php if ($points) { ?>
+              <li><?php echo $text_points; ?> <?php echo $points; ?></li>
+              <?php } ?>
+              <?php if ($discounts) { ?>
+              <li>
+                  <hr>
+              </li>
+              <?php foreach ($discounts as $discount) { ?>
+              <li><?php echo $discount['quantity']; ?><?php echo $text_discount; ?><?php echo $discount['price']; ?></li>
+              <?php } ?>
+              <?php } ?>
+          </ul>
+<?php } ?>
+<div class="product-card-tab-section">
+			<ul class="product-card-tab-section__link-list">
+				<li class="product-card-tab-section__link-item">
+					<input id="product-card-tab-section__item_1" type="radio" name="tabs" checked>
+					<label for="product-card-tab-section__item_1" class="label-product-card-tab-section__item_1" title="Вкладка 1"><span>Описание</span></label> 
+				</li>
+				<li class="product-card-tab-section__link-item">
+					<input id="product-card-tab-section__item_2" type="radio" name="tabs">
+					<label for="product-card-tab-section__item_2" class="label-product-card-tab-section__item_2" title="Вкладка 1"><span>Опции</span></label>
+				</li>
+				<li class="product-card-tab-section__link-item">
+					<input id="product-card-tab-section__item_3" type="radio" name="tabs">
+					<label for="product-card-tab-section__item_3" class="label-product-card-tab-section__item_3" title="Вкладка 1"><span>Условия доставки</span></label>
+				</li>
+				<li class="product-card-tab-section__link-item">
+					<input id="product-card-tab-section__item_4" type="radio" name="tabs">
+					<label for="product-card-tab-section__item_4" class="label-product-card-tab-section__item_4" title="Вкладка 1"><span>Условия оплаты</span></label>
+				</li>
+			</ul>
+			<ul class="product-card-tab-section__list">
+				<li class="product-card-tab-section__item product-card-tab-section__item_1 dis-block" id="product-card-tab-section__content-item_1">
+					<h4 class="product-card-tab-section__suptitle">
+						Описания товара:
+					</h4>
+					<ul class="product-card-tab-section__suplist">
+						<li class="product-card-tab-section__supitem">
+							<p class="product-card-tab-section__text">
+								1
+							</p>
+						</li>
+						<li class="product-card-tab-section__supitem">
+							<p class="product-card-tab-section__text">
+								2
+							</p>
+						</li>
+						<li class="product-card-tab-section__supitem">
+							<p class="product-card-tab-section__text">
+								3
+							</p>
+						</li>
+						<li class="product-card-tab-section__supitem">
+							<p class="product-card-tab-section__text">
+								4
+							</p>
+						</li>
+						<li class="product-card-tab-section__supitem">
+							<p class="product-card-tab-section__text">
+								5
+							</p>
+						</li>
+						<li class="product-card-tab-section__supitem">
+							<p class="product-card-tab-section__text">
+								6
+							</p>
+						</li>
+					</ul>
+				</li>
+				<li class="product-card-tab-section__item" id="product-card-tab-section__content-item_2">
+					<h4 class="product-card-tab-section__suptitle">
+						Опции доступные для этого изделия:
+					</h4>
+					<ul class="product-card-tab-section__suplist">
+						<li class="product-card-tab-section__supitem">
+							<p class="product-card-tab-section__text">
+								- Бесплатное изменение дизайна под Ваш вкус
+							</p>
+						</li>
+						<li class="product-card-tab-section__supitem">
+							<p class="product-card-tab-section__text">
+								- Анатомическое 3D-моделирование
+							</p>
+						</li>
+						<li class="product-card-tab-section__supitem">
+							<p class="product-card-tab-section__text">
+								- Защита от истирания полным анодированием
+							</p>
+						</li>
+						<li class="product-card-tab-section__supitem">
+							<p class="product-card-tab-section__text">
+								- Качество исполнения High-jewelry (самый высокий класс)
+							</p>
+						</li>
+						<li class="product-card-tab-section__supitem">
+							<p class="product-card-tab-section__text">
+								- Пожизненная гарантия, бесплатная чистка и полировка
+							</p>
+						</li>
+						<li class="product-card-tab-section__supitem">
+							<p class="product-card-tab-section__text">
+								- Изготовление из Ваших материалов
+							</p>
+						</li>
+					</ul>
+				</li>
+				<li class="product-card-tab-section__item" id="product-card-tab-section__content-item_3">
+					<h4 class="product-card-tab-section__suptitle">
+						Условия доставки:
+					</h4>
+					<p class="product-card-tab-section__text">
+						1
+					</p>
+				</li>
+				<li class="product-card-tab-section__item" id="product-card-tab-section__content-item_4">
+					<h4 class="product-card-tab-section__suptitle">
+						Условия оплаты:
+					</h4>
+					<p class="product-card-tab-section__text">
+						2
+					</p>
+				</li>
+			</ul>
+		</div>
+	<?php if ($products) { ?>
+    <h4 class="recommended-carousel2-title">С этим товаром обычно покупают</h4>
+      <div id="recommended-carousel2" class="owl-carousel ">
+      <?php $i = 0; ?>
+      <?php foreach ($products as $product) { ?>
+      <?php if ($column_left && $column_right) { ?>
+      <?php $class = 'col-sm-12'; ?>
+      <?php } elseif ($column_left || $column_right) { ?>
+      <?php $class = 'col-sm-12'; ?>
+      <?php } else { ?>
+      <?php $class = 'col-sm-12'; ?>
+      <?php } ?>
+      <div class="product-layout <?php echo $class; ?>">
+        <div class="product-thumb recommended-list-product-card-item">
+          <div class="product-name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
+          <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
+          <div class="caption">
+            <?php if ($product['rating']) { ?>
+            <div class="rating">
+              <?php for ($i = 1; $i <= 5; $i++) { ?>
+              <?php if ($product['rating'] < $i) { ?>
+              <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+              <?php } else { ?>
+              <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+              <?php } ?>
+              <?php } ?>
+            </div>
+            <?php } ?>
+            <?php if ($product['price']) { ?>
+            <p class="price">
+              <?php if (!$product['special']) { ?>
+              <?php echo $product['price']; ?>.
+              <?php } else { ?>
+              <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+              <?php } ?>
+              <?php if ($product['tax']) { ?>
+              <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+              <?php } ?>
+            </p>
+            <?php } ?>
+          </div>
+            <div class="button-red"><a class="btn" href="<?php echo $product['href']; ?>" title="<?php echo $product['name']; ?>"><?php echo $text_more_info; ?></a></div>
+        </div>
+        <!-- <div class="home-latest__add-to-fav" style="top:80px" data-toggle="tooltip" title="" onclick="wishlist.add('<?php echo $product['product_id']; ?>');" data-original-title="В закладки"><i class="far fa-heart" style="font-size: 32px;" aria-hidden="true"></i></div> -->
+      </div>
+
+      <?php } ?>
+        </div>
+        <script>
+            $('#recommended-carousel2').owlCarousel({
+                items : 1,
+                autoPlay: true,
+                navigation: true,
+                navigationText: ['<i class="fa fa-chevron-left fa-5x"></i>', '<i class="fa fa-chevron-right fa-5x"></i>'],
+                stopOnHover: true,
+                pagination: false
+            });
+        </script>
+     <?php } ?>
+
+
+
+</div>
+        </div>
+      </div>
+    
+</div>
+  <!-- <section class="prodopsec">
+<div class="opisprod">
+	<?php echo $tab_description; ?>:<br /><?php echo $heading_title; ?>
+</div>
+<div class="prodsod">
+	<?php echo $description; ?>
+</div>
+</section> -->
+
+
+
+
+
+
+
+
+
+  <!-- <div class="row" style='margin-top:30px;display: table;min-height: 100%;height: 100%;width: 100%;'>
+      <div class="col-sm-6" style='padding-right: 0px;padding-left: 0px;'>
+	    <img src='/image/kamen.jpg' style='width:100%' />
+      </div>
+      <div class="col-sm-6 hidden-xs hidden-xl" style="padding-right: 0px;padding-left: 0px;justify-content: center;align-items: center;height: 100%;display: flex;color: #000;text-align: center;font-family: 'Playfair Display',arial;font-weight: 700;font-size:20px;">
+		<div>Бриллианты в кольцо подбираются под Ваш бюджет</div>
+      </div>
+  </div> -->
+  <!-- <div class="row" style='display: table;min-height: 100%;height: 100%;width: 100%;'>
+      <div class="col-sm-6 hidden-xs hidden-xl" style="padding-right: 0px;padding-left: 0px;justify-content: center;align-items: center;height: 100%;display: flex;color: #000;text-align: center;font-family: 'Playfair Display',arial;font-weight: 700;font-size:20px;">
+		<div>Каждому брилланту от 0.3 карата <br /> прилагается международный <br /> сертификат качества от GIA <br /> (самой авторитетной геммологической <br /> лаборатории мира)</div>
+      </div>
+      <div class="col-sm-6" style='padding-right: 0px;padding-left: 0px;'>
+	    <img src='/image/sert.jpg' style='width:100%' />
+      </div>
+  </div> -->
+  <!-- <div class="row" style='display: table;min-height: 100%;height: 100%;    width: 100%;'>
+      <div class="col-sm-6" style='padding-right: 0px;padding-left: 0px;'>
+	    <img src='/image/upak.jpg' style='width:100%' />
+      </div>
+      <div class="col-sm-6 hidden-xs hidden-xl" style="padding-right: 0px;padding-left: 0px;justify-content: center;align-items: center;height: 100%;display: flex;color: #000;text-align: center;font-family: 'Playfair Display',arial;font-weight: 700;font-size:20px;">
+		<div>Элегантный футляр с подсветкой</div>
+      </div>
+  </div> -->
+    <div class="col-xs-12"><?php echo $content_top; ?></div>
+
+    <?php if ($products) { ?>
+    <div class="h2-suptitle-slider-card h2">Похожие товары<?php //echo $text_related; ?></div>
+    <div class="row">
+      <div id="recommended-carousel" class="owl-carousel recommended-list-product-card">
+      <?php $i = 0; ?>
+      <?php foreach ($products as $product) { ?>
+      <?php if ($column_left && $column_right) { ?>
+      <?php $class = 'col-sm-12'; ?>
+      <?php } elseif ($column_left || $column_right) { ?>
+      <?php $class = 'col-sm-12'; ?>
+      <?php } else { ?>
+      <?php $class = 'col-sm-12'; ?>
+      <?php } ?>
+      <div class="product-layout <?php echo $class; ?>">
+        <div class="product-thumb recommended-list-product-card-item">
+          <div class="product-name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
+          <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
+          <div class="caption">
+            <?php if ($product['rating']) { ?>
+            <div class="rating">
+              <?php for ($i = 1; $i <= 5; $i++) { ?>
+              <?php if ($product['rating'] < $i) { ?>
+              <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+              <?php } else { ?>
+              <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+              <?php } ?>
+              <?php } ?>
+            </div>
+            <?php } ?>
+            <?php if ($product['price']) { ?>
+            <p class="price">
+              <?php if (!$product['special']) { ?>
+              <?php echo $product['price']; ?>.
+              <?php } else { ?>
+              <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+              <?php } ?>
+              <?php if ($product['tax']) { ?>
+              <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+              <?php } ?>
+            </p>
+            <?php } ?>
+          </div>
+            <div class="button-red"><a class="btn" href="<?php echo $product['href']; ?>" title="<?php echo $product['name']; ?>"><?php echo $text_more_info; ?></a></div>
+        </div>
+        <!-- <div class="home-latest__add-to-fav" style="top:80px" data-toggle="tooltip" title="" onclick="wishlist.add('<?php echo $product['product_id']; ?>');" data-original-title="В закладки"><i class="far fa-heart" style="font-size: 32px;" aria-hidden="true"></i></div> -->
+      </div>
+
+      <?php } ?>
+        </div>
+        <script>
+            $('#recommended-carousel').owlCarousel({
+                items : 3,
+                itemsDesktop : [1200,3],
+                itemsDesktopSmall : [992,2],
+                itemsTablet:  [768,2],
+                itemsMobile : [480,1],
+                autoPlay: true,
+                navigation: true,
+                navigationText: ['<i class="fa fa-chevron-left fa-5x"></i>', '<i class="fa fa-chevron-right fa-5x"></i>'],
+                stopOnHover: true,
+                pagination: false
+            });
+        </script>
+    </div>
+    <?php } ?>
+    <?php echo $content_bottom; ?>
+  </div>
+  </div>
+  <?php echo $column_right; ?></div>
+</div>
+<script><!--
+$('.date').datetimepicker({
+	pickTime: false
+});
+
+$('.datetime').datetimepicker({
+	pickDate: true,
+	pickTime: true
+});
+
+$('.time').datetimepicker({
+	pickDate: false
+});
+
+$('button[id^=\'button-upload\']').on('click', function() {
+	var node = this;
+
+	$('#form-upload').remove();
+
+	$('body').prepend('<form enctype="multipart/form-data" id="form-upload" style="display: none;"><input type="file" name="file" /></form>');
+
+	$('#form-upload input[name=\'file\']').trigger('click');
+
+	if (typeof timer != 'undefined') {
+    	clearInterval(timer);
+	}
+
+	timer = setInterval(function() {
+		if ($('#form-upload input[name=\'file\']').val() != '') {
+			clearInterval(timer);
+
+			$.ajax({
+				url: 'index.php?route=tool/upload',
+				type: 'post',
+				dataType: 'json',
+				data: new FormData($('#form-upload')[0]),
+				cache: false,
+				contentType: false,
+				processData: false,
+				beforeSend: function() {
+					$(node).button('loading');
+				},
+				complete: function() {
+					$(node).button('reset');
+				},
+				success: function(json) {
+					$('.text-danger').remove();
+
+					if (json['error']) {
+						$(node).parent().find('input').after('<div class="text-danger">' + json['error'] + '</div>');
+					}
+
+					if (json['success']) {
+						alert(json['success']);
+
+						$(node).parent().find('input').attr('value', json['code']);
+					}
+				},
+				error: function(xhr, ajaxOptions, thrownError) {
+					alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+				}
+			});
+		}
+	}, 500);
+});
+//--></script>
+<script><!--
+$('#review').delegate('.pagination a', 'click', function(e) {
+    e.preventDefault();
+
+    $('#review').fadeOut('slow');
+
+    $('#review').load(this.href);
+
+    $('#review').fadeIn('slow');
+});
+
+    $('.privacy-otziv').click(function(){
+        var privacy = $(".privacy-otziv:checked").val();
+        if (privacy != 1) {
+            $('.otziv-btn').prop('disabled', true);
+        } else if (privacy == 1) {
+            $('.otziv-btn').prop('disabled', false);
+        }
+    });
+
+$('#review').load('index.php?route=product/product/review&product_id=<?php echo $product_id; ?>');
+
+$('#button-review').on('click', function() {
+	$.ajax({
+		url: 'index.php?route=product/product/write&product_id=<?php echo $product_id; ?>',
+		type: 'post',
+		dataType: 'json',
+		data: $("#form-review").serialize(),
+		beforeSend: function() {
+			$('#button-review').button('loading');
+		},
+		complete: function() {
+			$('#button-review').button('reset');
+		},
+		success: function(json) {
+			$('.alert-success, .alert-danger').remove();
+
+			if (json['error']) {
+				$('#form-title').after('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '</div>');
+			}
+
+			if (json['success']) {
+				$('#form-title').after('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + '</div>');
+
+				$('input[name=\'name\']').val('');
+				$('textarea[name=\'text\']').val('');
+				$('input[name=\'rating\']:checked').prop('checked', false);
+                setTimeout(function () {
+                    $("#form-review-popup .mfp-close").click();
+                }, 3000);
+			}
+		}
+	});
+});
+    $(document).ready(function() {
+        $('.popup-form').magnificPopup({
+            type:'inline'
+        });
+    });
+//--></script>
+<script>
+    var a = $('.slider').attr("class");
+    if (a) {
+        $('.slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.slider-nav',
+            prevArrow: '<i class="fa fa-chevron-left fa-5x"></i>',
+            nextArrow: '<i class="fa fa-chevron-right fa-5x"></i>'
+        });
+        var count = $('.slider-nav > div').size();
+        if (count == 2) {
+            var slides = 4;
+            var center = true;
+        }
+        if (count == 4) {
+            var slides = 4;
+            var center = false;
+        }
+        else if (count == 1 || count == 3) {
+            var slides = 5;
+            var center = true;
+        }
+        else if (count > 5) {
+            var slides = 5;
+            var center = true;
+        }
+        $('.slider-nav').slick({
+            slidesToShow: slides,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            asNavFor: '.slider',
+            centerMode: center,
+            focusOnSelect: true
+        });
+    }
+</script>
+<script>
+  var productModel = document.querySelector('#product_model').textContent;
+  var dataLayer = window.dataLayer || [];
+  dataLayer.push({
+    'event': 'view_item',
+    'items':[{
+      'id': productModel,
+      'google_business_vertical': 'retail'          
+    }]
+  });
+</script>
+<?php echo $footer; ?>

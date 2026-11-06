@@ -1,0 +1,203 @@
+<div class="row">
+    <div class="col-sm-12">
+        <form action="" method="post" enctype="multipart/form-data" id="form-send-callback" class="grey">
+            <input type="hidden" name="formtitle" value="Есть вопросы">
+            <div class="form-title">Если есть вопросы напишите нам,<br>мы обязательно ответим</div>
+            <div class="form-group" id="fom-name">
+                <input type="text" class="form-control" id="input-name" placeholder="Имя *" value="" name="name">
+            </div>
+            <div class="form-group required" id="fom-phone">
+                <input type="text" class="form-control" id="input-phone" onkeyup="keyup_phone($(this).val())"  value="+7(" placeholder="Телефон *" value="" name="phone">
+            </div>
+            <div class="form-group" id="fom-mail">
+                <input type="text" class="form-control" id="input-mail" placeholder="E-mail" value="" name="mail">
+            </div>
+            <div class="form-group" id="fom-comments">
+                <textarea class="form-control" id="input-comments" placeholder="Комментарий" name="comments"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="button" id="button-uploads" data-loading-text="Загрузка" class="btn btn-default btn-block"><i class="fa fa-upload"></i> Загрузить фото</button>
+                <input type="hidden" name="photo" value="" id="input-photo" />
+            </div>
+            <div class="form-group" id="fom-privacy">
+                <label>
+                    <input type="checkbox" name="privacy" checked class="privacy-page-form" id="privacy" value="1">&nbsp;&nbsp;Даю согласие на обработку персональных данных и ознакомлен с <a href="/politika-konfidencialnosti" target="_blank">Политикой конфиденциальности</a></label>
+            </div>
+            <div align="center" class="form-group">
+                <input type="button" class="btn btn-black page-form-btn" data-loading-text="Отправка..." onclick="send();" id="button-send" value="Отправить">
+            </div>
+        </form>
+    </div>
+</div>
+<script src="catalog/view/javascript/jquery/jquery.maskedinput.min.js"></script>
+<script><!--
+$('.privacy-page-form').click(function(){
+    var privacy = $(".privacy-page-form:checked").val();
+    if (privacy != 1) {
+        $('.page-form-btn').prop('disabled', true);
+    } else if (privacy == 1) {
+        $('.page-form-btn').prop('disabled', false);
+    }
+})
+function strip_tags( str ){	// Strip HTML and PHP tags from a string
+	// 
+	// +   original by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+
+	return str.replace(/<\/?[^>]+>/gi, '');
+}
+function send() {
+    var name = $("#input-name").val();
+    var phone = $("#input-phone").val();
+    var url = encodeURIComponent(window.location['href']);	
+    var photo = $("#input-photo").val();
+    var comments = $("#input-comments").val();
+    var mail = $("#input-mail").val();
+    var sub = 'Есть вопросы';
+	var model='';
+	var type='';
+	str = $("ul.breadcrumb li:nth-child(2)").html();
+	str=strip_tags(str);
+	if(str=='Каталог'){
+	type='product';
+	model=$(".product-model").html();
+	}else{	
+	type=str;
+	
+	}
+	
+	
+
+	
+	
+    $("#input-phone").focus(function () {
+        $('#fom-phone').removeClass('has-error');
+        $('#fom-phone .text-danger').remove();
+    });
+
+    $.ajax({
+        url: 'index.php?route=module/callback/send',
+        type: 'post',
+        data:  'filter_model=' + model +'&filter_type=' + type +'&filter_name=' + name + '&filter_phone=' + phone + '&url=' + url + '&filter_mail=' + mail + '&filter_photo=' + photo + '&filter_comments=' + comments + '&sub=' + sub,
+        dataType: 'json',
+        beforeSend: function () {
+            $('#button-send').button('loading');
+        },
+        complete: function () {
+            $('#button-send').button('reset');
+        },
+        success: function (json) {
+            if (json['error']) {
+                if (json['error']['phone']) {
+                    if ($("#fom-phone .text-danger").length > 0) {
+                        $('#fom-phone').addClass('has-error');
+                        $('#fom-phone > #input-phone .text-danger').html(json['error']['phone'])
+                    } else {
+                        $('#fom-phone').addClass('has-error');
+                        $('#fom-phone > #input-phone').after('<div class="text-danger">' + json['error']['phone'] + '</div>')
+                    }
+                }
+                if (json['error']['mail']) {
+                    if ($("#fom-mail .text-danger").length > 0) {
+                        $('#fom-mail').addClass('has-error');
+                        $('#fom-mail > #input-mail .text-danger').html(json['error']['mail'])
+                    } else {
+                        $('#fom-mail').addClass('has-error');
+                        $('#fom-mail > #input-mail').after('<div class="text-danger">' + json['error']['mail'] + '</div>')
+                    }
+                }
+            }
+            if (json['success'] && !json['error']) {
+                $('#button-uploads').remove();
+                alert("Ваша заявка принята!");
+                $('#input-photo').val('');
+                yaCounter18227068.reachGoal('send_page');
+                ga('send', 'event', 'order', 'page');
+				
+//Отправка в Calltouch					
+var ct_site_id = '16158';
+var sub = 'Заявка';
+var ct_data = {             
+fio: name,
+phoneNumber: phone,
+email: mail,
+subject: sub,
+sessionId: window.call_value 
+};
+if (phone!='' && phone!=undefined){
+jQuery.ajax({  
+  url: 'https://api-node5.calltouch.ru/calls-service/RestAPI/'+ct_site_id+'/requests/orders/register/',      
+  dataType: 'json',         
+  type: 'POST',          
+  data: ct_data,
+  async: false
+}); 
+}
+				
+            }
+        }
+    });
+}
+
+$('#button-uploads').on('click', function() {
+    var node = this;
+
+    $('#form-upload').remove();
+
+    $('body').prepend('<form enctype="multipart/form-data" id="form-upload" style="display: none;"><input type="file" name="file" /></form>');
+
+    $('#form-upload input[name=\'file\']').trigger('click');
+
+    if (typeof timer != 'undefined') {
+        clearInterval(timer);
+    }
+
+    timer = setInterval(function() {
+
+        if ($('#form-upload input[name=\'file\']').val() != '') {
+            clearInterval(timer);
+
+            $.ajax({
+                url: 'index.php?route=tool/upload',
+                type: 'post',
+                dataType: 'json',
+                data: new FormData($('#form-upload')[0]),
+                cache: false,
+                contentType: false,
+                processData: false,
+                beforeSend: function() {
+                    $(node).button('loading');
+                },
+                complete: function() {
+                    $(node).button('reset');
+                },
+                success: function(json) {
+                    $('.text-danger').remove();
+
+                    if (json['error']) {
+                        $(node).parent().find('input').after('<div class="text-danger">' + json['error'] + '</div>');
+                    }
+
+                    if (json['success']) {
+                        $(node).parent().find('input').attr('value', json['file']);
+                        $("#input-photo").after('<p>Фото загружено</p>');
+                    }
+                    $('#button-uploads').remove();
+                },
+                error: function(xhr, ajaxOptions, thrownError) {
+                    alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                }
+            });
+        }
+    }, 500);
+});
+$(document).ready(function() {
+    $('.slider').magnificPopup({
+        type:'image',
+        delegate: 'a',
+        gallery: {
+            enabled:true
+        }
+    });
+});
+//-->
+</script>

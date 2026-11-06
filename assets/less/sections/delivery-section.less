@@ -70,7 +70,7 @@
 }
 
 .delivery-individual__title {
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 400;
     margin-bottom: 24px;
 }
@@ -79,6 +79,16 @@
     color: @gray;
     font-size: 20px;
     line-height: 1.35;
+
+    p {
+        .display-flex();
+        .align-items-baseline();
+
+        span:first-child {
+            margin-right: 4px;
+            white-space: nowrap;
+        }
+    }
 
     strong {
         color: @black;
@@ -184,7 +194,6 @@
 @media all and (max-width: @bp-1590) {
     .delivery-individual {max-width: 1070px; padding-right: 110px; padding-bottom: 60px;}
     .delivery-individual__info {max-width: 520px;}
-    .delivery-individual__title {font-size: 24px;}
     .payment-method__title {font-size: 20px;}
     .payment-method__subtitle {font-size: 20px;}
     .payment-method__image {width: 150px; height: 52px;}
@@ -197,8 +206,9 @@
     .delivery-method__text p:not(:last-child) {margin-bottom: 8px;}
     .delivery-individual {padding-right: 136px; padding-bottom: 100px;}
     .delivery-individual__info {max-width: 660px; padding: 24px;}
-    .delivery-individual__title {font-size: 20px; margin-bottom: 16px;}
+    .delivery-individual__title {margin-bottom: 16px;}
     .delivery-individual__text {font-size: 16px;}
+    .delivery-individual__text p {.column();}
     .delivery-individual__text p:not(:last-child) {margin-bottom: 16px;}
     .delivery-individual__text strong {display: block; margin-top: 8px;}
     .payment-method__item {.column(); padding: 24px;}
@@ -206,9 +216,11 @@
 }
 
 @media all and (max-width: @bp-836) {
-    .delivery-individual {padding-right: 20px; padding-bottom: 174px;}
-    .delivery-individual__info {width: ~'calc(100% - 20px)';}
+    .delivery-individual {padding-right: 0; padding-bottom: 0;}
+    .delivery-individual__image {margin-right: 20px;}
+    .delivery-individual__info {margin-top: -50px; margin-left: 20px; position: relative; width: ~'calc(100% - 20px)';}
     .delivery-individual__title {font-size: 18px;}
+    .delivery-individual__text {}
     .delivery-individual__text strong {font-size: 16px;}
     .payment-method {width: 100%;}
     .payment-method__item {gap: 16px;}

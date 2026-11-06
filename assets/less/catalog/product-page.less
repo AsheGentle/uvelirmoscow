@@ -330,21 +330,33 @@
 .product-specs__item {
     .display-flex();
     .justify-content-between();
-    .align-items-start();
-    gap: 16px;
+    .align-items-baseline();
+    gap: 4px;
 
     &:not(:last-child) {
         margin-bottom: 10px;
     }
+
+    &::after {
+        .flex-order(2);
+        .flex(1,1,40px);
+        border-bottom: 1px dotted;
+        content: '';
+        display: block;
+    }
 }
 
 .product-specs__name {
+    .flex-order(1);
     color: #8D796E;
-    flex: 0 0 150px;
+    max-width: 48%;
+    white-space: nowrap;
 }
 
 .product-specs__value {
+    .flex-order(3);
     color: @black;
+    max-width: 48%;
     text-align: right;
 }
 
@@ -400,6 +412,11 @@
 
 .product-another__title {
     font-size: 14px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin-bottom: 10px;
 }
 

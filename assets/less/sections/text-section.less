@@ -85,6 +85,19 @@
             margin-top: 32px;
         }
     }
+
+    &.big {
+        font-size: 20px;
+    }
+
+    a:not([class]) {
+        color: currentColor;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 @media all and (max-width: @bp-1590) {

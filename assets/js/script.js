@@ -1,24 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-  var banner = document.querySelector('.cookies');
-  var acceptBtn = document.querySelector('.cookie__button');
-
-  if (!banner) return;
-
-  if (localStorage.getItem('cookie_consent') === 'accepted') {
-    banner.remove();
-    return;
-  }
-
-  if (acceptBtn) {
-    acceptBtn.addEventListener('click', function () {
-      try {
-        localStorage.setItem('cookie_consent', 'accepted');
-      } catch (e) {
-      }
-    });
-  }
-});
-
 $(function(){
     Fancybox.bind("[data-fancybox]", {});
 
@@ -282,7 +261,7 @@ $(function(){
 
     if ($(".employees.swiper").length > 0) {
         let swiperEmployees = new Swiper(".employees.swiper", {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 20,
             navigation: {
                 enabled: true,
@@ -294,16 +273,16 @@ $(function(){
                 type: 'fraction'
             },
             breakpoints: {
-                600: {
-                    slidesPerView: 2,
-                    spaceBetween: 20
-                },
                 837: {
                     slidesPerView: 3,
                     spaceBetween: 20
                 },
                 1351: {
-                    slidesPerView: 3,
+                    slidesPerView: 4,
+                    spaceBetween: 30
+                },
+                1591: {
+                    slidesPerView: 5,
                     spaceBetween: 30
                 }
             }
@@ -500,16 +479,16 @@ $(function(){
         });
     }
 
-    if ($(".inner-service__images").length > 0) {
-        let swiperServicesImages = new Swiper(".inner-service__images", {
-            slidesPerView: 1,
-            navigation: {
-                enabled: true,
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev'
-            }
-        });
-    }
+//    if ($(".inner-service__images").length > 0) {
+//        let swiperServicesImages = new Swiper(".inner-service__images", {
+//            slidesPerView: 1,
+//            navigation: {
+//                enabled: true,
+//                nextEl: '.swiper-button-next',
+//                prevEl: '.swiper-button-prev'
+//            }
+//        });
+//    }
 
     if ($(".inner-slider").length > 0) {
         let swiperInner = new Swiper(".inner-slider", {
@@ -537,6 +516,45 @@ $(function(){
             pagination: {
                 el: '.inner-pictures-pagination',
                 type: 'fraction'
+            }
+        });
+    }
+    
+    if ($(".order-ways__list").length > 0) {
+        let swiperServices = new Swiper(".order-ways__list", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            navigation: {
+                enabled: true,
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction'
+            },
+            breakpoints: {
+                600: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                    navigation: {
+                        enabled: true
+                    }
+                },
+                1351: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                    navigation: {
+                        enabled: true
+                    }
+                },
+                1591: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    navigation: {
+                        enabled: false
+                    }
+                }
             }
         });
     }
@@ -1263,10 +1281,12 @@ $(function(){
         }
 
         activateSubmenuCategory($(this));
-    }).on("click", function(){
+    }).on("click", function(e){
         if (!isMobileMenu()) {
             return;
         }
+
+        e.preventDefault();
 
         var $category = $(this);
         var $block = $category.closest(".submenu__block");

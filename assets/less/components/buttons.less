@@ -174,7 +174,6 @@
 
 .buttons {
     .display-flex;
-    .align-items-center();
     .justify-content-center();
     gap: var(--gap);
     margin-top: var(--gap);
@@ -182,6 +181,12 @@
     .btn {
         width: 100%;
         max-width: 490px;
+
+        &:not(:only-child) {
+            .display-flex();
+            .align-items-center();
+            .justify-content-center();
+        }
     }
 }
 

@@ -1,0 +1,128 @@
+<?php
+class ControllerModuleFeatured extends Controller {
+	public function index($setting) {
+		$this->load->language('module/featured');
+
+		$data['heading_title'] = $this->language->get('heading_title');
+
+		$data['text_tax'] = $this->language->get('text_tax');
+
+		$data['button_cart'] = $this->language->get('button_cart');
+		$data['button_wishlist'] = $this->language->get('button_wishlist');
+		$data['button_compare'] = $this->language->get('button_compare');
+        $data['text_more_info'] = $this->language->get('text_more_info');
+        $data['text_model'] = $this->language->get('text_model');
+        $data['price_work'] = $this->language->get('price_work');
+        $data['price_product'] = $this->language->get('price_product');
+
+		$this->load->model('catalog/product');
+
+		$this->load->model('tool/image');
+
+		$data['products'] = array();
+
+		if (!$setting['limit']) {
+			$setting['limit'] = 4;
+		}
+
+		if (!empty($setting['product'])) {
+			$products = array_slice($setting['product'], 0, (int)$setting['limit']);
+
+			foreach ($products as $product_id) {
+				$product_info = $this->model_catalog_product->getProduct($product_id);
+
+				if ($product_info) {
+                    $data['options'] = array();
+
+                    foreach ($this->model_catalog_product->getProductOptions($product_info['product_id']) as $option) {
+                        $product_option_value_data = array();
+
+                        foreach ($option['product_option_value'] as $option_value) {
+                            if (!$option_value['subtract'] || ($option_value['quantity'] > 0)) {
+
+                                $product_option_value_data[] = array(
+                                    'product_option_value_id' => $option_value['product_option_value_id'],
+                                    'option_value_id'         => $option_value['option_value_id'],
+                                    'name'                    => $option_value['name'],
+                                    'default_value'                    => $option_value['default_value'],
+                                    'image'                   => $this->model_tool_image->resize($option_value['image'], 50, 50),
+                                    'price_prefix'            => $option_value['price_prefix']
+                                );
+                            }
+                        }
+
+                        $data['options'][] = array(
+                            'product_option_id'    => $option['product_option_id'],
+                            'product_option_value' => $product_option_value_data,
+                            'option_id'            => $option['option_id'],
+                            'name'                 => $option['name'],
+                            'type'                 => $option['type'],
+                            'value'                => $option['value'],
+                            'required'             => $option['required']
+                        );
+                    }
+
+					if ($product_info['image']) {
+						$image = $this->model_tool_image->resize($product_info['image'], $setting['width'], $setting['height']);
+					} else {
+						$image = $this->model_tool_image->resize('placeholder.png', $setting['width'], $setting['height']);
+					}
+
+					if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+						$price = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')));
+					} else {
+						$price = false;
+					}
+
+                    if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+                        $price_works = $this->currency->format($this->tax->calculate($product_info['price_works'], $product_info['tax_class_id'], $this->config->get('config_tax')));
+                    } else {
+                        $price_works = false;
+                    }
+
+					if ((float)$product_info['special']) {
+						$special = $this->currency->format($this->tax->calculate($product_info['special'], $product_info['tax_class_id'], $this->config->get('config_tax')));
+					} else {
+						$special = false;
+					}
+
+					if ($this->config->get('config_tax')) {
+						$tax = $this->currency->format((float)$product_info['special'] ? $product_info['special'] : $product_info['price']);
+					} else {
+						$tax = false;
+					}
+
+					if ($this->config->get('config_review_status')) {
+						$rating = $product_info['rating'];
+					} else {
+						$rating = false;
+					}
+
+					$data['products'][] = array(
+						'product_id'  => $product_info['product_id'],
+                        'model'       => $product_info['model'],
+						'thumb'       => $image,
+						'name'        => $product_info['name'],
+                        'weight'      => $product_info['weight'],
+						'description' => utf8_substr(strip_tags(html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',
+						'price'       => $price,
+                        'price_works' => $price_works,
+						'special'     => $special,
+						'tax'         => $tax,
+						'rating'      => $rating,
+						'href'        => $this->url->link('product/product', 'product_id=' . $product_info['product_id']),
+                        'options'    => $data['options']
+					);
+				}
+			}
+		}
+
+		if ($data['products']) {
+			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/featured.tpl')) {
+				return $this->load->view($this->config->get('config_template') . '/template/module/featured.tpl', $data);
+			} else {
+				return $this->load->view('default/template/module/featured.tpl', $data);
+			}
+		}
+	}
+}
