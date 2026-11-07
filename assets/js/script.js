@@ -1610,7 +1610,7 @@ $(function(){
         $("body").toggleClass("open-filter");
     });
 
-    $(".filter-back__close").on("click", function(){
+    $(".filter-back__close, .fv-mobile_close_box").on("click", function(){
         $("body").removeClass("open-filter");
     });
 
